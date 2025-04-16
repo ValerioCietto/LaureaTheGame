@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabellone Accademico - Laurea the Game</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .board {
+      display: grid;
+      grid-template-columns: repeat(6, 100px);
+      grid-template-rows: repeat(4, 60px);
+      gap: 6px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.2);
+    }
+    .cell {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 12px;
+      color: white;
+    }
+    .lezioni {
+      background-color: #268bd2;
+    }
+    .esami {
+      background-color: #cb4b16;
+    }
+    .vacanza {
+      background-color: #859900;
+    }
+  </style>
+</head>
+<body>
+  <div class="board">
+    <!-- Ottobre -->
+    <div class="cell lezioni">Ott 1</div>
+    <div class="cell lezioni">Ott 2</div>
+    <!-- Novembre -->
+    <div class="cell lezioni">Nov 1</div>
+    <div class="cell lezioni">Nov 2</div>
+    <!-- Dicembre -->
+    <div class="cell lezioni">Dic 1</div>
+    <div class="cell lezioni">Dic 2</div>
+    <!-- Gennaio -->
+    <div class="cell esami">Gen 1</div>
+    <div class="cell esami">Gen 2</div>
+    <!-- Febbraio -->
+    <div class="cell lezioni">Feb 1</div>
+    <div class="cell lezioni">Feb 2</div>
+    <!-- Marzo -->
+    <div class="cell lezioni">Mar 1</div>
+    <div class="cell lezioni">Mar 2</div>
+    <!-- Aprile -->
+    <div class="cell lezioni">Apr 1</div>
+    <div class="cell lezioni">Apr 2</div>
+    <!-- Maggio -->
+    <div class="cell lezioni">Mag 1</div>
+    <div class="cell lezioni">Mag 2</div>
+    <!-- Giugno -->
+    <div class="cell lezioni">Giu 1</div>
+    <div class="cell lezioni">Giu 2</div>
+    <!-- Luglio -->
+    <div class="cell esami">Lug 1</div>
+    <div class="cell esami">Lug 2</div>
+    <!-- Agosto -->
+    <div class="cell vacanza">Ago 1</div>
+    <div class="cell vacanza">Ago 2</div>
+    <!-- Settembre -->
+    <div class="cell esami">Set 1</div>
+    <div class="cell esami">Set 2</div>
+  </div>
+</body>
+</html>
