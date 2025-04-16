@@ -1,0 +1,79 @@
+{
+  "imprevisti": [
+    {
+      "titolo": "Cambio prof",
+      "descrizione": "Il nuovo prof è giovane, motivato e... sadico.",
+      "effetto": "Cambia la difficoltà dell'esame: tira 1d6 per la nuova difficoltà."
+    },
+    {
+      "titolo": "Cambio piano di carriera",
+      "descrizione": "Hai scoperto che volevi fare tutt’altro, ma ormai è tardi.",
+      "effetto": "Sostituisci uno degli esami con uno casuale."
+    },
+    {
+      "titolo": "Scambio esame",
+      "descrizione": "Accettate lo scambio con un altro studente. Cattiva idea.",
+      "effetto": "Scambia un esame con un altro giocatore."
+    },
+    {
+      "titolo": "Grande motivazione",
+      "descrizione": "Hai trovato una playlist motivazionale di 8 ore.",
+      "effetto": "+2 preparazione."
+    },
+    {
+      "titolo": "Lavori per mantenerti",
+      "descrizione": "Tornare a casa alle 2 non aiuta a studiare.",
+      "effetto": "-2 preparazione."
+    },
+    {
+      "titolo": "Morte del vicino che era così gentile",
+      "descrizione": "Ti serve tempo per riflettere. E per fare la fila all’anagrafe.",
+      "effetto": "Salti un appello."
+    },
+    {
+      "titolo": "Errore di sistema Moodle",
+      "descrizione": "Il tuo appello è stato pubblicato alle 3:47 AM e cancellato alle 3:49.",
+      "effetto": "Salti un appello."
+    },
+    {
+      "titolo": "Appello straordinario",
+      "descrizione": "Hai trovato un pdf nascosto con una data bonus.",
+      "effetto": "+1 appello disponibile."
+    },
+    {
+      "titolo": "Esame di recupero",
+      "descrizione": "Un altro giro, stesso risultato? Forse no.",
+      "effetto": "+1 appello."
+    },
+    {
+      "titolo": "Esonero a sorpresa",
+      "descrizione": "Il prof ti guarda e dice: ‘tu no, vai pure.’",
+      "effetto": "+1 appello gratuito."
+    },
+    {
+      "titolo": "Esame a libera scelta",
+      "descrizione": "C’è un esame facilissimo che nessuno considera mai. E tu sì.",
+      "effetto": "+1 appello con esame di difficoltà 1."
+    },
+    {
+      "titolo": "Appunti del Principe Mezzosangue",
+      "descrizione": "Sono perfetti, ma scritti con calligrafia gotica incomprensibile.",
+      "effetto": "+6 preparazione."
+    },
+    {
+      "titolo": "Appunti del Principe Mezzacalzetta",
+      "descrizione": "C’è scritto solo ‘boh’ ripetuto 14 volte.",
+      "effetto": "-3 preparazione."
+    },
+    {
+      "titolo": "Notte su Wikipedia",
+      "descrizione": "Hai letto tutto, ora credi di essere laureato in tre corsi diversi.",
+      "effetto": "+4 preparazione."
+    },
+    {
+      "titolo": "Studiare insieme",
+      "descrizione": "Vi distraete dopo 8 minuti, ma almeno avete fatto i titoli delle dispense.",
+      "effetto": "Tutti i giocatori: +1 preparazione."
+    }
+  ]
+}
