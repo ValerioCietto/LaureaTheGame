@@ -1,0 +1,8 @@
+Le reti neurali da pesca sono una branchia dell’intelligenza artificiale utilizzata principalmente nei porti, nelle sagre e nei simulatori di laghi molto calmi.
+Il corso è tenuto dal professor Carlo Bigdata, ex pescatore convertito al machine learning dopo aver sognato un siluro che parlava in Python.
+Gli studenti imparano a progettare modelli predittivi capaci di stimare la probabilità che un’orata abbia voglia di parlare di Kant.
+
+Tra gli algoritmi principali troviamo il Backpropagation con lenza flessibile, la Deep Learning con esche variabili, e la Discesa del gradient carpione.
+I dati di addestramento provengono da laghi open-source e finti pescatori in CGI. I problemi più frequenti includono l’overfishing dei dati, l’underbaiting e il bias dell’anguilla.
+L’esame finale consiste nell’apprendere un sistema delle profondità marine, da cui il termine deep learning.
+Le tesi più quotate esplorano la possibilità di insegnare alle carpe a riconoscere pattern ricorrenti nel meteo o nei pensieri del pescatore.
