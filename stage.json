@@ -1,0 +1,34 @@
+{
+  "stage": [
+    {
+      "titolo": "Timbrare il cartellino",
+      "descrizione": "Lo stagista deve mimare il gesto di timbrare un badge immaginario facendo 'beep' con la bocca.",
+      "ruolo_altri": "Un altro giocatore decide arbitrariamente se lo stagista passa o no (es: 'troppo alto', 'non hai fatto l'alcool test').",
+      "note": "Gli altri possono aggiungere imprevisti surreali da mimare."
+    },
+    {
+      "titolo": "Portare il caffè al capo",
+      "descrizione": "Un altro giocatore (il capo) chiede il caffè. Lo stagista deve raggiungere una macchinetta immaginaria in un punto assurdo della stanza.",
+      "ruolo_altri": "Il capo osserva. Gli altri aggiungono ostacoli immaginari che lo stagista deve schivare.",
+      "note": "Lo stagista deve mimare il rumore della macchinetta e consegnare un caffè finto."
+    },
+    {
+      "titolo": "Fare fotocopie",
+      "descrizione": "Lo stagista deve mimare l'uso della fotocopiatrice.",
+      "ruolo_altri": "Un altro giocatore interpreta la fotocopiatrice e inventa scuse assurde per non funzionare (es: 'manca l'inchiostro bianco', 'la carta è troppo filosofica').",
+      "note": "Lo stagista deve insistere, protestare, e trovare soluzioni creative."
+    },
+    {
+      "titolo": "Spiegare lo smartphone al senior",
+      "descrizione": "Lo stagista deve spiegare un telefono immaginario con funzioni assurde (es: fotocamera che vede attraverso i muri).",
+      "ruolo_altri": "Un altro giocatore fa il senior che non capisce apposta, fa domande inutili o confonde tutto.",
+      "note": "Lo stagista deve usare supercazzole tecniche per risultare credibile."
+    },
+    {
+      "titolo": "Babysitter figlia del capo",
+      "descrizione": "Lo stagista deve badare a un altro giocatore che interpreta la figlia del capo, una vera peste.",
+      "ruolo_altri": "La bambina fa capricci e disastri. Lo stagista può usare i suoi buoni pasto per comprarle un gelato.",
+      "note": "La scena deve essere strappalacrime, tipo film drammatico pomeridiano."
+    }
+  ]
+}
