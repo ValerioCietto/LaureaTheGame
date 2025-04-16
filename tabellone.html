@@ -14,8 +14,8 @@
     }
     .board {
       display: grid;
-      grid-template-columns: repeat(6, 100px);
-      grid-template-rows: repeat(4, 60px);
+      grid-template-columns: repeat(6, 140px);
+      grid-template-rows: repeat(4, 100px);
       gap: 6px;
       padding: 20px;
       background: #fff;
@@ -24,13 +24,15 @@
     }
     .cell {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       text-align: center;
       border-radius: 8px;
       font-weight: bold;
-      font-size: 12px;
+      font-size: 14px;
       color: white;
+      padding: 6px;
     }
     .lezioni {
       background-color: #268bd2;
@@ -41,46 +43,49 @@
     .vacanza {
       background-color: #859900;
     }
+    .imprevisto {
+      background-color: #b58900;
+    }
   </style>
 </head>
 <body>
   <div class="board">
     <!-- Ottobre -->
-    <div class="cell lezioni">Ott 1</div>
-    <div class="cell lezioni">Ott 2</div>
+    <div class="cell lezioni">Ott 1<br><small>lezione</small></div>
+    <div class="cell lezioni">Ott 2<br><small>lezione</small></div>
     <!-- Novembre -->
-    <div class="cell lezioni">Nov 1</div>
-    <div class="cell lezioni">Nov 2</div>
+    <div class="cell lezioni">Nov 1<br><small>lezione</small></div>
+    <div class="cell imprevisto">Nov 2<br>Imprevisto</div>
     <!-- Dicembre -->
-    <div class="cell lezioni">Dic 1</div>
-    <div class="cell lezioni">Dic 2</div>
+    <div class="cell lezioni">Dic 1<br><small>lezione</small></div>
+    <div class="cell lezioni">Dic 2<br><small>lezione</small></div>
     <!-- Gennaio -->
-    <div class="cell esami">Gen 1</div>
-    <div class="cell esami">Gen 2</div>
+    <div class="cell esami">Gen 1<br><small>sessione esami</small></div>
+    <div class="cell esami">Gen 2<br><small>sessione esami</small></div>
     <!-- Febbraio -->
-    <div class="cell lezioni">Feb 1</div>
-    <div class="cell lezioni">Feb 2</div>
+    <div class="cell lezioni">Feb 1<br><small>lezione</small></div>
+    <div class="cell lezioni">Feb 2<br><small>lezione</small></div>
     <!-- Marzo -->
-    <div class="cell lezioni">Mar 1</div>
-    <div class="cell lezioni">Mar 2</div>
+    <div class="cell lezioni">Mar 1<br><small>lezione</small></div>
+    <div class="cell lezioni">Mar 2<br><small>lezione</small></div>
     <!-- Aprile -->
-    <div class="cell lezioni">Apr 1</div>
-    <div class="cell lezioni">Apr 2</div>
+    <div class="cell lezioni">Apr 1<br><small>lezione</small></div>
+    <div class="cell lezioni">Apr 2<br><small>lezione</small></div>
     <!-- Maggio -->
-    <div class="cell lezioni">Mag 1</div>
-    <div class="cell lezioni">Mag 2</div>
+    <div class="cell imprevisto">Mag 1<br>Imprevisto</div>
+    <div class="cell lezioni">Mag 2<br><small>lezione</small></div>
     <!-- Giugno -->
-    <div class="cell lezioni">Giu 1</div>
-    <div class="cell lezioni">Giu 2</div>
+    <div class="cell lezioni">Giu 1<br><small>lezione</small></div>
+    <div class="cell lezioni">Giu 2<br><small>lezione</small></div>
     <!-- Luglio -->
-    <div class="cell esami">Lug 1</div>
-    <div class="cell esami">Lug 2</div>
+    <div class="cell esami">Lug 1<br><small>sessione esami</small></div>
+    <div class="cell esami">Lug 2<br><small>sessione esami</small></div>
     <!-- Agosto -->
-    <div class="cell vacanza">Ago 1</div>
-    <div class="cell vacanza">Ago 2</div>
+    <div class="cell vacanza">Ago 1<br><small>vacanza</small></div>
+    <div class="cell vacanza">Ago 2<br><small>vacanza</small></div>
     <!-- Settembre -->
-    <div class="cell esami">Set 1</div>
-    <div class="cell esami">Set 2</div>
+    <div class="cell esami">Set 1<br><small>sessione esami</small></div>
+    <div class="cell esami">Set 2<br><small>sessione esami</small></div>
   </div>
 </body>
 </html>
