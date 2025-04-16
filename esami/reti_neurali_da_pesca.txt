@@ -6,3 +6,41 @@ Tra gli algoritmi principali troviamo il Backpropagation con lenza flessibile, l
 I dati di addestramento provengono da laghi open-source e finti pescatori in CGI. I problemi più frequenti includono l’overfishing dei dati, l’underbaiting e il bias dell’anguilla.
 L’esame finale consiste nell’apprendere un sistema delle profondità marine, da cui il termine deep learning.
 Le tesi più quotate esplorano la possibilità di insegnare alle carpe a riconoscere pattern ricorrenti nel meteo o nei pensieri del pescatore.
+
+Domande (6)
+Chi è il docente del corso?
+A. Prof. Dattilo Rete
+B. Prof. Carlo Bigdata
+C. Dott. Siluro Bayesiano
+→ (Indizio: Carlo Bigdata)
+
+Che tipo di discesa viene usata negli algoritmi del corso?
+A. Discesa del gradient carpione
+B. Discesa del pesce rosso
+C. Discesa a strascico supervisionata
+→ (Indizio: gradient carpione)
+
+Qual è una fonte comune di dati per l’addestramento?
+A. Videocassette di pesca anni ’90
+B. Laghi open-source e pescatori CGI
+C. Diario segreto dei tonni
+→ (Indizio: CGI e open-source)
+
+Cos’è il bias dell’anguilla?
+A. Una preferenza verso specie lunghe e scivolose
+B. Una distorsione nei dati dovuta all'elusività
+C. Un algoritmo emotivo
+→ (Indizio: distorsione)
+
+In cosa consiste l’esame finale?
+A. Predire la posizione di un pesce virtuale
+B. Lanciare una rete e giustificare il fallimento
+C. Costruire un acquario quantistico
+→ (Indizio: giustificazione teatrale)
+
+Quale di questi NON è citato nel testo?
+A. Overfishing dei dati
+B. Underbaiting
+C. Regressione ad amo singolo
+→ (Senza indizio)
+
