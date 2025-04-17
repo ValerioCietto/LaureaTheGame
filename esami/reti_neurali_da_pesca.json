@@ -1,0 +1,130 @@
+{
+  "esame": "Reti neurali da pesca",
+  "cfu": 6,
+  "testo": [
+    {
+      "paragrafo": 1,
+      "contenuto": "Le reti neurali da pesca sono nate per applicare l’intelligenza artificiale all’ambito ittico e lacustre. Le prime versioni venivano addestrate su immagini di orate, siluri e sogliole animate. Il loro impiego si è diffuso in porti digitali e in simulatori di laghi.",
+      "domande": [
+        {
+          "domanda": "Qual è lo scopo delle reti neurali da pesca?",
+          "opzioni": ["Calcolare la marea", "Applicare l’IA alla pesca", "Simulare temporali marini"],
+          "corretta": 1
+        },
+        {
+          "domanda": "Su quali animali venivano addestrate le prime versioni?",
+          "opzioni": ["Orate, siluri e sogliole animate", "Delfini e sardine digitali", "Squali e tartarughe virtuali"],
+          "corretta": 0
+        },
+        {
+          "domanda": "Dove si è diffuso l’impiego delle reti?",
+          "opzioni": ["In piscine universitarie", "In acquari immersivi", "In porti digitali e simulatori"],
+          "corretta": 2
+        },
+        {
+          "domanda": "Le sogliole nel dataset erano:",
+          "opzioni": ["Immagini statiche", "Rappresentazioni animate", "Modelli 3D realistici"],
+          "corretta": 1
+        },
+        {
+          "domanda": "Le reti venivano usate anche in:",
+          "opzioni": ["Videogiochi di caccia", "Simulatori di laghi", "Calcolatrici da sub"],
+          "corretta": 1
+        }
+      ]
+    },
+    {
+      "paragrafo": 2,
+      "contenuto": "Il modello più noto è il “Perceptron ad Amo Singolo”, dotato di un input sensorio-olfattivo e una funzione di attivazione gorgogliante. La rete si allena usando dataset di spruzzi e riflessi acquatici, tenendo conto della direzione del vento e dell’umore del pescatore.",
+      "domande": [
+        {
+          "domanda": "Qual è il nome del modello più noto?",
+          "opzioni": ["Rete Pescatoriale Profonda", "Perceptron ad Amo Singolo", "LenzaNet 9000"],
+          "corretta": 1
+        },
+        {
+          "domanda": "Che tipo di input ha il Perceptron?",
+          "opzioni": ["Sensorio-olfattivo", "Tattile-neurale", "Magnetico-sonico"],
+          "corretta": 0
+        },
+        {
+          "domanda": "Come viene attivata la rete?",
+          "opzioni": ["Con la voce del pescatore", "Con un rumore di splash", "Con una funzione gorgogliante"],
+          "corretta": 2
+        },
+        {
+          "domanda": "Quali dati vengono usati per l’addestramento?",
+          "opzioni": ["Schizzi e sabbia", "Spruzzi e riflessi acquatici", "Onde e nuvole"],
+          "corretta": 1
+        },
+        {
+          "domanda": "Cosa influenza la rete durante la pesca?",
+          "opzioni": ["La pressione atmosferica", "L’umore del pescatore e il vento", "Il tipo di canna da pesca"],
+          "corretta": 1
+        }
+      ]
+    },
+    {
+      "paragrafo": 3,
+      "contenuto": "Tra i problemi comuni c’è l’overfishing computazionale, in cui i pesci digitali vengono riconosciuti troppo spesso. Per evitarlo, si introduce rumore biologico simulato, come lo sciabordio o la presenza di zanzare interferenti.",
+      "domande": [
+        {
+          "domanda": "Cos’è l’overfishing computazionale?",
+          "opzioni": ["Un errore di calcolo nelle maree", "Una cattura eccessiva di pesci veri", "Un riconoscimento eccessivo di pesci digitali"],
+          "corretta": 2
+        },
+        {
+          "domanda": "Qual è un effetto dell’overfishing?",
+          "opzioni": ["Congelamento del modello", "Riconoscimenti inutili ripetuti", "Perdita di dati reali"],
+          "corretta": 1
+        },
+        {
+          "domanda": "Come si contrasta l’overfishing?",
+          "opzioni": ["Riducendo la risoluzione", "Introducendo rumore biologico", "Aumentando il numero di neuroni"],
+          "corretta": 1
+        },
+        {
+          "domanda": "Che tipo di rumore si introduce?",
+          "opzioni": ["Biologico simulato", "Meccanico di superficie", "Digitale quantistico"],
+          "corretta": 0
+        },
+        {
+          "domanda": "Quale disturbo è citato nel testo?",
+          "opzioni": ["Vento sulle onde", "Sciabordio e zanzare", "Barche fantasma"],
+          "corretta": 1
+        }
+      ]
+    },
+    {
+      "paragrafo": 4,
+      "contenuto": "I ricercatori stanno ora lavorando su reti generative che producono direttamente storie di pesca convincenti, da usare nei bar. Alcuni prototipi riescono a generare anche esche virtuali, con aromi sintetici codificati in byte.",
+      "domande": [
+        {
+          "domanda": "Cosa generano le nuove reti?",
+          "opzioni": ["Mappe di profondità", "Storie di pesca", "Ricette di pesce"],
+          "corretta": 1
+        },
+        {
+          "domanda": "Dove si usano queste storie?",
+          "opzioni": ["In conferenze di IA", "Nei bar", "In riviste scientifiche"],
+          "corretta": 1
+        },
+        {
+          "domanda": "Cosa producono alcuni prototipi?",
+          "opzioni": ["Ami connessi", "Esche virtuali", "Gilet intelligenti"],
+          "corretta": 1
+        },
+        {
+          "domanda": "Che tipo di aroma usano?",
+          "opzioni": ["Liquido", "Naturale", "Sintetico"],
+          "corretta": 2
+        },
+        {
+          "domanda": "Come vengono codificati gli aromi?",
+          "opzioni": ["In suoni binaurali", "In byte", "In gocce di dati"],
+          "corretta": 1
+        }
+      ]
+    }
+  ]
+}
