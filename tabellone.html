@@ -106,7 +106,30 @@
     const maxParagraphs = key => examTexts[key].cfu / 3;
     let takenExams = [];
     const cellsDef = [
-      { label: 'Ott 1', type: 'lezioni' }, /* ... */ { label: 'Set 2', type: 'esami' }
+      { label: 'Ott 1', type: 'lezioni' },
+      { label: 'Ott 2', type: 'lezioni' },
+      { label: 'Nov 1', type: 'lezioni' },
+      { label: 'Nov 2', type: 'imprevisto' },
+      { label: 'Dic 1', type: 'lezioni' },
+      { label: 'Dic 2', type: 'lezioni' },
+      { label: 'Gen 1', type: 'esami' },
+      { label: 'Gen 2', type: 'esami' },
+      { label: 'Feb 1', type: 'lezioni' },
+      { label: 'Feb 2', type: 'lezioni' },
+      { label: 'Mar 1', type: 'lezioni' },
+      { label: 'Mar 2', type: 'lezioni' },
+      { label: 'Apr 1', type: 'lezioni' },
+      { label: 'Apr 2', type: 'lezioni' },
+      { label: 'Mag 1', type: 'imprevisto' },
+      { label: 'Mag 2', type: 'lezioni' },
+      { label: 'Giu 1', type: 'lezioni' },
+      { label: 'Giu 2', type: 'lezioni' },
+      { label: 'Lug 1', type: 'esami' },
+      { label: 'Lug 2', type: 'esami' },
+      { label: 'Ago 1', type: 'vacanza' },
+      { label: 'Ago 2', type: 'vacanza' },
+      { label: 'Set 1', type: 'esami' },
+      { label: 'Set 2', type: 'esami' }
     ];
     let currentCell = 0;
     const board = document.getElementById('board'), boardCells = [];
