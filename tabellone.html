@@ -1,89 +1,42 @@
-<!DOCTYPE html><html lang="it">
+<!DOCTYPE html>
+<html lang="it">
 <head>
   <meta charset="UTF-8">
   <title>Tabellone Accademico - Laurea the Game</title>
   <style>
-    body {
-      font-family: sans-serif;
-      background: #f5f5f5;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
-    .board {
-      display: grid;
-      grid-template-columns: repeat(6, 140px);
-      grid-template-rows: repeat(4, 100px);
-      gap: 6px;
-      background: #fff;
-      border-radius: 12px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.2);
-    }
-    .cell {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      border-radius: 8px;
-      font-weight: bold;
-      font-size: 14px;
-      color: white;
-      padding: 6px;
-    }
+    body { font-family: sans-serif; background: #f5f5f5; display: flex; flex-direction: column; align-items: center; padding: 20px; }
+    .board { display: grid; grid-template-columns: repeat(6, 140px); grid-template-rows: repeat(4, 100px); gap: 6px; background: #fff; border-radius: 12px; box-shadow: 0 0 12px rgba(0,0,0,0.2); }
+    .cell { position: relative; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border-radius: 8px; font-weight: bold; font-size: 14px; color: white; padding: 6px; }
+    .cell.player::after { content: ''; position: absolute; top: 4px; left: 4px; width: 12px; height: 12px; border-radius: 50%; background: white; }
     .lezioni { background-color: #268bd2; }
     .esami { background-color: #cb4b16; }
     .vacanza { background-color: #859900; }
-    .imprevisto { background-color: #b58900; }.cards-container {
-  display: flex;
-  gap: 20px;
-  margin-top: 20px;
-  width: 100%;
-  max-width: 1000px;
-}
-.card {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 6px rgba(0,0,0,0.1);
-  padding: 10px;
-  flex: 1;
-}
-.card h3 {
-  margin: 0 0 10px;
-  font-size: 16px;
-  text-align: center;
-}
-.card ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.card ul li {
-  margin: 4px 0;
-}
-#esame-select {
-  width: 100%;
-  padding: 4px;
-  margin-bottom: 10px;
-  font-size: 14px;
-}
-#dai-esame-button {
-  width: 100%;
-  padding: 6px;
-  border: none;
-  border-radius: 4px;
-  background: #268bd2;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-}
-
+    .imprevisto { background-color: #b58900; }
+    .controls { display: flex; gap: 10px; margin: 20px 0; }
+    .controls button { padding: 6px 12px; border: none; border-radius: 4px; background: #268bd2; color: white; font-weight: bold; cursor: pointer; }
+    .controls button:disabled { background: #aaa; cursor: default; }
+    .cards-container { display: flex; gap: 20px; width: 100%; max-width: 1000px; }
+    .card { background: #fff; border-radius: 8px; box-shadow: 0 0 6px rgba(0,0,0,0.1); padding: 10px; flex: 1; }
+    .card h3 { margin: 0 0 10px; font-size: 16px; text-align: center; }
+    .card ul { list-style: none; padding: 0; margin: 0; }
+    .card ul li { margin: 4px 0; display: flex; justify-content: space-between; align-items: center; }
+    #esame-select { width: 100%; padding: 4px; margin-bottom: 10px; font-size: 14px; }
+    dialog { padding: 20px; border: none; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.3); }
+    dialog h3 { margin-top: 0; }
+    select { width: 100%; margin: 10px 0; }
+    button.dialog { margin-top: 10px; }
+    #testo-content { white-space: pre-wrap; max-height: 200px; overflow: auto; margin-bottom: 10px; border: 1px solid #ccc; padding: 10px; }
   </style>
 </head>
 <body>
-  <div class="board" id="board"></div>  <div class="cards-container">
+  <div class="board" id="board"></div>
+  <div class="controls">
+    <button id="advance-button">Avanza di 14 giorni</button>
+    <button id="frequenta-button" disabled>Frequenta Lezione</button>
+    <button id="dai-esame-button">Dai esame</button>
+    <button id="studio-button" disabled>Studio forsennato</button>
+  </div>
+  <div class="cards-container">
     <div class="card lezioni-card">
       <h3>Lezioni</h3>
       <ul id="lezioni-list"></ul>
@@ -95,110 +48,88 @@
     <div class="card esami-card">
       <h3>Esami</h3>
       <select id="esame-select"></select>
-      <button id="dai-esame-button">Dai esame</button>
     </div>
-  </div>  <script>
-    // Dati esami con CFU
-    const exams = [
-      { name: "Analisi sintagmostotologica", cfu: 6 },
-      { name: "Geometria non semplice", cfu: 6 },
-      { name: "Matematica discreta e silenziosa", cfu: 6 },
-      { name: "Statistica ad mentula", cfu: 9 },
-      { name: "Finanza e macrobiotica", cfu: 9 },
-      { name: "Scienza delle merendine", cfu: 6 },
-      { name: "Stupidità artificiale", cfu: 6 },
-      { name: "Diritto e poi svolta a destra", cfu: 6 },
-      { name: "LFTMTS", cfu: 9 },
-      { name: "Economia delle fatine dei denti", cfu: 6 },
-      { name: "Chimica la Formica", cfu: 12 },
-      { name: "Albegra della pronuncia basgliata", cfu: 12 },
-      { name: "Fisica del fisico", cfu: 12 },
-      { name: "Auparacintesi dei Purinsesti", cfu: 12 },
-      { name: "Reti neurali e uncinetto", cfu: 9 },
-      { name: "Teoria dei numeri invisibili", cfu: 3 },
-      { name: "Scenza dellottografia", cfu: 6 },
-      { name: "Magia e stregoneria", cfu: 9 },
-      { name: "Reti neurali da pesca", cfu: 6 },
-      { name: "Spiegare lo smartphone al senior (seminario)", cfu: 3 }
-    ];
-    // Paragrafi sbloccati iniziali
-    const paragraphsUnlocked = {};
-    exams.forEach(e => paragraphsUnlocked[e.name] = 0);
-    const maxParagraphs = name => exams.find(e => e.name === name).cfu / 3;
-
-    // Esami sostenuti
-    let takenExams = [];
-
-    // Setup board
-    const board = document.getElementById("board");
-    const cells = [
-      { label: 'Ott 1', type: 'lezioni' },{ label: 'Ott 2', type: 'lezioni' },
-      { label: 'Nov 1', type: 'lezioni' },{ label: 'Nov 2', type: 'imprevisto' },
-      { label: 'Dic 1', type: 'lezioni' },{ label: 'Dic 2', type: 'lezioni' },
-      { label: 'Gen 1', type: 'esami' },{ label: 'Gen 2', type: 'esami' },
-      { label: 'Feb 1', type: 'lezioni' },{ label: 'Feb 2', type: 'lezioni' },
-      { label: 'Mar 1', type: 'lezioni' },{ label: 'Mar 2', type: 'lezioni' },
-      { label: 'Apr 1', type: 'lezioni' },{ label: 'Apr 2', type: 'lezioni' },
-      { label: 'Mag 1', type: 'imprevisto' },{ label: 'Mag 2', type: 'lezioni' },
-      { label: 'Giu 1', type: 'lezioni' },{ label: 'Giu 2', type: 'lezioni' },
-      { label: 'Lug 1', type: 'esami' },{ label: 'Lug 2', type: 'esami' },
-      { label: 'Ago 1', type: 'vacanza' },{ label: 'Ago 2', type: 'vacanza' },
-      { label: 'Set 1', type: 'esami' },{ label: 'Set 2', type: 'esami' }
-    ];
-    cells.forEach(c => {
-      const cell = document.createElement('div');
-      cell.classList.add('cell', c.type);
-      const label = c.label;
-      const sub = c.type === 'lezioni' ? 'lezione' : c.type === 'esami' ? 'sessione esami' : c.type === 'vacanza' ? 'vacanza' : 'Imprevisto';
-      cell.innerHTML = `${label}<br><small>${sub}</small>`;
-      board.appendChild(cell);
-    });
-
-    // Lezioni card
-    const lezList = document.getElementById('lezioni-list');
-    function updateLezioni() {
-      lezList.innerHTML = '';
-      exams.slice(0,4).forEach(e => {
-        const unlocked = paragraphsUnlocked[e.name];
-        const total = maxParagraphs(e.name);
-        const li = document.createElement('li');
-        li.innerText = `${e.name}: ${unlocked}/${total}`;
-        lezList.appendChild(li);
-      });
-    }
-    updateLezioni();
-
-    // Libretto card
-    const libList = document.getElementById('libretto-list');
-    function updateLibretto() {
-      libList.innerHTML = '';
-      exams.forEach(e => {
-        if (!takenExams.includes(e.name)) {
-          const li = document.createElement('li');
-          li.innerText = `${e.name} - ${e.cfu} CFU`;
-          libList.appendChild(li);
-        }
-      });
-    }
-    updateLibretto();
-
-    // Esami card
-    const select = document.getElementById('esame-select');
-    exams.forEach(e => {
-      const option = document.createElement('option');
-      option.value = e.name;
-      option.innerText = `${e.name} (${e.cfu} CFU)`;
-      select.appendChild(option);
-    });
-    document.getElementById('dai-esame-button').addEventListener('click', () => {
-      const selected = select.value;
-      if (!takenExams.includes(selected)) {
-        takenExams.push(selected);
-        updateLibretto();
-        alert(`Hai sostenuto l'esame: ${selected}`);
-      } else {
-        alert('Hai già sostenuto questo esame!');
+  </div>
+  <dialog id="lezione-dialog">
+    <h3>Frequenta Lezione</h3>
+    <select id="lezione-select" size="3"></select>
+    <button id="lezione-confirm" class="dialog">Conferma</button>
+  </dialog>
+  <dialog id="testo-dialog">
+    <h3>Testo paragrafo</h3>
+    <div id="testo-content"></div>
+    <button id="testo-close" class="dialog">Chiudi</button>
+  </dialog>
+  <script>
+    // Includi esami.json come oggetto
+    const examTexts = {
+      "reti_neurali_da_pesca": {
+        "cfu": 6,
+        "text": [
+          "Le reti neurali da pesca sono nate per applicare l’intelligenza artificiale all’ambito ittico e lacustre...",
+          "Il modello più noto è il “Perceptron ad Amo Singolo”...",
+          "Tra i problemi comuni c’è l’overfishing computazionale...",
+          "I ricercatori stanno ora lavorando su reti generative..."
+        ]
+      },
+      "albegra_della_pronuncia_basgliata": {
+        "cfu": 12,
+        "text": [
+          "L’albegra, disciplina confusa fin dall’origine...",
+          "Nella provincia di Basglia, la notazione classica...",
+          "I teoremi vengono dimostrati tramite danze interpretative...",
+          "In tempi recenti, la Facoltà di Albegra Application..."
+        ]
+      },
+      "statistica_ad_mentula": {
+        "cfu": 9,
+        "text": [
+          "La Statistica ad mentula è un campo controverso...",
+          "Secondo il prof. Gennaro Casuale, una correlazione...",
+          "Gli studenti raccolgono dati con dadi...",
+          "La regola d’oro del corso è: se il dato non supporta la tesi..."
+        ]
       }
+    };
+    // Setup
+    const exams = [];
+    const paragraphsUnlocked = {};
+    function initExams() {
+      Object.keys(examTexts).forEach(key => {
+        exams.push({ name: key.replace(/_/g, ' '), key, cfu: examTexts[key].cfu });
+      });
+      exams.forEach(e => paragraphsUnlocked[e.key] = 0);
+      populateExamSelect();
+      updateLibretto();
+      updateLezioni();
+    }
+    const maxParagraphs = key => examTexts[key].cfu / 3;
+    let takenExams = [];
+    const cellsDef = [
+      { label: 'Ott 1', type: 'lezioni' }, /* ... */ { label: 'Set 2', type: 'esami' }
+    ];
+    let currentCell = 0;
+    const board = document.getElementById('board'), boardCells = [];
+    function initBoard() {
+      cellsDef.forEach((c,i) => {
+        const cell = document.createElement('div');
+        cell.classList.add('cell', c.type);
+        cell.innerHTML = `${c.label}<br><small>${c.type==='lezioni'?'lezione':c.type==='esami'?'sessione esami':c.type==='vacanza'?'vacanza':'Imprevisto'}</small>`;
+        board.appendChild(cell);
+        boardCells.push(cell);
+      });
+      boardCells[0].classList.add('player');
+    }
+    function updateControlli() { /* ... */ }
+    function updateLezioni() { /* ... */ }
+    function updateLibretto() { /* ... */ }
+    function populateExamSelect() { /* ... */ }
+    function showTesto(key) { /* ... */ }
+    function shuffle(a) { /* ... */ }
+    document.addEventListener('DOMContentLoaded', () => {
+      initBoard(); initExams(); updateControlli();
+      // Controls handlers...
     });
-  </script></body>
+  </script>
+</body>
 </html>
