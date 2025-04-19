@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="it">
+<!DOCTYPE html><html lang="it">
 <head>
   <meta charset="UTF-8">
   <title>Tabellone Accademico - Laurea the Game</title>
@@ -37,57 +36,54 @@
     .lezioni { background-color: #268bd2; }
     .esami { background-color: #cb4b16; }
     .vacanza { background-color: #859900; }
-    .imprevisto { background-color: #b58900; }
+    .imprevisto { background-color: #b58900; }.cards-container {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 1000px;
+}
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0,0,0,0.1);
+  padding: 10px;
+  flex: 1;
+}
+.card h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  text-align: center;
+}
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.card ul li {
+  margin: 4px 0;
+}
+#esame-select {
+  width: 100%;
+  padding: 4px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+#dai-esame-button {
+  width: 100%;
+  padding: 6px;
+  border: none;
+  border-radius: 4px;
+  background: #268bd2;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
 
-    .cards-container {
-      display: flex;
-      gap: 20px;
-      margin-top: 20px;
-      width: 100%;
-      max-width: 1000px;
-    }
-    .card {
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 6px rgba(0,0,0,0.1);
-      padding: 10px;
-      flex: 1;
-    }
-    .card h3 {
-      margin: 0 0 10px;
-      font-size: 16px;
-      text-align: center;
-    }
-    .card ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .card ul li {
-      margin: 4px 0;
-    }
-    #esame-select {
-      width: 100%;
-      padding: 4px;
-      margin-bottom: 10px;
-      font-size: 14px;
-    }
-    #dai-esame-button {
-      width: 100%;
-      padding: 6px;
-      border: none;
-      border-radius: 4px;
-      background: #268bd2;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-    }
   </style>
 </head>
 <body>
-  <div class="board" id="board"></div>
-
-  <div class="cards-container">
+  <div class="board" id="board"></div>  <div class="cards-container">
     <div class="card lezioni-card">
       <h3>Lezioni</h3>
       <ul id="lezioni-list"></ul>
@@ -101,10 +97,39 @@
       <select id="esame-select"></select>
       <button id="dai-esame-button">Dai esame</button>
     </div>
-  </div>
+  </div>  <script>
+    // Dati esami con CFU
+    const exams = [
+      { name: "Analisi sintagmostotologica", cfu: 6 },
+      { name: "Geometria non semplice", cfu: 6 },
+      { name: "Matematica discreta e silenziosa", cfu: 6 },
+      { name: "Statistica ad mentula", cfu: 9 },
+      { name: "Finanza e macrobiotica", cfu: 9 },
+      { name: "Scienza delle merendine", cfu: 6 },
+      { name: "Stupidità artificiale", cfu: 6 },
+      { name: "Diritto e poi svolta a destra", cfu: 6 },
+      { name: "LFTMTS", cfu: 9 },
+      { name: "Economia delle fatine dei denti", cfu: 6 },
+      { name: "Chimica la Formica", cfu: 12 },
+      { name: "Albegra della pronuncia basgliata", cfu: 12 },
+      { name: "Fisica del fisico", cfu: 12 },
+      { name: "Auparacintesi dei Purinsesti", cfu: 12 },
+      { name: "Reti neurali e uncinetto", cfu: 9 },
+      { name: "Teoria dei numeri invisibili", cfu: 3 },
+      { name: "Scenza dellottografia", cfu: 6 },
+      { name: "Magia e stregoneria", cfu: 9 },
+      { name: "Reti neurali da pesca", cfu: 6 },
+      { name: "Spiegare lo smartphone al senior (seminario)", cfu: 3 }
+    ];
+    // Paragrafi sbloccati iniziali
+    const paragraphsUnlocked = {};
+    exams.forEach(e => paragraphsUnlocked[e.name] = 0);
+    const maxParagraphs = name => exams.find(e => e.name === name).cfu / 3;
 
-  <script>
-    // Board setup
+    // Esami sostenuti
+    let takenExams = [];
+
+    // Setup board
     const board = document.getElementById("board");
     const cells = [
       { label: 'Ott 1', type: 'lezioni' },{ label: 'Ott 2', type: 'lezioni' },
@@ -123,35 +148,35 @@
     cells.forEach(c => {
       const cell = document.createElement('div');
       cell.classList.add('cell', c.type);
-      cell.innerHTML = `${c.label}<br><small>${c.type === 'lezioni' ? 'lezione' : c.type === 'esami' ? 'sessione esami' : c.type === 'vacanza' ? 'vacanza' : 'Imprevisto'}</small>`;
+      const label = c.label;
+      const sub = c.type === 'lezioni' ? 'lezione' : c.type === 'esami' ? 'sessione esami' : c.type === 'vacanza' ? 'vacanza' : 'Imprevisto';
+      cell.innerHTML = `${label}<br><small>${sub}</small>`;
       board.appendChild(cell);
     });
 
-    // Exam data
-    const exams = [
-      "Analisi sintagmostotologica","Geometria non semplice","Matematica discreta e silenziosa",
-      "Statistica ad mentula","Finanza e macrobiotica","Scienza delle merendine",
-      "Stupidità artificiale","Diritto e poi svolta a destra","LFTMTS",
-      "Economia delle fatine dei denti","Chimica la Formica","Albegra della pronuncia basgliata",
-      "Fisica del fisico","Auparacintesi dei Purinsesti","Reti neurali e uncinetto",
-      "Teoria dei numeri invisibili","Scenza dellottografia","Magia e stregoneria",
-      "Reti neurali da pesca"
-    ];
-    let takenExams = [];
-
     // Lezioni card
     const lezList = document.getElementById('lezioni-list');
-    exams.slice(0,4).forEach(e => {
-      const li = document.createElement('li'); li.innerText = e; lezList.appendChild(li);
-    });
+    function updateLezioni() {
+      lezList.innerHTML = '';
+      exams.slice(0,4).forEach(e => {
+        const unlocked = paragraphsUnlocked[e.name];
+        const total = maxParagraphs(e.name);
+        const li = document.createElement('li');
+        li.innerText = `${e.name}: ${unlocked}/${total}`;
+        lezList.appendChild(li);
+      });
+    }
+    updateLezioni();
 
     // Libretto card
     const libList = document.getElementById('libretto-list');
     function updateLibretto() {
       libList.innerHTML = '';
       exams.forEach(e => {
-        if (!takenExams.includes(e)) {
-          const li = document.createElement('li'); li.innerText = e; libList.appendChild(li);
+        if (!takenExams.includes(e.name)) {
+          const li = document.createElement('li');
+          li.innerText = `${e.name} - ${e.cfu} CFU`;
+          libList.appendChild(li);
         }
       });
     }
@@ -160,7 +185,9 @@
     // Esami card
     const select = document.getElementById('esame-select');
     exams.forEach(e => {
-      const option = document.createElement('option'); option.value = e; option.innerText = e;
+      const option = document.createElement('option');
+      option.value = e.name;
+      option.innerText = `${e.name} (${e.cfu} CFU)`;
       select.appendChild(option);
     });
     document.getElementById('dai-esame-button').addEventListener('click', () => {
@@ -173,6 +200,5 @@
         alert('Hai già sostenuto questo esame!');
       }
     });
-  </script>
-</body>
+  </script></body>
 </html>
