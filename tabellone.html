@@ -186,18 +186,17 @@ function updateLezioni() {
         sel.appendChild(o);
       });
     }
-    function showTesto(key) {
-      const dialog = document.getElementById('testo-dialog');
-      const content = document.getElementById('testo-content');
-      // Ottieni i paragrafi sbloccati
-      const unlocked = paragraphsUnlocked[key];
-      const texts = examTexts[key].text.slice(0, unlocked);
-      // Mostra i paragrafi
-      content.textContent = texts.join("
+function showTesto(key) {
+  const dialog = document.getElementById('testo-dialog');
+  const content = document.getElementById('testo-content');
+  // Ottieni i paragrafi sbloccati
+  const unlocked = paragraphsUnlocked[key];
+  const texts = examTexts[key].text.slice(0, unlocked);
+  // Mostra i paragrafi
+  content.textContent = texts.join("\n\n");
+  dialog.showModal();
+}
 
-");
-      dialog.showModal();
-    }
 function shuffle(a) {
       // Fisher–Yates shuffle
       for (let i = a.length - 1; i > 0; i--) {
