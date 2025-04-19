@@ -143,12 +143,68 @@
       });
       boardCells[0].classList.add('player');
     }
-    function updateControlli() { /* ... */ }
-    function updateLezioni() { /* ... */ }
-    function updateLibretto() { /* ... */ }
-    function populateExamSelect() { /* ... */ }
-    function showTesto(key) { /* ... */ }
-    function shuffle(a) { /* ... */ }
+    function updateControlli() {
+      const type = cellsDef[currentCell].type;
+      document.getElementById('frequenta-button').disabled = type !== 'lezioni';
+      document.getElementById('dai-esame-button').disabled = type !== 'esami';
+      document.getElementById('studio-button').disabled = type !== 'vacanza';
+    }
+
+function updateLezioni() {
+      const list = document.getElementById('lezioni-list');
+      list.innerHTML = '';
+      exams.slice(0, 4).forEach(e => {
+        const li = document.createElement('li');
+        li.innerText = `${e.name}: ${paragraphsUnlocked[e.key]}/${maxParagraphs(e.key)}`;
+        if (paragraphsUnlocked[e.key] > 0) {
+          const btn = document.createElement('button');
+          btn.innerText = 'Vedi testo';
+          btn.onclick = () => showTesto(e.key);
+          li.appendChild(btn);
+        }
+        list.appendChild(li);
+      });
+    }
+    function updateLibretto() {
+      const list = document.getElementById('libretto-list');
+      list.innerHTML = '';
+      exams.forEach(e => {
+        if (!takenExams.includes(e.key)) {
+          const li = document.createElement('li');
+          li.innerText = `${e.name} - ${examTexts[e.key].cfu} CFU`;
+          list.appendChild(li);
+        }
+      });
+    }
+    function populateExamSelect() {
+      const sel = document.getElementById('esame-select');
+      sel.innerHTML = '';
+      exams.forEach(e => {
+        const o = document.createElement('option');
+        o.value = e.key;
+        o.innerText = `${e.name} (${e.cfu} CFU)`;
+        sel.appendChild(o);
+      });
+    }
+    function showTesto(key) {
+      const dialog = document.getElementById('testo-dialog');
+      const content = document.getElementById('testo-content');
+      // Ottieni i paragrafi sbloccati
+      const unlocked = paragraphsUnlocked[key];
+      const texts = examTexts[key].text.slice(0, unlocked);
+      // Mostra i paragrafi
+      content.textContent = texts.join("
+
+");
+      dialog.showModal();
+    }
+function shuffle(a) {
+      // Fisher–Yates shuffle
+      for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+      }
+    }
     document.addEventListener('DOMContentLoaded', () => {
       initBoard(); initExams(); updateControlli();
       // Controls handlers...
