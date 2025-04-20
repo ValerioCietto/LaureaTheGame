@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Esame – Reti neurali da pesca</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 700px;
+      margin: 40px auto;
+      line-height: 1.4;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .question {
+      margin-bottom: 1.2em;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .options label {
+      display: block;
+      margin: 4px 0;
+    }
+    #submit-button {
+      display: block;
+      margin: 20px auto;
+      padding: 10px 20px;
+      font-size: 1em;
+    }
+    #result {
+      text-align: center;
+      font-size: 1.2em;
+      margin-top: 30px;
+      padding: 20px;
+      border: 2px solid #268bd2;
+      border-radius: 8px;
+      background: #eef9ff;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Esame: Reti neurali da pesca</h1>
+  <p style="text-align:center;">CFU assegnati: <span id="cfu-display">–</span></p>
+
+  <form id="exam-form"></form>
+  <button id="submit-button">Invia risposte</button>
+
+  <div id="result" style="display:none;"></div>
+
+  <script>
+    // --- Dati dell'esame ---
+    const examData = {
+      name: "Reti neurali da pesca",
+      // cfu verrà sovrascritto dal parametro URL se fornito
+      cfu: 6,
+      questions: [
+        // dal paragrafo 1
+        { text: "Qual è lo scopo delle reti neurali da pesca?", options: ["Calcolare la marea", "Applicare l’IA alla pesca", "Simulare temporali marini"], correct: 1 },
+        { text: "Su quali animali venivano addestrate le prime versioni?", options: ["Orate, siluri e sogliole animate", "Delfini e sardine digitali", "Squali e tartarughe virtuali"], correct: 0 },
+        { text: "Dove si è diffuso l’impiego delle reti?", options: ["In piscine universitarie", "In acquari immersivi", "In porti digitali e simulatori"], correct: 2 },
+        { text: "Le sogliole nel dataset erano:", options: ["Immagini statiche", "Rappresentazioni animate", "Modelli 3D realistici"], correct: 1 },
+        { text: "Le reti venivano usate anche in:", options: ["Videogiochi di caccia", "Simulatori di laghi", "Calcolatrici da sub"], correct: 1 },
+        // dal paragrafo 2
+        { text: "Qual è il nome del modello più noto?", options: ["Rete Pescatoriale Profonda", "Perceptron ad Amo Singolo", "LenzaNet 9000"], correct: 1 },
+        { text: "Che tipo di input ha il Perceptron?", options: ["Sensorio-olfattivo", "Tattile-neurale", "Magnetico-sonico"], correct: 0 },
+        { text: "Come viene attivata la rete?", options: ["Con la voce del pescatore", "Con un rumore di splash", "Con una funzione gorgogliante"], correct: 2 },
+        { text: "Quali dati vengono usati per l’addestramento?", options: ["Schizzi e sabbia", "Spruzzi e riflessi acquatici", "Onde e nuvole"], correct: 1 },
+        { text: "Cosa influenza la rete durante la pesca?", options: ["La pressione atmosferica", "L’umore del pescatore e il vento", "Il tipo di canna da pesca"], correct: 1 },
+        // dal paragrafo 3
+        { text: "Cos’è l’overfishing computazionale?", options: ["Un errore di calcolo nelle maree", "Una cattura eccessiva di pesci veri", "Un riconoscimento eccessivo di pesci digitali"], correct: 2 },
+        { text: "Qual è un effetto dell’overfishing?", options: ["Congelamento del modello", "Riconoscimenti inutili ripetuti", "Perdita di dati reali"], correct: 1 },
+        { text: "Come si contrasta l’overfishing?", options: ["Riducendo la risoluzione", "Introducendo rumore biologico", "Aumentando il numero di neuroni"], correct: 1 },
+        { text: "Che tipo di rumore si introduce?", options: ["Biologico simulato", "Meccanico di superficie", "Digitale quantistico"], correct: 0 },
+        { text: "Quale disturbo è citato nel testo?", options: ["Vento sulle onde", "Sciabordio e zanzare", "Barche fantasma"], correct: 1 },
+        // dal paragrafo 4
+        { text: "Cosa generano le nuove reti?", options: ["Mappe di profondità", "Storie di pesca", "Ricette di pesce"], correct: 1 },
+        { text: "Dove si usano queste storie?", options: ["In conferenze di IA", "Nei bar", "In riviste scientifiche"], correct: 1 },
+        { text: "Cosa producono alcuni prototipi?", options: ["Ami connessi", "Esche virtuali", "Gilet intelligenti"], correct: 1 },
+        { text: "Che tipo di aroma usano?", options: ["Liquido", "Naturale", "Sintetico"], correct: 2 },
+        { text: "Come vengono codificati gli aromi?", options: ["In suoni binaurali", "In byte", "In gocce di dati"], correct: 1 }
+      ]
+    };
+
+    // Fisher–Yates shuffle
+    function shuffle(array) {
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    // Estrai parametro cfu dalla query string
+    function getParam(name, defaultValue) {
+      const url = new URL(window.location);
+      return url.searchParams.get(name) || defaultValue;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Imposta CFU
+      const cfuParam = parseInt(getParam('cfu', examData.cfu), 10);
+      examData.cfu = isNaN(cfuParam) ? examData.cfu : cfuParam;
+      document.getElementById('cfu-display').innerText = examData.cfu;
+
+      // Seleziona 5 domande a caso
+      const selected = shuffle([...examData.questions]).slice(0, 5);
+
+      // Popola il form
+      const form = document.getElementById('exam-form');
+      selected.forEach((q, idx) => {
+        const field = document.createElement('div');
+        field.className = 'question';
+        field.innerHTML = `
+          <h2>Domanda ${idx + 1}</h2>
+          <p>${q.text}</p>
+          <div class="options">
+            ${q.options.map((opt, i) =>
+              `<label>
+                 <input type="radio" name="q${idx}" value="${i}">
+                 ${opt}
+               </label>`
+            ).join('')}
+          </div>
+        `;
+        form.appendChild(field);
+      });
+
+      // Gestione submit
+      document.getElementById('submit-button').addEventListener('click', () => {
+        let correct = 0;
+        selected.forEach((q, idx) => {
+          const val = form.querySelector(`input[name="q${idx}"]:checked`);
+          if (val && parseInt(val.value, 10) === q.correct) correct++;
+        });
+        // Calcola voto in trentesimi
+        const score = Math.round((correct / selected.length) * 30);
+        document.getElementById('result').innerText =
+          `Hai risposto correttamente a ${correct} su ${selected.length}.\n` +
+          `Voto finale: ${score}/30`;
+        document.getElementById('result').style.display = 'block';
+        // Disabilita il form per non poter ritentare
+        form.querySelectorAll('input').forEach(i => i.disabled = true);
+        document.getElementById('submit-button').disabled = true;
+      });
+    });
+  </script>
+
+</body>
+</html>
