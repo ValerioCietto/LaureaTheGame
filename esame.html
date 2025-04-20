@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Esame – Reti neurali da pesca</title>
+  <title>Esame dinamico</title>
   <style>
     body {
       font-family: sans-serif;
@@ -49,13 +49,12 @@
 </head>
 <body>
 
-  <h1>Esame: Reti neurali da pesca</h1>
+  <h1 id="exam-title">Esame</h1>
   <p style="text-align:center;">
     CFU assegnati: <span id="cfu-display">–</span> &nbsp;|&nbsp;
     Preparazione: <span id="prep-display">–</span> paragrafi
   </p>
 
-  <!-- Qui compariranno i paragrafi sbloccati -->
   <div id="exam-text"></div>
 
   <form id="exam-form"></form>
@@ -64,40 +63,15 @@
   <div id="result" style="display:none;"></div>
 
   <script>
-    // --- Dati dell'esame con i 4 paragrafi di testo ---
-    const examData = {
-      name: "Reti neurali da pesca",
-      cfu: 6,
-      text: [
-        "Le reti neurali da pesca sono nate per applicare l’intelligenza artificiale all’ambito ittico e lacustre. Le prime versioni venivano addestrate su immagini di orate, siluri e sogliole animate. Il loro impiego si è diffuso in porti digitali e in simulatori di laghi.",
-        "Il modello più noto è il “Perceptron ad Amo Singolo”, dotato di un input sensorio-olfattivo e una funzione di attivazione gorgogliante. La rete si allena usando dataset di spruzzi e riflessi acquatici, tenendo conto della direzione del vento e dell’umore del pescatore.",
-        "Tra i problemi comuni c’è l’overfishing computazionale, in cui i pesci digitali vengono riconosciuti troppo spesso. Per evitarlo, si introduce rumore biologico simulato, come lo sciabordio o la presenza di zanzare interferenti.",
-        "I ricercatori stanno ora lavorando su reti generative che producono direttamente storie di pesca convincenti, da usare nei bar. Alcuni prototipi riescono a generare anche esche virtuali, con aromi sintetici codificati in byte."
-      ],
-      questions: [
-        // (come prima, 20 domande totali…)
-        { text: "Qual è lo scopo delle reti neurali da pesca?", options: ["Calcolare la marea", "Applicare l’IA alla pesca", "Simulare temporali marini"], correct: 1 },
-        { text: "Su quali animali venivano addestrate le prime versioni?", options: ["Orate, siluri e sogliole animate", "Delfini e sardine digitali", "Squali e tartarughe virtuali"], correct: 0 },
-        { text: "Dove si è diffuso l’impiego delle reti?", options: ["In piscine universitarie", "In acquari immersivi", "In porti digitali e simulatori"], correct: 2 },
-        { text: "Le sogliole nel dataset erano:", options: ["Immagini statiche", "Rappresentazioni animate", "Modelli 3D realistici"], correct: 1 },
-        { text: "Le reti venivano usate anche in:", options: ["Videogiochi di caccia", "Simulatori di laghi", "Calcolatrici da sub"], correct: 1 },
-        { text: "Qual è il nome del modello più noto?", options: ["Rete Pescatoriale Profonda", "Perceptron ad Amo Singolo", "LenzaNet 9000"], correct: 1 },
-        { text: "Che tipo di input ha il Perceptron?", options: ["Sensorio-olfattivo", "Tattile-neurale", "Magnetico-sonico"], correct: 0 },
-        { text: "Come viene attivata la rete?", options: ["Con la voce del pescatore", "Con un rumore di splash", "Con una funzione gorgogliante"], correct: 2 },
-        { text: "Quali dati vengono usati per l’addestramento?", options: ["Schizzi e sabbia", "Spruzzi e riflessi acquatici", "Onde e nuvole"], correct: 1 },
-        { text: "Cosa influenza la rete durante la pesca?", options: ["La pressione atmosferica", "L’umore del pescatore e il vento", "Il tipo di canna da pesca"], correct: 1 },
-        { text: "Cos’è l’overfishing computazionale?", options: ["Un errore di calcolo nelle maree", "Una cattura eccessiva di pesci veri", "Un riconoscimento eccessivo di pesci digitali"], correct: 2 },
-        { text: "Qual è un effetto dell’overfishing?", options: ["Congelamento del modello", "Riconoscimenti inutili ripetuti", "Perdita di dati reali"], correct: 1 },
-        { text: "Come si contrasta l’overfishing?", options: ["Riducendo la risoluzione", "Introducendo rumore biologico", "Aumentando il numero di neuroni"], correct: 1 },
-        { text: "Che tipo di rumore si introduce?", options: ["Biologico simulato", "Meccanico di superficie", "Digitale quantistico"], correct: 0 },
-        { text: "Quale disturbo è citato nel testo?", options: ["Vento sulle onde", "Sciabordio e zanzare", "Barche fantasma"], correct: 1 },
-        { text: "Cosa generano le nuove reti?", options: ["Mappe di profondità", "Storie di pesca", "Ricette di pesce"], correct: 1 },
-        { text: "Dove si usano queste storie?", options: ["In conferenze di IA", "Nei bar", "In riviste scientifiche"], correct: 1 },
-        { text: "Cosa producono alcuni prototipi?", options: ["Ami connessi", "Esche virtuali", "Gilet intelligenti"], correct: 1 },
-        { text: "Che tipo di aroma usano?", options: ["Liquido", "Naturale", "Sintetico"], correct: 2 },
-        { text: "Come vengono codificati gli aromi?", options: ["In suoni binaurali", "In byte", "In gocce di dati"], correct: 1 }
-      ]
-    };
+    // Helper: estrai parametro numerico o stringa
+    function getParam(name, defaultValue = null) {
+      const params = new URL(window.location).searchParams;
+      return params.has(name) ? params.get(name) : defaultValue;
+    }
+    function getParamNum(name, defaultValue) {
+      const v = parseInt(getParam(name), 10);
+      return isNaN(v) ? defaultValue : v;
+    }
 
     // Fisher–Yates shuffle
     function shuffle(array) {
@@ -108,22 +82,34 @@
       return array;
     }
 
-    // Prende un parametro numerico dalla query string
-    function getParamNum(name, defaultValue) {
-      const v = parseInt(new URL(window.location).searchParams.get(name), 10);
-      return isNaN(v) ? defaultValue : v;
-    }
+    document.addEventListener('DOMContentLoaded', async () => {
+      const nomeEsame = getParam('nome_esame', null);
+      if (!nomeEsame) {
+        document.body.innerHTML = "<p style='color:red;text-align:center;'>Parametro <strong>nome_esame</strong> mancante!</p>";
+        return;
+      }
 
-    document.addEventListener('DOMContentLoaded', () => {
-      // Parametri CFU e preparazione
-      examData.cfu = getParamNum('cfu', examData.cfu);
+      let examData;
+      try {
+        const res = await fetch(`esami/${nomeEsame}.json`);
+        if (!res.ok) throw new Error(res.status + " " + res.statusText);
+        examData = await res.json();
+      } catch (err) {
+        document.body.innerHTML = `<p style='color:red;text-align:center;'>Impossibile caricare l'esame "${nomeEsame}":<br>${err.message}</p>`;
+        return;
+      }
+
+      // Parametri
       const prep = Math.min(4, Math.max(1, getParamNum('preparazione', 1)));
+      const cfuParam = getParamNum('cfu', examData.cfu || 0);
+      examData.cfu = cfuParam;
 
-      // Mostra CFU e preparazione
+      // Titolo e CFU/preparazione
+      document.getElementById('exam-title').innerText = `Esame: ${examData.name}`;
       document.getElementById('cfu-display').innerText = examData.cfu;
       document.getElementById('prep-display').innerText = prep;
 
-      // Mostra i paragrafi sbloccati
+      // Mostra paragrafi sbloccati
       const textContainer = document.getElementById('exam-text');
       examData.text.slice(0, prep).forEach(p => {
         const pEl = document.createElement('p');
@@ -131,10 +117,10 @@
         textContainer.appendChild(pEl);
       });
 
-      // Seleziona 5 domande a caso
+      // Seleziona 5 domande (assumiamo esame da 6 CFU; per altri CFU cambiare slice)
       const selected = shuffle([...examData.questions]).slice(0, 5);
 
-      // Popola il form
+      // Popola form
       const form = document.getElementById('exam-form');
       selected.forEach((q, idx) => {
         const field = document.createElement('div');
@@ -164,19 +150,16 @@
 
         const score = Math.round((correct / selected.length) * 30);
         let outcome;
-        if (score === 18) {
-          outcome = "Passato con disonore";
-        } else if (score >= 18) {
-          outcome = "Esame superato";
-        } else {
-          outcome = "Esame non superato";
-        }
+        if (score === 18) outcome = "Passato con disonore";
+        else if (score >= 18) outcome = "Esame superato";
+        else outcome = "Esame non superato";
 
-        document.getElementById('result').innerText =
+        const resultEl = document.getElementById('result');
+        resultEl.innerText =
           `Hai risposto correttamente a ${correct} su ${selected.length}.\n` +
           `Voto finale: ${score}/30\n` +
           `${outcome}`;
-        document.getElementById('result').style.display = 'block';
+        resultEl.style.display = 'block';
 
         form.querySelectorAll('input').forEach(i => i.disabled = true);
         document.getElementById('submit-button').disabled = true;
