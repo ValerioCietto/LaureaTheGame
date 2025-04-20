@@ -1,0 +1,123 @@
+{
+  "name": "Geometria non semplice, ma nemmeno difficilissima",
+  "cfu": 9,
+  "text": [
+    "La geometria non semplice, ma nemmeno difficilissima, è una disciplina che ama gli ossimori: da un lato analizza figure familiari, dall'altro vi introduce proprietà stranianti e contorsioni inattese. Platone si rivolterebbe nella tomba, e Euclide prenderebbe appunti confusi disegnando la quinta dimensione su un piano.",
+    "Tra le figure studiate spiccano il “Triangolo Tormentato”, con angoli che cambiano in base all'umore del disegnatore, e il “Cerchio Asintotico”, la cui circonferenza tende asintoticamente a un valore misterioso. Il “Poligono Incompiuto”, infine, si rifiuta di chiudersi finché non si cede alla perfezione imperfetta.",
+    "Il teorema fondamentale della geometria non semplice recita: “Non esiste luogo dove le bisettrici non si incontrino, ma potrebbero farlo in punti diversi a seconda del vento”. Le dimostrazioni avvengono spesso tramite modelli di carta elasticizzati e origami instabili, celebrando il caos ordinato.",
+    "In laboratorio, gli studenti costruiscono poliedri impossibili con spaghetti di plastica e gommapiuma, misurano distanze con metri elasticizzati e risolvono problemi di area richiedendo il permesso scritto di un arbitro geometrico. Ogni esame si conclude con un esercizio di disegno a mano libera in gravità alterata."
+  ],
+  "questions": [
+    // Paragrafo 1
+    {
+      "text": "Cos’è la geometria non semplice?",
+      "options": ["Una geometria tradizionale", "Una disciplina che ama gli ossimori", "Un metodo di calcolo rapido"],
+      "correct": 1
+    },
+    {
+      "text": "Chi si rivolterebbe nella tomba secondo il testo?",
+      "options": ["Platone", "Euclide", "Archimede"],
+      "correct": 0
+    },
+    {
+      "text": "Cosa farebbe Euclide sul piano?",
+      "options": ["Disegnerebbe la quinta dimensione", "Costruirebbe modelli 3D", "Calcolerebbe aree basilari"],
+      "correct": 0
+    },
+    {
+      "text": "Quale aggettivo descrive questa geometria?",
+      "options": ["Semplice", "Non semplice", "Lineare"],
+      "correct": 1
+    },
+    {
+      "text": "Quale figura classica viene stravolta?",
+      "options": ["Triangolo", "Cerchio", "Quadrato"],
+      "correct": 0
+    },
+
+    // Paragrafo 2
+    {
+      "text": "Quale figura cambia angoli in base all'umore?",
+      "options": ["Triangolo Tormentato", "Cerchio Asintotico", "Poligono Incompiuto"],
+      "correct": 0
+    },
+    {
+      "text": "Cosa fa il Cerchio Asintotico?",
+      "options": ["Merita applausi", "Tende asintoticamente a un valore misterioso", "Rifiuta di essere disegnato"],
+      "correct": 1
+    },
+    {
+      "text": "Quale figura si rifiuta di chiudersi?",
+      "options": ["Cerchio Asintotico", "Poligono Incompiuto", "Triangolo Equilatero"],
+      "correct": 1
+    },
+    {
+      "text": "Da cosa dipendono gli angoli del Triangolo Tormentato?",
+      "options": ["Dalla temperatura", "Dall'umore del disegnatore", "Dalla pressione atmosferica"],
+      "correct": 1
+    },
+    {
+      "text": "Quale figura NON è menzionata?",
+      "options": ["Triangolo Tormentato", "Quadrato Ipnotico", "Cerchio Asintotico"],
+      "correct": 1
+    },
+
+    // Paragrafo 3
+    {
+      "text": "Cosa recita il teorema fondamentale?",
+      "options": [
+        "Le bisettrici non esistono",
+        "Si incontrano ma in punti diversi secondo il vento",
+        "Sono parallele per definizione"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Cosa si usa per le dimostrazioni?",
+      "options": ["Origami instabili", "Modelli di carta elasticizzati", "Software di disegno"],
+      "correct": 1
+    },
+    {
+      "text": "Quale tecnica celebra il caos ordinato?",
+      "options": ["Origami instabili", "Calcolo simbolico", "Geometria frattale"],
+      "correct": 0
+    },
+    {
+      "text": "In base a cosa potrebbero incontrarsi le bisettrici?",
+      "options": ["Il vento", "La luna", "La temperatura"],
+      "correct": 0
+    },
+    {
+      "text": "Che aggettivo descrive gli origami?",
+      "options": ["Stabili", "Instabili", "Precisi"],
+      "correct": 1
+    },
+
+    // Paragrafo 4
+    {
+      "text": "Cosa costruiscono in laboratorio?",
+      "options": ["Triangoli regolari", "Poliedri impossibili", "Cerchi perfetti"],
+      "correct": 1
+    },
+    {
+      "text": "Con cosa misurano le distanze?",
+      "options": ["Righe di legno", "Metri elasticizzati", "Calcolatrici"],
+      "correct": 1
+    },
+    {
+      "text": "Quale materiale usano per i poliedri?",
+      "options": ["Legno e vetro", "Spaghetti di plastica e gommapiuma", "Metallo e pietra"],
+      "correct": 1
+    },
+    {
+      "text": "Cosa serve per risolvere problemi di area?",
+      "options": ["Un arbitro geometrico", "Una calcolatrice tascabile", "Un compasso"],
+      "correct": 0
+    },
+    {
+      "text": "In quale condizione si disegna a mano libera?",
+      "options": ["In acqua", "In gravità alterata", "Al buio"],
+      "correct": 1
+    }
+  ]
+}
