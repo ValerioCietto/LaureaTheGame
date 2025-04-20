@@ -1,0 +1,112 @@
+{
+  "name": "Albegra della pronuncia basgliata",
+  "cfu": 12,
+  "text": [
+    "L’albegra, disciplina confusa fin dall’origine, fu fondata dal grande matematico Ablù Gèbra, noto per la sua pessima dizione. La sua opera più famosa, Trattato sulle x che non si fanno trovare, ispirò intere generazioni di professori ostili.",
+    "Nella provincia di Basglia, la notazione classica fu sostituita da simboli più “armoniosi”, come la chiocciola (@) al posto del segno più, e l’uso del punto esclamativo (!) per rappresentare l’ignoto.",
+    "La regola fondamentale del sistema basgliato recita: Se non capisci l’equazione, prova a urlarla. Le lettere più utilizzate sono la Ɣ (gamma strana) e la ʞ (Kappa inversa), simboli adottati dopo che gli alfabeti normali furono dichiarati troppo borghesi. Tra le operazioni preferite c’è la moltiplicazione poetica, dove due numeri si combinano solo se hanno rime.",
+    "I teoremi vengono dimostrati tramite danze interpretative e lancio di gessetti, piuttosto che con metodi deduttivi. Ogni esame inizia con il rituale del “Quadrato Sbagliato”, una figura disegnata con righello storto per confondere lo studente. La Facoltà di Albegra Applicata all’Imprecisione ha introdotto il concetto di incertezza intenzionale, dove il risultato è sempre “circa 7”."
+  ],
+  "questions": [
+    {
+      "text": "Chi è il fondatore dell’albegra?",
+      "options": ["Aljebra Ubica", "Ablù Gèbra", "Albu Gian"],
+      "correct": 1
+    },
+    {
+      "text": "Qual è il titolo dell’opera più famosa?",
+      "options": ["Trattato sulle x che non si fanno trovare", "Teorema sull’invisibilità di x", "Manuale di algebra borghese"],
+      "correct": 0
+    },
+    {
+      "text": "Cosa ha ispirato l’opera di Ablù Gèbra?",
+      "options": ["Generazioni di professori ostili", "Studenti di matematica", "Altri matematici"],
+      "correct": 0
+    },
+    {
+      "text": "Qual è una caratteristica di Ablù Gèbra?",
+      "options": ["Ottima dizione", "Pessima dizione", "Dinamismo vocale"],
+      "correct": 1
+    },
+    {
+      "text": "Quando è nata la disciplina?",
+      "options": ["Durante il Rinascimento", "Fin dall’origine", "Durante l’Illuminismo"],
+      "correct": 1
+    },
+    {
+      "text": "Dove si trova la provincia che ha rivoluzionato la notazione?",
+      "options": ["Basglia", "Brasilia", "Bulgaria"],
+      "correct": 0
+    },
+    {
+      "text": "Quale simbolo ha sostituito il segno più?",
+      "options": ["Chiocciola (@)", "Asterisco (*)", "Cerchiolino (°)"],
+      "correct": 0
+    },
+    {
+      "text": "Quale simbolo rappresenta l’ignoto in albegra basgliata?",
+      "options": ["Punto esclamativo (!)", "Punto interrogativo (?)", "Punto e virgola (;)"],
+      "correct": 0
+    },
+    {
+      "text": "Perché sono stati adottati i nuovi simboli?",
+      "options": ["Per armonia", "Per semplicità", "Per velocità"],
+      "correct": 0
+    },
+    {
+      "text": "Cosa ha sostituito la notazione classica?",
+      "options": ["Simboli armoniosi", "Alfabeti digitali", "Segni musicali"],
+      "correct": 0
+    },
+    {
+      "text": "Cosa recita la regola fondamentale del sistema basgliato?",
+      "options": ["Se non capisci l’equazione, prova a urlarla", "Se non capisci, chiedi aiuto", "Se sbagli, ricomincia"],
+      "correct": 0
+    },
+    {
+      "text": "Quali lettere sono le più utilizzate?",
+      "options": ["Ɣ (gamma strana) e ʞ (Kappa inversa)", "X e Y", "A e B"],
+      "correct": 0
+    },
+    {
+      "text": "Chi ha dichiarato gli alfabeti normali troppo borghesi?",
+      "options": ["Albegristi basgliati", "Professori tradizionalisti", "La regina"],
+      "correct": 0
+    },
+    {
+      "text": "Cos’è la moltiplicazione poetica?",
+      "options": ["Combinazione di numeri in base a rime", "Moltiplicazione con poesia", "Addizione in rima"],
+      "correct": 0
+    },
+    {
+      "text": "Cosa unisce i numeri nella moltiplicazione poetica?",
+      "options": ["Le rime", "Le sillabe", "Le note"],
+      "correct": 0
+    },
+    {
+      "text": "Come vengono dimostrati i teoremi?",
+      "options": ["Danze interpretative e lancio di gessetti", "Dimostrazioni formali", "Calcoli algebrici"],
+      "correct": 0
+    },
+    {
+      "text": "Cosa disegna il rituale del “Quadrato Sbagliato”?",
+      "options": ["Figura con righello storto", "Cerchio perfetto", "Triangolo equilatero"],
+      "correct": 0
+    },
+    {
+      "text": "Qual è l’effetto del “Quadrato Sbagliato”?",
+      "options": ["Confondere lo studente", "Sembrar bello", "Essere utile"],
+      "correct": 0
+    },
+    {
+      "text": "Quale concetto ha introdotto la Facoltà di Albegra Applicata all’Imprecisione?",
+      "options": ["Incertezza intenzionale", "Precisione meccanica", "Stupidità programmata"],
+      "correct": 0
+    },
+    {
+      "text": "Qual è il risultato nell’incertezza intenzionale?",
+      "options": ["Circa 7", "Esattamente 7", "Sempre ignoto"],
+      "correct": 0
+    }
+  ]
+}
