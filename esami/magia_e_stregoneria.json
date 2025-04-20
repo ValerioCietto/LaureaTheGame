@@ -1,0 +1,119 @@
+{
+  name: "Magia e stregoneria",
+  cfu: 12,
+  text: [
+    "Il corso di Magia e stregoneria è opzionale, ma nessuno ricorda di averlo scelto. Una volta iscritti, si ricevono automaticamente una pergamena, un pennino d’osso e una scadenza indefinita.",
+    "La disciplina unisce teoria arcana, metodi quantitativi e valutazioni soggettive su base lunare. Il professor Ambrosius T. Buglione, che si dice insegni da 312 anni (anche se nel libretto c’è scritto “dal 2017”), guida il corso senza mai comparire fisicamente.",
+    "Gli studenti seguono le lezioni tramite incantesimi vocali preregistrati, visibili solo su lavagne scritte col gesso dell’oblio. Tra gli argomenti principali: Trasformazione delle Statistiche in Profezie, Derivata del Destino e il famigerato Teorema di Sfiga Costante. Ogni studente è tenuto a evocare almeno una volta l’Assistentino da Esame.",
+    "Il laboratorio consiste nel calcolare il numero primo successivo al proprio compleanno mentre si gira in tondo sotto una coperta. La prova finale? Tradurre un foglio bianco contenente l’intero compito, scritto in inchiostro inverso metafisico. Attenzione: ogni risposta corretta riduce il voto se non è accompagnata da un gesto teatrale adeguato."
+  ],
+  questions: [
+    // Paragrafo 1
+    {
+      text: "Il corso di Magia e stregoneria è:",
+      options: ["Facoltativo", "Obbligatorio", "Segreto"],
+      correct: 0
+    },
+    {
+      text: "Cosa ricevono automaticamente gli iscritti?",
+      options: ["Un gufo", "Una pergamena e un pennino d’osso", "Un manuale sacro"],
+      correct: 1
+    },
+    {
+      text: "Qual è la scadenza dell'esame?",
+      options: ["Indefinita", "Entro le 11", "Alla luna piena"],
+      correct: 0
+    },
+    {
+      text: "Il pennino è fatto di:",
+      options: ["Quill", "Osso", "Cristallo"],
+      correct: 1
+    },
+    {
+      text: "Nessuno ricorda di:",
+      options: ["Aver scelto il corso", "Aver studiato", "Aver pagato la retta"],
+      correct: 0
+    },
+
+    // Paragrafo 2
+    {
+      text: "La disciplina unisce:",
+      options: ["Teoria arcana e metodi quantitativi", "Solo teologia", "Solo matematica"],
+      correct: 0
+    },
+    {
+      text: "Le valutazioni avvengono su base:",
+      options: ["Lunare", "Solare", "Incidentale"],
+      correct: 0
+    },
+    {
+      text: "Chi insegna il corso?",
+      options: ["Prof. Ambrosius T. Buglione", "Prof. Merlino", "Prof. Stregotto"],
+      correct: 0
+    },
+    {
+      text: "Da quanti anni insegna?",
+      options: ["312", "50", "2017"],
+      correct: 0
+    },
+    {
+      text: "Quando appare il professore?",
+      options: ["In sogno", "Mai fisicamente", "Solo in video"],
+      correct: 1
+    },
+
+    // Paragrafo 3
+    {
+      text: "Come seguono le lezioni?",
+      options: ["Con Zoom", "Incantesimi vocali preregistrati", "Libri antichi"],
+      correct: 1
+    },
+    {
+      text: "Cosa si usa per scrivere sulla lavagna?",
+      options: ["Gesso dell’oblio", "Gesso magico", "Carbone"],
+      correct: 0
+    },
+    {
+      text: "Qual è uno degli argomenti principali?",
+      options: ["Albegra basgliata", "Trasformazione delle Statistiche in Profezie", "Chimica delle pozioni"],
+      correct: 1
+    },
+    {
+      text: "Il Teorema di Sfiga Costante è:",
+      options: ["Argomento principale", "Metodo di calcolo", "Un esperimento"],
+      correct: 0
+    },
+    {
+      text: "Chi viene evocato?",
+      options: ["Assistentino da Esame", "Gatto magico", "Drago invisibile"],
+      correct: 0
+    },
+
+    // Paragrafo 4
+    {
+      text: "Cosa devono calcolare gli studenti in laboratorio?",
+      options: ["Derivata del Destino", "Numero primo successivo al compleanno", "Inchiostro inverso"],
+      correct: 1
+    },
+    {
+      text: "Dove ruotano gli studenti?",
+      options: ["Sotto una coperta", "Su una scopa", "In cerchio magico"],
+      correct: 0
+    },
+    {
+      text: "La prova finale consiste nel:",
+      options: ["Evocare un demone", "Tradurre un foglio bianco", "Scrivere una poesia"],
+      correct: 1
+    },
+    {
+      text: "Il foglio è scritto in:",
+      options: ["Inchiostro invisibile", "Inchiostro inverso metafisico", "Inchiostro d’oro"],
+      correct: 1
+    },
+    {
+      text: "Ogni risposta corretta senza gesto teatrale:",
+      options: ["Aumenta il voto", "Non ha effetto", "Riduce il voto"],
+      correct: 2
+    }
+  ]
+}
