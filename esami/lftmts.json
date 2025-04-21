@@ -14,6 +14,7 @@
   questions: [
     // Domande paragrafo 1
     {
+      paragraph: 0,
       text: "Secondo una delle interpretazioni, cosa significa LFTMTS?",
       options: [
         "Le Forme Trascendentali Magiche e Tendenzialmente Sospette",
@@ -23,6 +24,7 @@
       correct: 1
     },
     {
+      paragraph: 0,
       text: "Chi può decifrare la sigla LFTMTS?",
       options: [
         "Chi ha un livello sufficiente di comprensione o disperazione",
@@ -32,6 +34,7 @@
       correct: 0
     },
     {
+      paragraph: 0,
       text: "Quale variante viene proposta da altri studiosi?",
       options: [
         "Lingua Fondamentale di Trasmissione Semplice",
@@ -41,6 +44,7 @@
       correct: 1
     },
     {
+      paragraph: 0,
       text: "Com’è descritto lo stato del significato della sigla?",
       options: [
         "Completamente noto",
@@ -50,6 +54,7 @@
       correct: 1
     },
     {
+      paragraph: 0,
       text: "Quale termine NON compare nelle interpretazioni date?",
       options: [
         "Fondamentale",
@@ -58,8 +63,10 @@
       ],
       correct: 2
     },
+
     // Domande paragrafo 2
     {
+      paragraph: 1,
       text: "Come inizia l’esame LFTMTS?",
       options: [
         "Con un discorso introduttivo",
@@ -69,6 +76,7 @@
       correct: 1
     },
     {
+      paragraph: 1,
       text: "Cosa deve dimostrare lo studente per proseguire?",
       options: [
         "Di sapere dove si trova",
@@ -78,6 +86,7 @@
       correct: 0
     },
     {
+      paragraph: 1,
       text: "Quale di questi argomenti NON è citato?",
       options: [
         "Entropia dei processi decisionali",
@@ -87,6 +96,7 @@
       correct: 2
     },
     {
+      paragraph: 1,
       text: "Il corso include:",
       options: [
         "Entropia dei processi decisionali",
@@ -96,6 +106,7 @@
       correct: 2
     },
     {
+      paragraph: 1,
       text: "Come sono descritte le dimostrazioni richieste?",
       options: [
         "Richieste e gradite",
@@ -104,8 +115,10 @@
       ],
       correct: 1
     },
+
     // Domande paragrafo 3
     {
+      paragraph: 2,
       text: "Cosa accade alla fine di ogni lezione?",
       options: [
         "Una domanda retorica seguita da 4 ore di silenzio",
@@ -115,6 +128,7 @@
       correct: 0
     },
     {
+      paragraph: 2,
       text: "Quanto dura il silenzio finale?",
       options: [
         "4 ore",
@@ -124,6 +138,7 @@
       correct: 0
     },
     {
+      paragraph: 2,
       text: "Chi insegna la materia?",
       options: [
         "Professor Zeno Infinito",
@@ -133,6 +148,7 @@
       correct: 0
     },
     {
+      paragraph: 2,
       text: "Come comunica il docente?",
       options: [
         "Con post‑it fluttuanti e musica lo‑fi",
@@ -142,6 +158,7 @@
       correct: 0
     },
     {
+      paragraph: 2,
       text: "Quale genere musicale usa il professor Infinito?",
       options: [
         "Rock alternativo",
@@ -150,8 +167,10 @@
       ],
       correct: 1
     },
+
     // Domande paragrafo 4
     {
+      paragraph: 3,
       text: "Dove sono archiviati gli esami precedenti?",
       options: [
         "In un archivio online",
@@ -161,6 +180,7 @@
       correct: 1
     },
     {
+      paragraph: 3,
       text: "Cosa comporta aprire la scatola?",
       options: [
         "Recuperare gli esami",
@@ -170,6 +190,7 @@
       correct: 1
     },
     {
+      paragraph: 3,
       text: "Quali paradossi si discutono durante le esercitazioni?",
       options: [
         "Paradosso di Zenone",
@@ -179,6 +200,7 @@
       correct: 1
     },
     {
+      paragraph: 3,
       text: "Esempio di paradosso citato?",
       options: [
         "Iscriversi a un corso senza crediti per sentirsi meno soli",
@@ -188,6 +210,7 @@
       correct: 0
     },
     {
+      paragraph: 3,
       text: "Qual è l’ultima domanda dell’esame?",
       options: [
         "Come ti senti?",
@@ -197,4 +220,4 @@
       correct: 1
     }
   ]
-};
+}
