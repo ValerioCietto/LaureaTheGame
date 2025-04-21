@@ -1,0 +1,192 @@
+{
+  "name": "Statistica ad mentula",
+  "cfu": 9,
+  "text": [
+    "La Statistica ad mentula è un campo controverso, fondato sull’osservazione che “non tutti i numeri vogliono davvero dire qualcosa”. Il corso si basa su metodi liberi e creativi, come il campionamento a sentimento e la regressione al caso, incoraggiando analisi audaci e intuizioni fuori dagli schemi.",
+    "Le distribuzioni più comuni nel corso sono la Gaussiana Male Intesa, la Campana d’Ansia e il famigerato Istogramma dell’Umore, che varia in base alla giornata. Gli studenti imparano a riconoscere pattern improbabili e a celebrare la bellezza del dato incoerente.",
+    "I partecipanti sono invitati a generare dati propri lanciando dadi, intervistando amici distratti o semplicemente inventando di pancia. Le risposte vengono poi valutate con la Scala Likert Esistenziale, che va da “Boh” a “Assolutamente, forse”, per catturare il livello di convinzione personale.",
+    "Gli esercizi includono il calcolo della media delle emozioni, la varianza delle opinioni non espresse e la costruzione di un grafico che confonda il lettore. La regola d’oro è: se il dato non supporta la tesi, cambia la tesi (o il dato), a seconda dell’umore."
+  ],
+  "questions": [
+    {
+      "text": "Su cosa si fonda la Statistica ad mentula?",
+      "paragraph": 0,
+      "options": [
+        "Sul calcolo rigoroso",
+        "Sull’osservazione che non tutti i numeri vogliono dire qualcosa",
+        "Sulla raccolta di dati etici"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Quale metodo creativo viene usato per campionare?",
+      "paragraph": 0,
+      "options": [
+        "Campionamento a sentimento",
+        "Campionamento casuale semplice",
+        "Campionamento stratificato"
+      ],
+      "correct": 0
+    },
+    {
+      "text": "Come si chiama la regressione adottata nel corso?",
+      "paragraph": 0,
+      "options": [
+        "Regressione lineare",
+        "Regressione al caso",
+        "Regressione logistica"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Chi è il fondatore del corso?",
+      "paragraph": 0,
+      "options": [
+        "Prof. Gennaro Casuale",
+        "Dr. Statistica Precisa",
+        "Prof. Carlo Rigorista"
+      ],
+      "correct": 0
+    },
+    {
+      "text": "Qual è il motto spesso citato dal fondatore?",
+      "paragraph": 0,
+      "options": [
+        "Una correlazione senza senso è pur sempre un legame",
+        "I numeri non mentono mai",
+        "La statistica è solo un’opinione"
+      ],
+      "correct": 0
+    },
+    {
+      "text": "Quale distribuzione è nota per generare ansia?",
+      "paragraph": 1,
+      "options": [
+        "Gaussiana Male Intesa",
+        "Campana d’Ansia",
+        "Istogramma dell’Umore"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Quale distribuzione varia in base alla giornata?",
+      "paragraph": 1,
+      "options": [
+        "Campana d’Ansia",
+        "Istogramma dell’Umore",
+        "Gaussiana Male Intesa"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Quale distribuzione celebra i numeri incompresi?",
+      "paragraph": 1,
+      "options": [
+        "Gaussiana Male Intesa",
+        "Campana d’Ansia",
+        "Istogramma dell’Umore"
+      ],
+      "correct": 2
+    },
+    {
+      "text": "Quale attività usano per generare dati?",
+      "paragraph": 1,
+      "options": [
+        "Lanci di dadi",
+        "Misurazioni astronomiche",
+        "Analisi chimiche"
+      ],
+      "correct": 0
+    },
+    {
+      "text": "Chi viene intervistato per raccogliere dati?",
+      "paragraph": 1,
+      "options": [
+        "Amici distratti",
+        "Professori esperti",
+        "Esperti di statistica"
+      ],
+      "correct": 0
+    },
+    {
+      "text": "Quale scala valuta il grado di convinzione?",
+      "paragraph": 2,
+      "options": [
+        "Scala di Richter",
+        "Scala Likert Esistenziale",
+        "Scala Celsius"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Quale espressione fa parte della scala Likert?",
+      "paragraph": 2,
+      "options": [
+        "Boh",
+        "Forse mai",
+        "Deciso"
+      ],
+      "correct": 0
+    },
+    {
+      "text": "Qual è il livello massimo della scala usata?",
+      "paragraph": 2,
+      "options": [
+        "Assolutamente, forse",
+        "Decisamente no",
+        "Quasi mai"
+      ],
+      "correct": 0
+    },
+    {
+      "text": "Qual è l’esercizio di confusione grafica?",
+      "paragraph": 2,
+      "options": [
+        "Grafico parlante",
+        "Grafico che confonde il lettore",
+        "Diagramma perfetto"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Cosa calcolano gli studenti con le emozioni?",
+      "paragraph": 2,
+      "options": [
+        "Media delle emozioni",
+        "Mediana delle emozioni",
+        "Moda delle emozioni"
+      ],
+      "correct": 0
+    },
+    {
+      "text": "Quale varianza viene misurata?",
+      "paragraph": 3,
+      "options": [
+        "Varianza delle opinioni non espresse",
+        "Varianza dei voti",
+        "Varianza dei pesi"
+      ],
+      "correct": 0
+    },
+    {
+      "text": "Cosa succede se il dato non supporta la tesi?",
+      "paragraph": 3,
+      "options": [
+        "Si annulla il dato",
+        "Si cambia tesi o dato a seconda dell’umore",
+        "Si ripete l’esperimento scientifico"
+      ],
+      "correct": 1
+    },
+    {
+      "text": "Qual è la regola d’oro del corso?",
+      "paragraph": 3,
+      "options": [
+        "Usa sempre più campionamenti",
+        "Se il dato non supporta la tesi, cambia tesi o dato",
+        "Non fidarti mai dei numeri"
+      ],
+      "correct": 1
+    }
+  ]
+}
