@@ -1,223 +1,212 @@
 {
-  name: "LFTMTS",
-  cfu: 9,
-  text: [
-    // Paragrafo 1
+  "name": "LFTMTS",
+  "cfu": 9,
+  "text": [
     "LFTMTS è una sigla di cui il significato completo è classificato. Solo chi raggiunge un livello sufficiente di comprensione (o disperazione) riesce a decifrarla. Alcuni studiosi sostengono significhi “Logica Fondamentale TransMeccanica Teorica Superiore”, mentre altri propongono varianti come “Le Forme Trascendentali Magiche e Tendenzialmente Sospette”.",
-    // Paragrafo 2
     "L’esame ha la particolarità di iniziare senza istruzioni, e prosegue solo se lo studente dimostra di sapere dove si trova. Il corso affronta argomenti come entropia dei processi decisionali, metalogica delle scelte sbagliate, e dimostrazioni non richieste ma comunque gradite.",
-    // Paragrafo 3
     "Ogni lezione termina con una domanda retorica seguita da 4 ore di silenzio. La materia è insegnata dal professor Zeno Infinito, che comunica unicamente tramite post‑it fluttuanti e musica lo‑fi.",
-    // Paragrafo 4
     "Gli esami precedenti sono archiviati in una scatola di Schrödinger: aprirla comporta il rischio di affrontarli veramente. Durante le esercitazioni si discutono i paradossi impliciti nelle decisioni universitarie, come iscriversi a un corso senza crediti solo per sentirsi meno soli. L’ultima domanda dell’esame è sempre la stessa: “Ma tu, che idea ti sei fatto?”."
   ],
-  questions: [
-    // Domande paragrafo 1
+  "questions": [
     {
-      paragraph: 0,
-      text: "Secondo una delle interpretazioni, cosa significa LFTMTS?",
-      options: [
+      "paragraph": 0,
+      "text": "Secondo una delle interpretazioni, cosa significa LFTMTS?",
+      "options": [
         "Le Forme Trascendentali Magiche e Tendenzialmente Sospette",
         "Logica Fondamentale TransMeccanica Teorica Superiore",
         "Linguaggio Fluttuante di Tipologia Misteriosa"
       ],
-      correct: 1
+      "correct": 1
     },
     {
-      paragraph: 0,
-      text: "Chi può decifrare la sigla LFTMTS?",
-      options: [
+      "paragraph": 0,
+      "text": "Chi può decifrare la sigla LFTMTS?",
+      "options": [
         "Chi ha un livello sufficiente di comprensione o disperazione",
         "Solo studenti di informatica",
         "Chi conosce la matematica avanzata"
       ],
-      correct: 0
+      "correct": 0
     },
     {
-      paragraph: 0,
-      text: "Quale variante viene proposta da altri studiosi?",
-      options: [
+      "paragraph": 0,
+      "text": "Quale variante viene proposta da altri studiosi?",
+      "options": [
         "Lingua Fondamentale di Trasmissione Semplice",
         "Le Forme Trascendentali Magiche e Tendenzialmente Sospette",
         "Linguistica Filosofica e Traduzioni Multidimensionali"
       ],
-      correct: 1
+      "correct": 1
     },
     {
-      paragraph: 0,
-      text: "Com’è descritto lo stato del significato della sigla?",
-      options: [
+      "paragraph": 0,
+      "text": "Com’è descritto lo stato del significato della sigla?",
+      "options": [
         "Completamente noto",
         "Classificato",
         "Perso nel tempo"
       ],
-      correct: 1
+      "correct": 1
     },
     {
-      paragraph: 0,
-      text: "Quale termine NON compare nelle interpretazioni date?",
-      options: [
+      "paragraph": 0,
+      "text": "Quale termine NON compare nelle interpretazioni date?",
+      "options": [
         "Fondamentale",
         "TransMeccanica",
         "Quantistica"
       ],
-      correct: 2
+      "correct": 2
     },
-
-    // Domande paragrafo 2
     {
-      paragraph: 1,
-      text: "Come inizia l’esame LFTMTS?",
-      options: [
+      "paragraph": 1,
+      "text": "Come inizia l’esame LFTMTS?",
+      "options": [
         "Con un discorso introduttivo",
         "Senza istruzioni",
         "Con un compito a sorpresa"
       ],
-      correct: 1
+      "correct": 1
     },
     {
-      paragraph: 1,
-      text: "Cosa deve dimostrare lo studente per proseguire?",
-      options: [
+      "paragraph": 1,
+      "text": "Cosa deve dimostrare lo studente per proseguire?",
+      "options": [
         "Di sapere dove si trova",
         "Di avere il libretto",
         "Di aver studiato"
       ],
-      correct: 0
+      "correct": 0
     },
     {
-      paragraph: 1,
-      text: "Quale di questi argomenti NON è citato?",
-      options: [
+      "paragraph": 1,
+      "text": "Quale di questi argomenti NON è citato?",
+      "options": [
         "Entropia dei processi decisionali",
         "Metalogica delle scelte sbagliate",
         "Teoria dei giochi cooperativi"
       ],
-      correct: 2
+      "correct": 2
     },
     {
-      paragraph: 1,
-      text: "Il corso include:",
-      options: [
+      "paragraph": 1,
+      "text": "Il corso include:",
+      "options": [
         "Entropia dei processi decisionali",
         "Metalogica delle scelte sbagliate",
         "Metamatematica dell’errore sporadico"
       ],
-      correct: 2
+      "correct": 2
     },
     {
-      paragraph: 1,
-      text: "Come sono descritte le dimostrazioni richieste?",
-      options: [
+      "paragraph": 1,
+      "text": "Come sono descritte le dimostrazioni richieste?",
+      "options": [
         "Richieste e gradite",
         "Non richieste ma comunque gradite",
         "Sempre obbligatorie"
       ],
-      correct: 1
+      "correct": 1
     },
-
-    // Domande paragrafo 3
     {
-      paragraph: 2,
-      text: "Cosa accade alla fine di ogni lezione?",
-      options: [
+      "paragraph": 2,
+      "text": "Cosa accade alla fine di ogni lezione?",
+      "options": [
         "Una domanda retorica seguita da 4 ore di silenzio",
         "Un quiz a tempo",
         "Un laboratorio pratico"
       ],
-      correct: 0
+      "correct": 0
     },
     {
-      paragraph: 2,
-      text: "Quanto dura il silenzio finale?",
-      options: [
+      "paragraph": 2,
+      "text": "Quanto dura il silenzio finale?",
+      "options": [
         "4 ore",
         "1 ora",
         "30 minuti"
       ],
-      correct: 0
+      "correct": 0
     },
     {
-      paragraph: 2,
-      text: "Chi insegna la materia?",
-      options: [
+      "paragraph": 2,
+      "text": "Chi insegna la materia?",
+      "options": [
         "Professor Zeno Infinito",
         "Professor Ciclo Eterno",
         "Professor Tempo Mortale"
       ],
-      correct: 0
+      "correct": 0
     },
     {
-      paragraph: 2,
-      text: "Come comunica il docente?",
-      options: [
+      "paragraph": 2,
+      "text": "Come comunica il docente?",
+      "options": [
         "Con post‑it fluttuanti e musica lo‑fi",
         "Con email",
         "Con segnali luminosi"
       ],
-      correct: 0
+      "correct": 0
     },
     {
-      paragraph: 2,
-      text: "Quale genere musicale usa il professor Infinito?",
-      options: [
+      "paragraph": 2,
+      "text": "Quale genere musicale usa il professor Infinito?",
+      "options": [
         "Rock alternativo",
         "Musica lo‑fi",
         "Classica barocca"
       ],
-      correct: 1
+      "correct": 1
     },
-
-    // Domande paragrafo 4
     {
-      paragraph: 3,
-      text: "Dove sono archiviati gli esami precedenti?",
-      options: [
+      "paragraph": 3,
+      "text": "Dove sono archiviati gli esami precedenti?",
+      "options": [
         "In un archivio online",
         "In una scatola di Schrödinger",
         "In un caveau segreto"
       ],
-      correct: 1
+      "correct": 1
     },
     {
-      paragraph: 3,
-      text: "Cosa comporta aprire la scatola?",
-      options: [
+      "paragraph": 3,
+      "text": "Cosa comporta aprire la scatola?",
+      "options": [
         "Recuperare gli esami",
         "Affrontarli veramente",
         "Perdere del tempo"
       ],
-      correct: 1
+      "correct": 1
     },
     {
-      paragraph: 3,
-      text: "Quali paradossi si discutono durante le esercitazioni?",
-      options: [
+      "paragraph": 3,
+      "text": "Quali paradossi si discutono durante le esercitazioni?",
+      "options": [
         "Paradosso di Zenone",
         "Paradossi delle decisioni universitarie",
         "Paradosso del sorite"
       ],
-      correct: 1
+      "correct": 1
     },
     {
-      paragraph: 3,
-      text: "Esempio di paradosso citato?",
-      options: [
+      "paragraph": 3,
+      "text": "Esempio di paradosso citato?",
+      "options": [
         "Iscriversi a un corso senza crediti per sentirsi meno soli",
         "Abbandonare un corso per ritrovarsi",
         "Studiare due volte lo stesso libro"
       ],
-      correct: 0
+      "correct": 0
     },
     {
-      paragraph: 3,
-      text: "Qual è l’ultima domanda dell’esame?",
-      options: [
+      "paragraph": 3,
+      "text": "Qual è l’ultima domanda dell’esame?",
+      "options": [
         "Come ti senti?",
         "Ma tu, che idea ti sei fatto?",
         "Cosa hai imparato?"
       ],
-      correct: 1
+      "correct": 1
     }
   ]
 }
