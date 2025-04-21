@@ -1,4 +1,4 @@
-const examData = {
+{
   name: "LFTMTS",
   cfu: 9,
   text: [
