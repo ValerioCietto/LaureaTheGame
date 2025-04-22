@@ -1,1 +1,213 @@
-{}
+{
+  "name": "Comunicazione Scritta e Gesticolata",
+  "cfu": 6,
+  "text": [
+    "Il corso di Comunicazione Scritta e Gesticolata combina l’arte della scrittura con la potenza del gesto: gli studenti imparano a trasmettere significati complessi attraverso parole scritte supportate da movimenti del corpo e espressioni facciali.",
+    "Tra gli argomenti principali ci sono la Punteggiatura Coreografata, le Parole ad Aria e la Sintassi Mimica: si studiano tecniche per enfatizzare punti chiave con gesti precisi e segni grafici estesi nello spazio.",
+    "Le lezioni prevedono esercizi di scrittura su lavagne mobili e simultaneo accompagnamento gestuale, l’uso di cartelloni animati con storyboard gestuali e sessioni di interpretazione silenziosa di testi complessi.",
+    "L’esame finale consiste in una presentazione di 5 minuti: lo studente deve esporre un tema scritto su lavagna, accompagnato da un codice gestuale inventato, e sarà valutato su chiarezza, creatività e coordinazione tra testo e gesto."
+  ],
+  "questions": [
+    {
+      "paragraph": 0,
+      "text": "Qual è l’obiettivo principale del corso?",
+      "options": [
+        "Unire scrittura e gesto per comunicare",
+        "Migliorare la calligrafia tradizionale",
+        "Studiare la storia del linguaggio"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 0,
+      "text": "Quale elemento sostiene la scrittura?",
+      "options": [
+        "Suono musicale",
+        "Movimenti del corpo",
+        "Illuminazione colorata"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "Cosa imparano gli studenti?",
+      "options": [
+        "Tecniche di dattilografia veloce",
+        "Trasmettere significati complessi",
+        "Creare font digitali"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "Quale parte del corpo è fondamentale?",
+      "options": [
+        "Le mani",
+        "I piedi",
+        "Gli occhi"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 0,
+      "text": "Quale abilità non è centrale?",
+      "options": [
+        "Espressioni facciali",
+        "Movimenti del corpo",
+        "Tecniche vocali"
+      ],
+      "correct": 2
+    },
+    {
+      "paragraph": 1,
+      "text": "Cosa si intende per Punteggiatura Coreografata?",
+      "options": [
+        "Gesti accentuati per i segni di punteggiatura",
+        "Musica associata alle virgole",
+        "Colori diversi per ogni punto"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "Cosa sono le Parole ad Aria?",
+      "options": [
+        "Parole scritte in aria con un dito",
+        "Parole proiettate su schermo",
+        "Parole sussurrate"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "Che cos’è la Sintassi Mimica?",
+      "options": [
+        "Struttura del discorso cantato",
+        "Sequenza di movimenti corrispondenti a frasi",
+        "Uso di emoji nel testo"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 1,
+      "text": "Quale tecnica non appartiene a questo paragrafo?",
+      "options": [
+        "Punteggiatura Coreografata",
+        "Sintassi Mimica",
+        "Scrittura automatica"
+      ],
+      "correct": 2
+    },
+    {
+      "paragraph": 1,
+      "text": "Con cosa si enfatizzano i punti chiave?",
+      "options": [
+        "Gesti precisi",
+        "Musica dal vivo",
+        "Luci stroboscopiche"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Dove si scrive durante le lezioni?",
+      "options": [
+        "Su lavagne mobili",
+        "Su taccuini digitali",
+        "Su schermi LED"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Cosa accompagna la scrittura?",
+      "options": [
+        "Accompagnamento gestuale",
+        "Musica di sottofondo",
+        "Polvere luminosa"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Cosa si usa per storyboard gestuali?",
+      "options": [
+        "Cartelloni animati",
+        "Video in 3D",
+        "Slide PowerPoint"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Quale attività si svolge in silenzio?",
+      "options": [
+        "Interpretazione di testi complessi",
+        "Lettura ad alta voce",
+        "Registrazione audio"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Quale strumento non è menzionato?",
+      "options": [
+        "Lavagne mobili",
+        "Cartelloni animati",
+        "Tablet grafico"
+      ],
+      "correct": 2
+    },
+    {
+      "paragraph": 3,
+      "text": "Quanto dura la presentazione d’esame?",
+      "options": [
+        "3 minuti",
+        "5 minuti",
+        "10 minuti"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 3,
+      "text": "Cosa deve includere la presentazione?",
+      "options": [
+        "Tema scritto e codice gestuale",
+        "Solo testo scritto",
+        "Solo gesto"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Su quali criteri viene valutato lo studente?",
+      "options": [
+        "Chiarezza e creatività",
+        "Velocità di scrittura",
+        "Volume del gesto"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Chi valuta la performance?",
+      "options": [
+        "Docente del corso",
+        "Commissione esterna",
+        "Compagni di classe"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Quale aspetto non viene valutato?",
+      "options": [
+        "Coordinazione testo-gesto",
+        "Originalità del gesto",
+        "Numero di errori grammaticali"
+      ],
+      "correct": 2
+    }
+  ]
+}
+
