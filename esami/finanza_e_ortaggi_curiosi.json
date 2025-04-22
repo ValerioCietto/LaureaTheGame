@@ -1,0 +1,132 @@
+{
+  "name": "Finanza e ortaggi curiosi",
+  "cfu": 6,
+  "text": [
+    "Finanza e ortaggi curiosi esplora il mercato agro-alimentare dal punto di vista economico più stravagante: si studiano titoli azionari di carote, obbligazioni di pomodori e derivati di cavolfiori. Il corso è stato fondato dalla professoressa Carota Borsa, famosa per aver quotato in Borsa il primo finocchio.",
+    "Le principali “classi di asset vegetali” includono Caroti Bond (cedola arancione), Pomodoro Futures e Cetriolo ETF. Ogni strumento si valuta in base a indici come il Tasso di Crescita Fogliare e il Variazionario di Germogliamento.",
+    "In laboratorio gli studenti simulano crash di mercato indotti da parassiti immaginari e manipolano portafogli di verdure virtuali, testando strategie come l’acquisto di cipolle in hedge contro l’inflazione cipolloglobale.",
+    "L’esame finale richiede di presentare un piano di investimento per un orto sostenibile: bisogna calcolare rischio, rendimento atteso e proporzione di ravanelli liquidi, quindi difenderlo davanti alla Commissione dei Gambi."
+  ],
+  "questions": [
+    {
+      "paragraph": 0,
+      "text": "Chi ha fondato il corso?",
+      "options": ["Prof. Pomodoro Futures", "Prof.ssa Carota Borsa", "Dott. Cavolfiore Credit"],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "Quale vegetale ha quotato in Borsa la fondatrice?",
+      "options": ["Finocchio", "Carota", "Cetriolo"],
+      "correct": 0
+    },
+    {
+      "paragraph": 0,
+      "text": "Qual è l’obiettivo principale del corso?",
+      "options": ["Studiare titoli di carote", "Coltivare ortaggi reali", "Produrre insalate"],
+      "correct": 0
+    },
+    {
+      "paragraph": 0,
+      "text": "Che approccio adotta la disciplina?",
+      "options": ["Biologico tradizionale", "Economico stravagante", "Chimico avanzato"],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "In quale settore si applica la finanza in questo corso?",
+      "options": ["Tecnologico", "Agro-alimentare", "Immobiliare"],
+      "correct": 1
+    },
+    {
+      "paragraph": 1,
+      "text": "Qual è una delle classi di asset vegetali?",
+      "options": ["Caroti Bond", "Carota Commodity", "Carota Index"],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "Che tipo di strumento è il Pomodoro Futures?",
+      "options": ["Derivato", "Azioni", "ETF"],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "Cosa misura il Tasso di Crescita Fogliare?",
+      "options": ["Il valore azionario", "La crescita delle foglie", "Il prezzo dei semi"],
+      "correct": 1
+    },
+    {
+      "paragraph": 1,
+      "text": "Cosa rappresenta il Variazionario di Germogliamento?",
+      "options": ["Un indice di volatilità", "Un piano di semina", "Una strategia fiscale"],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "Quale ETF è menzionato?",
+      "options": ["Cetriolo ETF", "Orto ETF", "Verdura ETF"],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Quale evento simulano gli studenti in laboratorio?",
+      "options": ["Raccolta di pomodori", "Crash di mercato parassitario", "Vendemmia virtuale"],
+      "correct": 1
+    },
+    {
+      "paragraph": 2,
+      "text": "Con cosa si proteggono contro l’inflazione cipolloglobale?",
+      "options": ["Acquisto di cipolle", "Vendita di carote", "Scambio di lattuga"],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Che strumenti manipolano gli studenti?",
+      "options": ["Portafogli di verdure virtuali", "Azioni reali", "Criptovalute di spinaci"],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Il laboratorio include strategia di hedge con quale ortaggio?",
+      "options": ["Cipolla", "Zucchina", "Patata"],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Gli ortaggi virtuali si trovano in:",
+      "options": ["Mercati fisici", "Portafogli digitali", "Banche reali"],
+      "correct": 1
+    },
+    {
+      "paragraph": 3,
+      "text": "Cosa richiede l’esame finale?",
+      "options": ["Piano di coltivazione biologica", "Piano di investimento per un orto sostenibile", "Progetto di un orto urbano"],
+      "correct": 1
+    },
+    {
+      "paragraph": 3,
+      "text": "Quali elementi deve calcolare lo studente?",
+      "options": ["Rischio e rendimento", "Solo rendimento", "Solo rischio"],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Chi valuta il piano finale?",
+      "options": ["Commissione dei Gambi", "Banca Centrale", "Congresso Verdura"],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Qual è un requisito aggiuntivo per l’esame?",
+      "options": ["Mostrare campioni reali", "Difenderlo davanti alla commissione", "Scrivere un saggio storico"],
+      "correct": 1
+    },
+    {
+      "paragraph": 3,
+      "text": "Quale ortaggio non è citato nel testo?",
+      "options": ["Cavolfiore", "Ravanello", "Carota"],
+      "correct": 1
+    }
+  ]
+}
