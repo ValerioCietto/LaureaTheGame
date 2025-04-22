@@ -1,0 +1,212 @@
+{
+  "name": "Arrampicata sui vetri artistica",
+  "cfu": 6,
+  "text": [
+    "L’Arrampicata sui vetri artistica nasce come fusione tra sport estremo e performance visiva: si scala la superficie di grandi vetrate usando speciali ventose e tecniche di danza acrobatica. Gli atleti-artisti trascorrono ore a trovare l’equilibrio perfetto tra aderenza e leggerezza, trasformando ogni muro di vetro in una tela trasparente.",
+    "Le origini risalgono ai primi festival di arte urbana, quando un collettivo di ballerini-scaler liberi installò piattaforme mobili davanti a palazzi in vetro, esibendosi all’alba. Da allora, la disciplina si è evoluta in veri e propri eventi internazionali, giudicati per eleganza, creatività e difficoltà del percorso.",
+    "La tecnica si basa sull’uso di ventose in silicone rinforzato e di movimenti di posa ispirati alla calligrafia orientale. Gli allenamenti includono esercizi di equilibrio su lastre inclinate e sessioni di improvvisazione, in cui ogni artista inventa figure acrobatiche mentre sale.",
+    "L’esame finale consiste in una performance di 10 minuti su una parete di vetro di 15 metri, integrando elementi di narrazione visiva e musica dal vivo. La giuria valuta l’originalità, la pulizia dei movimenti e l’armonia con la colonna sonora, attribuendo poi un punteggio su 30."
+  ],
+  "questions": [
+    {
+      "paragraph": 0,
+      "text": "Qual è la caratteristica principale dell’Arrampicata sui vetri artistica?",
+      "options": [
+        "Uso di corde tradizionali",
+        "Scalata di vetrate con ventose",
+        "Saltelli su trampolini"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "Che elemento trasforma il muro di vetro in arte?",
+      "options": [
+        "Illuminazione a LED",
+        "Performance acrobatica",
+        "Spray colorati"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "Quale materiale viene usato per aderire al vetro?",
+      "options": [
+        "Ventose in silicone",
+        "Magnete industriale",
+        "Nastro adesivo"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 0,
+      "text": "A cosa mira il praticante-artista?",
+      "options": [
+        "Alla velocità massima",
+        "All’equilibrio tra aderenza e leggerezza",
+        "Alla massima altezza"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "In quale ambito si colloca questa disciplina?",
+      "options": [
+        "Sport estremo e performance visiva",
+        "Ciclismo urbano",
+        "Arte sonora"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "Dove è nata l’Arrampicata sui vetri artistica?",
+      "options": [
+        "In palestre private",
+        "Ai festival di arte urbana",
+        "Nei circhi itineranti"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 1,
+      "text": "Chi inventò le prime esibizioni su vetro?",
+      "options": [
+        "Un collettivo di ballerini-scaler liberi",
+        "Una compagnia di teatro",
+        "Un gruppo di climber professionisti"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "Quando si svolgevano le prime performance?",
+      "options": [
+        "All’alba",
+        "A mezzogiorno",
+        "Al tramonto"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "Qual è uno dei criteri di giudizio degli eventi internazionali?",
+      "options": [
+        "Numero di spettatori",
+        "Difficoltà del percorso",
+        "Costo del biglietto"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 1,
+      "text": "Cosa unisce sport e arte in questa disciplina?",
+      "options": [
+        "Coreografie sincronizzate",
+        "Performance e acrobazie",
+        "Concerti live"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 2,
+      "text": "Su quale tecnica si basa la disciplina?",
+      "options": [
+        "Uso di ventose in silicone rinforzato",
+        "Balancing su funi elastiche",
+        "Saltelli con trampoli"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Quale filosofia ispira i movimenti?",
+      "options": [
+        "Calligrafia orientale",
+        "Pittura impressionista",
+        "Jazz contemporaneo"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Che tipo di esercizi include l’allenamento?",
+      "options": [
+        "Equilibrio su lastre inclinate",
+        "Sollevamento pesi",
+        "Nuoto in tuta"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Cosa avviene nelle sessioni di improvvisazione?",
+      "options": [
+        "Disegno su vetro",
+        "Figure acrobatiche in salita",
+        "Recitazione drammatica"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 2,
+      "text": "Quale attrezzo è fondamentale?",
+      "options": [
+        "Ventose in silicone",
+        "Cordini elastici",
+        "Ramponi"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Quanto dura la performance d’esame?",
+      "options": [
+        "5 minuti",
+        "10 minuti",
+        "20 minuti"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 3,
+      "text": "Qual è l’altezza della parete d’esame?",
+      "options": [
+        "10 metri",
+        "15 metri",
+        "20 metri"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 3,
+      "text": "Cosa deve integrare la performance?",
+      "options": [
+        "Elementi di narrazione visiva e musica",
+        "Solo esercizi ginnici",
+        "Solo effetti luminosi"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Quale aspetto non viene valutato dalla giuria?",
+      "options": [
+        "Originalità",
+        "Pulizia dei movimenti",
+        "Numero di spettatori"
+      ],
+      "correct": 2
+    },
+    {
+      "paragraph": 3,
+      "text": "Su quale punteggio si basa la valutazione finale?",
+      "options": [
+        "15 punti",
+        "30 punti",
+        "50 punti"
+      ],
+      "correct": 1
+    }
+  ]
+}
