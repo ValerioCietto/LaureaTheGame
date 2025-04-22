@@ -1,1 +1,213 @@
-{}
+{
+  "name": "Fisica del fisico",
+  "cfu": 9,
+  "text": [
+    "Il corso “Fisica del fisico” esplora le leggi della meccanica applicate al corpo umano: si studiano la cinematica dei movimenti, la dinamica muscolare e le forze che agiscono su ossa e articolazioni durante attività quotidiane e sportive.",
+    "Si approfondiscono i principi del moto oscillatorio e delle vibrazioni applicate al battito cardiaco, al flusso sanguigno e ai riflessi nervosi, utilizzando modelli matematici non‐lineari e simulazioni al computer.",
+    "In laboratorio si misurano accelerazioni con sensori indossabili, si analizzano curve forza‐tempo durante il sollevamento pesi e si studiano l’elasticità dei tessuti impiegando macchine di trazione e piani inclinati.",
+    "L’esame finale consiste nel proporre un’esperienza di laboratorio: progettare un esperimento per quantificare l’energia meccanica di un salto, calcolare parametri come altezza, tempo di volo e potenza erogata, e presentare un breve report."
+  ],
+  "questions": [
+    {
+      "paragraph": 0,
+      "text": "Qual è l’oggetto principale di studio del corso?",
+      "options": [
+        "Le leggi della meccanica applicate al corpo umano",
+        "I fenomeni atmosferici",
+        "La termodinamica dei gas"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 0,
+      "text": "Cosa include l’analisi dei movimenti?",
+      "options": [
+        "Cinematica e dinamica muscolare",
+        "Ottica e rifrazione",
+        "Astrofisica"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 0,
+      "text": "Quali strutture del corpo sono considerate?",
+      "options": [
+        "Ossa e articolazioni",
+        "Organi interni",
+        "Cellule nervose"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 0,
+      "text": "In quali attività si applicano le forze studiate?",
+      "options": [
+        "Solo sportive",
+        "Quotidiane e sportive",
+        "Solo industriali"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "Quale disciplina viene integrata?",
+      "options": [
+        "Biologia molecolare",
+        "Biomeccanica",
+        "Geologia"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 1,
+      "text": "A quale fenomeno si applica il moto oscillatorio?",
+      "options": [
+        "Battito cardiaco",
+        "Caduta dei gravi",
+        "Rifrazione luminosa"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "Cosa viene modellato con simulazioni al computer?",
+      "options": [
+        "Risonanza acustica",
+        "Moto non‐lineare dei riflessi nervosi",
+        "Interferenza di onde"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 1,
+      "text": "Quale parte del corpo è associata al flusso sanguigno?",
+      "options": [
+        "Sistema circolatorio",
+        "Sistema digestivo",
+        "Sistema linfatico"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "Quale tipo di modello si usa?",
+      "options": [
+        "Modello lineare",
+        "Modello non‐lineare",
+        "Modello statico"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 1,
+      "text": "Che strumento si utilizza per simulare?",
+      "options": [
+        "Simulatori al computer",
+        "Tavole tattiche",
+        "Grafici su carta"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Quale tipo di sensori si indossano?",
+      "options": [
+        "Sensori di pressione",
+        "Sensori di accelerazione",
+        "Sensori di temperatura"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 2,
+      "text": "Cosa si analizza durante il sollevamento pesi?",
+      "options": [
+        "Curva forza‐tempo",
+        "Spettro elettromagnetico",
+        "Profilo audio"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Quale macchina si usa per studiare l’elasticità dei tessuti?",
+      "options": [
+        "Macchina di trazione",
+        "Centrifuga",
+        "Calorimetro"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Che dispositivo serve per piano inclinato?",
+      "options": [
+        "Carrello da laboratorio",
+        "Forno a microonde",
+        "Oscilloscopio"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Quale parametro si misura con i sensori?",
+      "options": [
+        "Velocità di diffusione",
+        "Accelerazione del corpo",
+        "Intensità luminosa"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 3,
+      "text": "Qual è l’oggetto dell’esperimento finale?",
+      "options": [
+        "Energia meccanica di un salto",
+        "Termodinamica di un gas",
+        "Elettromagnetismo di un filo"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Quale parametro NON va calcolato?",
+      "options": [
+        "Altezza del salto",
+        "Tempo di volo",
+        "Indice di rifrazione"
+      ],
+      "correct": 2
+    },
+    {
+      "paragraph": 3,
+      "text": "Cosa deve includere il report?",
+      "options": [
+        "Equazioni e calcoli",
+        "Biografia dello studente",
+        "Grafici meteorologici"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Per quanto tempo dura l’esperimento?",
+      "options": [
+        "1 minuto",
+        "5 minuti",
+        "10 minuti"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 3,
+      "text": "Chi valuta il lavoro finale?",
+      "options": [
+        "Il docente del corso",
+        "Una commissione esterna",
+        "Il pubblico"
+      ],
+      "correct": 0
+    }
+  ]
+}
+
