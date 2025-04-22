@@ -1,0 +1,212 @@
+{
+  "name": "Statistica stitica",
+  "cfu": 6,
+  "text": [
+    "La Statistica stitica è una disciplina che studia dati bloccati come se fossero numeri stitici: i risultati non vogliono uscire, rimangono compatti e richiedono un serio sforzo interpretativo. I primi statistici stitici provavano a “spingere” i dati con la regressione, ma spesso ottenevano poco più di un grido di errore.",
+    "Le misure più comuni nel corso sono la Costipata di Frequenza, che raggruppa i valori troppo stretti e compatti, e il Detentore di Mediana, che trattiene il valore centrale con tenacia. Si studia anche la Variabile Intestinale, che oscilla solo se sollecitata con rumorose manipolazioni.",
+    "La raccolta dati avviene con questionari sommessi distribuiti a soggetti riluttanti: i questionati rispondono con monosillabi o con lunghi sospiri. In laboratorio si sperimentano tecniche di “lubrificazione statistica”, come l’aggiunta di rumore casuale o di un cucchiaio di humor nero.",
+    "L’esame finale consiste nel liberare un dataset ostinato: lo studente deve applicare un’analisi completa (media, varianza, regressione) e poi interpretare i risultati senza provocare un blocco totale. Il docente valuta precisione, creatività e la capacità di ottenere almeno un grafico non intasato."
+  ],
+  "questions": [
+    {
+      "paragraph": 0,
+      "text": "Che metafora usa la Statistica stitica?",
+      "options": [
+        "Dati che scorrono liberi",
+        "Dati bloccati come numeri stitici",
+        "Dati gonfi di entusiasmo"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "Cosa ottenevano i primi statistici stitici con la regressione?",
+      "options": [
+        "Risultati fluidi",
+        "Grido di errore",
+        "Grafici colorati"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "Come si descrive il comportamento dei risultati?",
+      "options": [
+        "Compatti e bloccati",
+        "Estremamente variabili",
+        "Totalmente casuali"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 0,
+      "text": "Qual è l’obiettivo iniziale?",
+      "options": [
+        "Spingere i dati",
+        "Colorare i dati",
+        "Silenziare i dati"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 0,
+      "text": "Quale problema principale affronta la disciplina?",
+      "options": [
+        "Dati troppo fluidi",
+        "Dati troppo compatti",
+        "Dati troppo rumorosi"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 1,
+      "text": "Cosa raggruppa la Costipata di Frequenza?",
+      "options": [
+        "Valori troppo dispersi",
+        "Valori troppo stretti e compatti",
+        "Valori medi e ordinati"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 1,
+      "text": "Come definisce il Detentore di Mediana il valore centrale?",
+      "options": [
+        "Lo rilascia subito",
+        "Lo trattiene con tenacia",
+        "Lo ignora completamente"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 1,
+      "text": "Quando oscilla la Variabile Intestinale?",
+      "options": [
+        "Sempre",
+        "Solo se sollecitata rumorosamente",
+        "Mai"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 1,
+      "text": "Qual è una misura NON menzionata?",
+      "options": [
+        "Costipata di Frequenza",
+        "Detentore di Mediana",
+        "Curva di Scioltezza"
+      ],
+      "correct": 2
+    },
+    {
+      "paragraph": 1,
+      "text": "Cosa studia la mediana stitica?",
+      "options": [
+        "Il valore estremo",
+        "Il valore centrale bloccato",
+        "La media aritmetica"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 2,
+      "text": "Come rispondono i soggetti nei questionari stitici?",
+      "options": [
+        "Con lunghi racconti",
+        "Con monosillabi o sospiri",
+        "Con disegni colorati"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 2,
+      "text": "Cosa significa “lubrificazione statistica”?",
+      "options": [
+        "Aggiungere rumore casuale o humor nero",
+        "Aumentare la pressione sui dati",
+        "Rimuovere tutte le osservazioni"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Qual è l’obiettivo dei questionari sommessi?",
+      "options": [
+        "Ottenere risposte dettagliate",
+        "Gestire soggetti riluttanti",
+        "Ignorare completamente i dati"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 2,
+      "text": "Quale tecnica NON è parte della lubrificazione?",
+      "options": [
+        "Rumore causale",
+        "Humor nero",
+        "Musica classica"
+      ],
+      "correct": 2
+    },
+    {
+      "paragraph": 2,
+      "text": "Dove si svolgono gli esperimenti di raccolta dati?",
+      "options": [
+        "In sala conferenze",
+        "In laboratorio stitico",
+        "In piazza"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 3,
+      "text": "Di cosa deve liberare lo studente il dataset finale?",
+      "options": [
+        "Dati incoerenti",
+        "Un dataset ostinato",
+        "Grafici rumorosi"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 3,
+      "text": "Quali analisi deve applicare?",
+      "options": [
+        "Solo media",
+        "Media, varianza, regressione",
+        "Solo varianza"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 3,
+      "text": "Cosa valuta il docente?",
+      "options": [
+        "Velocità",
+        "Creatività e assenza di blocchi",
+        "Numero di grafici"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 3,
+      "text": "Cosa rappresenta un grafico non intasato?",
+      "options": [
+        "Un blocco totale",
+        "Una visualizzazione chiara",
+        "Un errore di sistema"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 3,
+      "text": "Qual è la sfida finale?",
+      "options": [
+        "Ottenere un grafico intasato",
+        "Interpretare il blocco dati",
+        "Liberare il dataset ostinato"
+      ],
+      "correct": 2
+    }
+  ]
+}
