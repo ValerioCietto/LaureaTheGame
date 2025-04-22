@@ -1,0 +1,212 @@
+{
+  "name": "Teorie su allunaggio e adduaggio",
+  "cfu": 6,
+  "text": [
+    "Il corso esplora le più stravaganti teorie sull’allunaggio storico: si studiano narrazioni che oscillano tra documenti NASA autentici e video complottisti girati in garage, dove gli astronauti avrebbero usato set cinematografici nascosti.",
+    "Parallelamente si analizzano le ipotesi sull’adduaggio, ovvero il rientro degli equipaggi sulla Terra: alcuni sostengono che il modulo di rientro sia atterrato non su un mare ma in un deserto segreto, tracciato con linee geometriche come un crop circle.",
+    "Nel modulo tecnico si confrontano teorie alternative: dall’idea che la Luna sia un ologramma assemblato in orbita, alla possibilità che il rientro sia avvenuto tramite portali spazio-temporali creati da civiltà antiche, passando per versioni che includono lasers e droni invisibili.",
+    "La parte finale consente agli studenti di proporre la propria teoria personale, supportata da prove immaginarie: ogni tesi viene valutata per coerenza narrativa, grado di assurdità e originalità del documento fittizio presentato."
+  ],
+  "questions": [
+    {
+      "paragraph": 0,
+      "text": "Che tipo di documenti si studiano sul primo allunaggio?",
+      "options": [
+        "Solo manuali di volo",
+        "Documenti NASA e video complottisti",
+        "Diari di bordo segreti"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "Dove sarebbero stati girati i video complottisti?",
+      "options": [
+        "In un osservatorio",
+        "In un garage",
+        "In una base militare"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "Cosa mette in dubbio la narrazione complottista?",
+      "options": [
+        "L’assenza di gravità",
+        "L’uso di set cinematografici nascosti",
+        "La mancanza di video"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "Quale agenzia fornisce documenti ufficiali?",
+      "options": [
+        "ESA",
+        "NASA",
+        "Roscosmos"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "Cosa si confronta con i documenti autentici?",
+      "options": [
+        "Racconti di fantascienza",
+        "Video complottisti",
+        "Trasmissioni radiofoniche"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 1,
+      "text": "Dove avrebbero atterrato il modulo di rientro secondo alcuni?",
+      "options": [
+        "In un mare dell’Atlantico",
+        "In un deserto segreto",
+        "In una foresta amazzonica"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 1,
+      "text": "Con cosa sarebbe tracciato il deserto segreto?",
+      "options": [
+        "Linee geometriche come crop circle",
+        "Frecce luminose",
+        "Tracce di pneumatici"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "Cosa studiano le ipotesi sull’adduaggio?",
+      "options": [
+        "Il decollo dal razzo",
+        "Il rientro sulla Terra",
+        "La permanenza sulla Luna"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 1,
+      "text": "Quale fenomeno non fa parte delle teorie sull’adduaggio?",
+      "options": [
+        "Crop circle terrestri",
+        "Portali spaziali",
+        "Deserti segreti"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 1,
+      "text": "Come viene definito il luogo di atterraggio alternativo?",
+      "options": [
+        "Pianura antartica",
+        "Deserto segreto",
+        "Oceano pacifico"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 2,
+      "text": "Qual è una teoria alternativa sull’allunaggio?",
+      "options": [
+        "La Luna è un ologramma in orbita",
+        "La Luna è un pianeta minore",
+        "La Luna è un satellite naturale"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Cosa avrebbero usato per il rientro alternativo?",
+      "options": [
+        "Portali spazio-temporali",
+        "Sottomarini lunari",
+        "Aerei supersonici"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Chi avrebbe creato i portali?",
+      "options": [
+        "Civiltà antiche",
+        "Scienziati NASA",
+        "Spazioporti commerciali"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Quale tecnologia non è menzionata?",
+      "options": [
+        "Lasers invisibili",
+        "Droni invisibili",
+        "Motori a razzo"
+      ],
+      "correct": 2
+    },
+    {
+      "paragraph": 2,
+      "text": "Come vengono descritte le simulazioni?",
+      "options": [
+        "Realistiche al 100%",
+        "Basate su ologrammi",
+        "Basate su modelli matematici"
+      ],
+      "correct": 2
+    },
+    {
+      "paragraph": 3,
+      "text": "Cosa devono proporre gli studenti nella parte finale?",
+      "options": [
+        "Un nuovo razzo lunare",
+        "La propria teoria personale",
+        "Una biografia di un astronauta"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 3,
+      "text": "Su quali criteri viene valutata la tesi?",
+      "options": [
+        "Coerenza narrativa, assurdità e originalità",
+        "Precisione storica e bibliografia",
+        "Chiarezza del linguaggio"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Di che tipo sono le prove presentate?",
+      "options": [
+        "Prove fotografiche reali",
+        "Prove immaginarie",
+        "Prove scientifiche verificate"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 3,
+      "text": "Quale aspetto non è valutato?",
+      "options": [
+        "Originalità del documento",
+        "Grado di assurdità",
+        "Numero di figure citate"
+      ],
+      "correct": 2
+    },
+    {
+      "paragraph": 3,
+      "text": "Qual è lo scopo finale del corso?",
+      "options": [
+        "Ripercorrere la storia dell’astronautica",
+        "Stimolare la creatività narrativa",
+        "Costruire modelli spaziali"
+      ],
+      "correct": 1
+    }
+  ]
+}
