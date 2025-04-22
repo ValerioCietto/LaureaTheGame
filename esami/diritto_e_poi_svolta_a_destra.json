@@ -1,1 +1,213 @@
-{}
+{
+  "name": "Diritto e poi svolta a destra",
+  "cfu": 6,
+  "text": [
+    "Il corso “Diritto e poi svolta a destra” è un’introduzione alla giurisprudenza urbana: ogni norma è insegnata come un’indicazione stradale, e gli studenti devono interpretare articoli di legge come se fossero cartelli a un incrocio.",
+    "Nel modulo procedurale, si studiano i codici di procedura con esercizi pratici: i rituali di udienza diventano un percorso di marcia, in cui ogni passaggio processuale è segnalato da una segnaletica immaginaria.",
+    "La giurisprudenza comparata viene affrontata tramite mappe mentali: le diverse scuole di pensiero (civilisti, penalisti, amministrativisti) sono disposte su una rotonda da cui lo studente deve sempre svoltare a destra per proseguire.",
+    "L’esame finale consiste in un mock trial itinerante: lo studente deve presentare un caso, muoversi fisicamente lungo un circuito segnato, svoltare a destra ad ogni paragrafo, e sostenere l’arringa davanti a una “giuria stradale”."
+  ],
+  "questions": [
+    {
+      "paragraph": 0,
+      "text": "Come viene insegnata la norma nel corso?",
+      "options": [
+        "Come un testo sacro",
+        "Come un’indicazione stradale",
+        "Come un codice cifrato"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "Cosa devono interpretare gli studenti?",
+      "options": [
+        "Cartelli a un incrocio",
+        "Diagrammi UML",
+        "Foglie di tè"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 0,
+      "text": "Qual è il titolo completo del corso?",
+      "options": [
+        "Diritto in città",
+        "Diritto e poi svolta a destra",
+        "Diritto e marcia legale"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "Che metafora si usa per le leggi?",
+      "options": [
+        "Musica sinfonica",
+        "Indicazioni stradali",
+        "Ricette di cucina"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "Quale abilità principale serve?",
+      "options": [
+        "Leggere mappe",
+        "Ascoltare in silenzio",
+        "Cantare articoli"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "Cosa studiano nel modulo procedurale?",
+      "options": [
+        "Codici penali antichi",
+        "Codici di procedura",
+        "Codici postali"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 1,
+      "text": "Come vengono segnalati i passaggi processuali?",
+      "options": [
+        "Con semafori",
+        "Con segnaletica immaginaria",
+        "Con rumori di clacson"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 1,
+      "text": "Quale attività pratica si svolge?",
+      "options": [
+        "Un percorso di marcia",
+        "Una simulazione di volo",
+        "Un pranzo di lavoro"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "In che forma si presentano le udienze?",
+      "options": [
+        "Dentro una rotonda",
+        "Come un percorso di marcia",
+        "In una sala buia"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 1,
+      "text": "Che elemento è centrale nel laboratorio?",
+      "options": [
+        "Bussola",
+        "Segnaletica",
+        "Campanello"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 2,
+      "text": "Come viene visualizzata la giurisprudenza comparata?",
+      "options": [
+        "Su una tavola rotonda",
+        "Su una rotonda stradale",
+        "Su un libretto sottile"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 2,
+      "text": "Chi sono i “civilisti, penalisti, amministrativisti”?",
+      "options": [
+        "Nodi di traffico",
+        "Scuole di pensiero",
+        "Tipi di veicoli"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 2,
+      "text": "Cosa deve fare lo studente alla rotonda?",
+      "options": [
+        "Svoltare a sinistra",
+        "Svoltare a destra",
+        "Fermarsi"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 2,
+      "text": "Che strumento aiuta nella comparazione?",
+      "options": [
+        "Mappa mentale",
+        "Compasso",
+        "Bilancia"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Qual è l’ordine di svolta?",
+      "options": [
+        "Sempre dritto",
+        "Sempre a destra",
+        "Sempre a sinistra"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 3,
+      "text": "In cosa consiste l’esame finale?",
+      "options": [
+        "Un quiz a risposta multipla",
+        "Un mock trial itinerante",
+        "Un saggio scritto"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 3,
+      "text": "Quanto dura la performance?",
+      "options": [
+        "5 minuti",
+        "10 minuti",
+        "15 minuti"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 3,
+      "text": "Cosa deve fare lo studente durante l’esame?",
+      "options": [
+        "Svolta a sinistra ad ogni punto",
+        "Svoltare a destra ad ogni paragrafo",
+        "Restare fermo"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 3,
+      "text": "Chi valuta l’arringa finale?",
+      "options": [
+        "Giudice vero",
+        "Giuria stradale",
+        "Pubblico generico"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 3,
+      "text": "Quale aspetto NON viene valutato?",
+      "options": [
+        "Coordinazione di marcia",
+        "Chiarezza dell’arringa",
+        "Colori della segnaletica"
+      ],
+      "correct": 2
+    }
+  ]
+}
+
