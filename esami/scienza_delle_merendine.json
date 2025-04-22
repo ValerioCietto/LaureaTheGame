@@ -1,0 +1,132 @@
+{
+  "name": "Scienza delle merendine",
+  "cfu": 6,
+  "text": [
+    "La Scienza delle Merendine nasce nel secondo dopoguerra, quando il bisogno di energia rapida incontrò la chimica del piacere. Il primo esperimento documentato risale al 1947, con la creazione del prototipo di Merendina Tipo A, a base di zucchero, farina d'aria e nostalgia.",
+    "Studi recenti hanno classificato le merendine in tre classi: Zuccherose, Creminose e Croccantiformi. Alcuni esemplari, come la Panpiuma Fritta, non rientrano in nessuna categoria e sono considerati “anomali”.",
+    "Gli scienziati della Università di Saccharia hanno dimostrato che una merendina può sopravvivere 37 anni in condizioni ottimali (cioè, chiusa in una tasca di zaino delle medie). Le sostanze attive più studiate sono: saccarosio iperbolico, olio di palma quantistico e vanillina teorica.",
+    "I metodi di consumo includono morsi multipli, ingestione unitaria, scioglimento rituale sotto il banco e baratto interpersonale. La Teoria della Sorpresina Interna postula che ogni merendina contenga un messaggio nascosto dell’inconscio collettivo. Uno studio del 2004 ha scoperto che 8 studenti su 10 credono che le merendine migliorino le performance scolastiche, soprattutto se accompagnate da succhi frizzanti o bugie spudorate. Infine, la legge della Merendina Relativa afferma: più è rumorosa da scartare, più è desiderata."
+  ],
+  "questions": [
+    {
+      "paragraph": 0,
+      "text": "In che anno risale il primo esperimento documentato?",
+      "options": ["1937", "1947", "1957"],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "Qual è il nome del prototipo creato nel 1947?",
+      "options": ["Merendina Tipo A", "Snack del Dopoguerra", "Bocconcino Storico"],
+      "correct": 0
+    },
+    {
+      "paragraph": 0,
+      "text": "Di cosa era fatta la Merendina Tipo A?",
+      "options": ["Zucchero, farina d'aria e nostalgia", "Latte, cioccolato e miele", "Burro, sale e farina integrale"],
+      "correct": 0
+    },
+    {
+      "paragraph": 0,
+      "text": "In quale periodo storico nasce la Scienza delle Merendine?",
+      "options": ["Primo dopoguerra", "Secondo dopoguerra", "Terzo dopoguerra"],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "Qual è lo scopo principale di questa disciplina?",
+      "options": ["Studiare il piacere alimentare", "Trovare energia rapida", "Analizzare le merendine d'epoca"],
+      "correct": 1
+    },
+    {
+      "paragraph": 1,
+      "text": "In quante classi sono state suddivise le merendine?",
+      "options": ["Due", "Tre", "Quattro"],
+      "correct": 1
+    },
+    {
+      "paragraph": 1,
+      "text": "Quale di queste NON è una delle tre classi?",
+      "options": ["Zuccherose", "Croccantiformi", "Gelatinose"],
+      "correct": 2
+    },
+    {
+      "paragraph": 1,
+      "text": "Quale merendina è considerata anomala?",
+      "options": ["Panpiuma Fritta", "Cookie Classico", "Barretta Dorata"],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "In quale categoria non rientra la Panpiuma Fritta?",
+      "options": ["Zuccherose", "Creminose", "Nessuna"],
+      "correct": 2
+    },
+    {
+      "paragraph": 1,
+      "text": "Chi ha condotto lo studio di classificazione?",
+      "options": ["Università di Saccharia", "Istituto di Gustologia", "Accademia del Dolce"],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Quanto può durare una merendina in condizioni ottimali?",
+      "options": ["7 anni", "37 anni", "70 anni"],
+      "correct": 1
+    },
+    {
+      "paragraph": 2,
+      "text": "Dove veniva conservata la merendina per sopravvivere 37 anni?",
+      "options": ["In un frigorifero", "In una tasca di zaino", "In una scatola di latta"],
+      "correct": 1
+    },
+    {
+      "paragraph": 2,
+      "text": "Quale università ha condotto la ricerca?",
+      "options": ["Università di Saccharia", "Università di Merenda", "Politecnico del Gusto"],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Quale di queste è una sostanza attiva studiata?",
+      "options": ["Saccarosio iperbolico", "Acqua distillata", "Proteine nobili"],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Quale sostanza NON è menzionata?",
+      "options": ["Olio di palma quantistico", "Vanillina teorica", "Sale da cucina"],
+      "correct": 2
+    },
+    {
+      "paragraph": 3,
+      "text": "Quale metodo di consumo NON è menzionato?",
+      "options": ["Morsi multipli", "Scioglimento rituale", "Cottura al forno"],
+      "correct": 2
+    },
+    {
+      "paragraph": 3,
+      "text": "Cosa postula la Teoria della Sorpresina Interna?",
+      "options": ["Messaggio implicito", "Sapore nascosto", "Forma perfetta"],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Quanti studenti su 10 credono nel potere delle merendine?",
+      "options": ["6", "8", "10"],
+      "correct": 1
+    },
+    {
+      "paragraph": 3,
+      "text": "Con cosa migliorano le performance scolastiche?",
+      "options": ["Succhi frizzanti o bugie spudorate", "Acqua minerale", "Frutta fresca"],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Cosa afferma la legge della Merendina Relativa?",
+      "options": ["Più è costosa, meno è desiderata", "Più è rumorosa da scartare, più è desiderata", "Più è antica, più vale"],
+      "correct": 1
+    }
+  ]
+}
