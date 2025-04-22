@@ -1,0 +1,212 @@
+{
+  "name": "Auparacintesi dei Purinsesti",
+  "cfu": 12,
+  "text": [
+    "La Auparacintesi è l’arte di connettere concetti apparentemente scollegati attraverso percorsi logico-allucinogeni. I Purinsesti, d’altro canto, sono contenitori semiotici fluttuanti in cui tutto esiste e non esiste contemporaneamente, un po’ come il piano di studi del primo anno.",
+    "Il corso, tenuto dal dottorato collettivo multidimensionale “_” (pronunciato con uno sguardo), si articola in moduli asincroni che avvengono prima, durante e dopo l’apprendimento. Gli studenti imparano a tradurre testi scritti in linguaggio antiorario, riconoscere silenzî concettuali pieni e svolgere interrogazioni simultanee in almeno due lingue inventate.",
+    "Tra i contenuti principali troviamo: la tricotomia degli assunti immaginari, l’analisi dei sogni non propri, e il famigerato esercizio del quadrato circolare verbalizzato. I laboratori prevedono la redazione di tesi impossibili, ovvero documenti che contraddicono la propria introduzione in ogni paragrafo successivo.",
+    "Il compito finale consiste nell’esporre, con sicurezza, un concetto che non si capisce ma che “suona giusto”. Nessuno ha mai finito il corso, ma tutti lo portano nel cuore (o dove capita)."
+  ],
+  "questions": [
+    {
+      "paragraph": 0,
+      "text": "Cosa sono i Purinsesti secondo il corso?",
+      "options": [
+        "Forme poetiche irregolari",
+        "Contenitori semiotici fluttuanti",
+        "Ricette universitarie astratte"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "Chi tiene ufficialmente il corso?",
+      "options": [
+        "Prof. Punto-E-Virgola",
+        "Il collettivo multidimensionale “_”",
+        "La Commissione dei Nodi Temporali"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "Qual è una delle abilità richieste durante le interrogazioni?",
+      "options": [
+        "Parlare sottosopra",
+        "Rispondere in due lingue inventate",
+        "Recitare backwards usando la voce interiore"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "Cosa si intende per tesi impossibile?",
+      "options": [
+        "Una tesi con troppi refusi",
+        "Una tesi senza conclusioni",
+        "Una tesi che si contraddice ad ogni paragrafo"
+      ],
+      "correct": 2
+    },
+    {
+      "paragraph": 0,
+      "text": "Quale elemento NON è citato nel testo?",
+      "options": [
+        "Linguaggio antiorario",
+        "Quadrato circolare verbalizzato",
+        "Paradosso delle matite parallele"
+      ],
+      "correct": 2
+    },
+    {
+      "paragraph": 1,
+      "text": "Che cosa caratterizza i moduli del corso?",
+      "options": [
+        "Avvengono prima, durante e dopo l’apprendimento",
+        "Si svolgono solo di notte",
+        "Richiedono voti in lettere"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "In quale linguaggio traducono i testi?",
+      "options": [
+        "Linguaggio antiorario",
+        "Linguaggio cifrato",
+        "Linguaggio binario"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "Cosa riconoscono gli studenti?",
+      "options": [
+        "Silenzî concettuali pieni",
+        "Dimensioni alternative",
+        "Formule matematiche nascoste"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "Quante lingue inventate usano nelle interrogazioni simultanee?",
+      "options": [
+        "Una",
+        "Due",
+        "Tre"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 1,
+      "text": "Chi è il docente del corso?",
+      "options": [
+        "Prof. Punto-E-Virgola",
+        "Il collettivo multidimensionale “_”",
+        "La Commissione dei Nodi Temporali"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 2,
+      "text": "Quale tecnica è inclusa nei contenuti principali?",
+      "options": [
+        "Tricotomia degli assunti immaginari",
+        "Dimensioni di Sospetto",
+        "Meccanica Quantistica"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Cosa analizzano gli studenti?",
+      "options": [
+        "Sogni non propri",
+        "Sogni propri",
+        "Sogni di terzi"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Cos’è l’esercizio del quadrato circolare?",
+      "options": [
+        "Figura impossibile",
+        "Funzione matematica",
+        "Spazio topologico"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Cosa devono redigere in laboratorio?",
+      "options": [
+        "Tesi impossibili",
+        "Manuali tecnici",
+        "Script video"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Cosa contraddice ogni paragrafo successivo?",
+      "options": [
+        "La propria introduzione",
+        "Il titolo",
+        "La conclusione"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "In cosa consiste il compito finale?",
+      "options": [
+        "Esposizione di un concetto incomprensibile",
+        "Scrivere una tesina storica",
+        "Calcolare un teorema"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Come deve essere il concetto finale?",
+      "options": [
+        "Che suona giusto",
+        "Che sia semplice",
+        "Che sia breve"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Quanti hanno completato il corso?",
+      "options": [
+        "Nessuno",
+        "Tutti",
+        "Alcuni"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Dove portano gli studenti il corso?",
+      "options": [
+        "Nel cuore",
+        "In ufficio",
+        "In biblioteca"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Quale caratteristica è valutata durante l’esposizione?",
+      "options": [
+        "Sicurezza",
+        "Velocità",
+        "Silenzio"
+      ],
+      "correct": 0
+    }
+  ]
+}
