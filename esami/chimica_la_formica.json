@@ -1,1 +1,213 @@
-{}
+{
+  "name": "Chimica la Formica",
+  "cfu": 6,
+  "text": [
+    "Il corso “Chimica la Formica” esplora le proprietà chimiche dell’acido formico e dei suoi derivati in un contesto surreale. Gli studenti studiano estratti di formiche arcobaleno e imparano a isolare composti fluorescenti ottenuti da gocce di melata fermentata.",
+    "Tra gli argomenti principali ci sono la sintesi di polverine cromatiche da esecrine, la stabilizzazione di microcristalli di formate, e l’analisi spettrale di effluvi di formiche in letargo. Si approfondisce l’uso di catalizzatori immaginari e reazioni di ossidoriduzione melodiche.",
+    "In laboratorio si realizzano reazioni al bordo di provette in vetro smerigliato, si osservano cambi di colore con phometria tattile, e si sperimentano tecniche di centrifugazione antomimica. Gli studenti annotano variazioni di odore e di lucentezza sotto lampade UV fittizie.",
+    "L’esame finale consiste nel progettare un nuovo composto ant-derived: bisogna descriverne la sintesi, prevedere colore, solubilità e aroma, e spiegare a voce alta le fasi della reazione mentre si indossa un casco a forma di formica."
+  ],
+  "questions": [
+    {
+      "paragraph": 0,
+      "text": "Qual è il focus principale del corso?",
+      "options": [
+        "Reazioni di alcani standard",
+        "Proprietà chimiche dell’acido formico",
+        "Sintesi di polimeri di plastica"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "Da quale sostanza si estraggono i composti fluorescenti?",
+      "options": [
+        "Miele artificiale",
+        "Gocce di melata fermentata",
+        "Acqua di sorgente"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "Che estratti studiano gli studenti?",
+      "options": [
+        "Estratti di formiche arcobaleno",
+        "Estratti di foglie esotiche",
+        "Estratti di muschio lunare"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 0,
+      "text": "Quale composto è al centro dell’analisi?",
+      "options": [
+        "Acido acetico",
+        "Acido formico",
+        "Acido citrico"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "Cosa imparano a isolare gli studenti?",
+      "options": [
+        "Proteine virali",
+        "Composti fluorescenti",
+        "Metalli pesanti"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 1,
+      "text": "Qual è uno degli argomenti principali?",
+      "options": [
+        "Sintesi di polverine cromatiche da esecrine",
+        "Produzione di idrocarburi aromatici",
+        "Analisi di solventi tradizionali"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "Cosa si stabilizza in laboratorio?",
+      "options": [
+        "Microcristalli di formate",
+        "Cristalli di sale grosso",
+        "Polveri di grafene"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "Che tipo di catalizzatori si studiano?",
+      "options": [
+        "Catalizzatori metallici",
+        "Catalizzatori immaginari",
+        "Catalizzatori biologici"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 1,
+      "text": "Quale tecnica spettrale si approfondisce?",
+      "options": [
+        "Spettrometria di massa",
+        "Analisi spettrale di effluvi",
+        "Cromatografia gassosa"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 1,
+      "text": "Quale reazione si definisce “melodica”?",
+      "options": [
+        "Ossidazione del ferro",
+        "Reazioni di ossidoriduzione",
+        "Sintesi di esteri"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 2,
+      "text": "Dove si effettuano le reazioni in laboratorio?",
+      "options": [
+        "In banchi di legno",
+        "Al bordo di provette in vetro smerigliato",
+        "In contenitori di plastica"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 2,
+      "text": "Quale metodo di misura si usa?",
+      "options": [
+        "Spettroscopia IR",
+        "PHometria tattile",
+        "Cromatografia liquida"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 2,
+      "text": "Cosa osservano gli studenti sotto lampade UV?",
+      "options": [
+        "Luminescenza reale",
+        "Luminescenza fittizia",
+        "Reazioni endotermiche"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 2,
+      "text": "Quale tecnica di separazione si sperimenta?",
+      "options": [
+        "Filtrazione sotto vuoto",
+        "Centrifugazione antomimica",
+        "Distillazione a vapore"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 2,
+      "text": "Quale parametro annotano gli studenti?",
+      "options": [
+        "Variazioni di temperatura",
+        "Variazioni di odore e lucentezza",
+        "Variazioni di pressione"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 3,
+      "text": "In cosa consiste l’esame finale?",
+      "options": [
+        "Progettare un nuovo composto ant-derived",
+        "Analizzare metalli pesanti",
+        "Scrivere una tesina teorica"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Quali proprietà devono prevedere gli studenti?",
+      "options": [
+        "Punto di fusione e densità",
+        "Colore, solubilità e aroma",
+        "Capacità termica"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 3,
+      "text": "Cosa devono spiegare a voce alta?",
+      "options": [
+        "Le fasi della reazione",
+        "Le basi teoriche della meccanica quantistica",
+        "L’estrazione di DNA"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Quale indumento particolare indossano gli studenti?",
+      "options": [
+        "Guanti di gomma",
+        "Casco a forma di formica",
+        "Camice tradizionale"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 3,
+      "text": "Su quale scala viene assegnato il punteggio finale?",
+      "options": [
+        "Su 10",
+        "Su 30",
+        "Su 100"
+      ],
+      "correct": 1
+    }
+  ]
+}
+
