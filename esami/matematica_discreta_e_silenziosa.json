@@ -1,0 +1,212 @@
+{
+  "name": "Matematica discreta e silenziosa",
+  "cfu": 6,
+  "text": [
+    "La Matematica discreta e silenziosa si occupa di strutture numeriche che non parlano mai ad alta voce: insiemi discreti, grafi mutici e logiche senza voce. Nata dall’esigenza di studiare sistemi senza rumori inutili, questa disciplina insegna a far tacere numeri apparentemente chiassosi.",
+    "Tra gli argomenti principali si trovano i grafi silenziosi, dove i nodi comunicano tramite gesti invisibili, e le sequenze mute, che avanzano senza alcun suono. Le operazioni su insiemi si eseguono con sussurri gestuali, e l’aritmetica modulare diventa un canto segreto tra i moduli.",
+    "Gli studenti imparano a creare tabelle di verità senza pronunciare alcuna parola, utilizzando bastoncini semaforici e fogli di carta piegati. Il concetto di ente discreto è illustrato con mattoncini LEGO trasparenti, mentre gli algoritmi vengono eseguiti in loop silenziosi, nei quali una sola clessidra scandisce il tempo.",
+    "L’esame finale consiste nel risolvere un labirinto combinatorio silenzioso, dove ogni passo deve essere silenzioso come un algoritmo ricorsivo. Il docente valuta eleganza, precisione e totale assenza di suoni, assegnando punteggi con segni di pollice verso invisibili."
+  ],
+  "questions": [
+    {
+      "paragraph": 0,
+      "text": "Che cosa studia la Matematica discreta e silenziosa?",
+      "options": [
+        "Strutture numeriche mutiche",
+        "Calcolo continuo ad alta voce",
+        "Equazioni rumorose"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 0,
+      "text": "Cosa include la disciplina?",
+      "options": [
+        "Insiemi discreti",
+        "Numeri reali",
+        "Equazioni differenziali"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 0,
+      "text": "Perché è detta ‘silenziosa’?",
+      "options": [
+        "Per studiare sistemi senza rumori inutili",
+        "Per calcolare velocemente",
+        "Per cantare formule"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 0,
+      "text": "Cosa sono i grafi mutici?",
+      "options": [
+        "Grafi che non parlano",
+        "Grafi rumorosi",
+        "Grafi con audio integrato"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 0,
+      "text": "Qual è l’obiettivo principale?",
+      "options": [
+        "Far tacere numeri chiassosi",
+        "Far urlare numeri",
+        "Far cantare numeri"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "Cosa definiscono i grafi silenziosi?",
+      "options": [
+        "Nodi comunicano tramite gesti invisibili",
+        "Nodi inviano messaggi audio",
+        "Nodi con altoparlanti"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "Cosa sono le sequenze mute?",
+      "options": [
+        "Sequenze che avanzano senza suono",
+        "Sequenze animate",
+        "Sequenze di testo"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "Come si eseguono le operazioni su insiemi?",
+      "options": [
+        "Con sussurri gestuali",
+        "Con calcolatrice",
+        "Con segnale luminoso"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "L’aritmetica modulare diventa:",
+      "options": [
+        "Un canto segreto tra moduli",
+        "Un rumore di fondo",
+        "Una danza rumorosa"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "Quale NON è un argomento di questo paragrafo?",
+      "options": [
+        "Grafi silenziosi",
+        "Sequenze mute",
+        "Analisi sonora"
+      ],
+      "correct": 2
+    },
+    {
+      "paragraph": 2,
+      "text": "Come si creano le tabelle di verità?",
+      "options": [
+        "Senza pronunciare alcuna parola",
+        "Cantando le righe",
+        "Registrando audio"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Quali strumenti si usano?",
+      "options": [
+        "Bastoncini semaforici e carta piegata",
+        "Calcolatori quantistici",
+        "Cioccolato"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Come è illustrato il concetto di ente discreto?",
+      "options": [
+        "Con mattoncini LEGO trasparenti",
+        "Con blocchi rumorosi",
+        "Con schegge di vetro"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Dove vengono eseguiti gli algoritmi?",
+      "options": [
+        "In loop silenziosi",
+        "In sale rumorose",
+        "Con musica ad alto volume"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Cosa scandisce il tempo?",
+      "options": [
+        "Una clessidra",
+        "Musica di sottofondo",
+        "Campane"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "In cosa consiste l’esame finale?",
+      "options": [
+        "Risolvere un labirinto combinatorio silenzioso",
+        "Calcolare integrali rumorosi",
+        "Inventare formule cantate"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Come devono essere i passi?",
+      "options": [
+        "Silenziosi come un algoritmo ricorsivo",
+        "Rapidi e rumorosi",
+        "Lenti ma chiassosi"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Cosa valuta il docente?",
+      "options": [
+        "Eleganza, precisione e silenzio",
+        "Velocità di risposta",
+        "Volume dell’audio"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Come assegna i punteggi?",
+      "options": [
+        "Con segni di pollice verso invisibili",
+        "Con applausi",
+        "Con numeri vocali"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Qual è l’unico suono ammesso?",
+      "options": [
+        "Assenza di suono",
+        "Battito di mani",
+        "Fischio"
+      ],
+      "correct": 0
+    }
+  ]
+}
