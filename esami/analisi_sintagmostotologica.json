@@ -1,0 +1,212 @@
+{
+  "name": "Analisi sintagmostotologica",
+  "cfu": 6,
+  "text": [
+    "L’Analisi sintagmostotologica è lo studio delle strutture sintattiche più improbabili, nate dall’unione di parole che fumano metafore e cantano analogie. I primi tentativi risalgono a un dialogo tra un poeta e un tassista, che generarono la celebre frase “il silenzio urla arcobaleni”.",
+    "Nel Medioevo accademico si usava il “Codice dei Sostantivi Erranti”, un manoscritto che spostava soggetti e predicati a piacimento, insegnando a districare frasi senza cominciare né finire davvero. I monaci linguisti vi aggiungevano parentesi graffe parlanti e virgole danzanti.",
+    "La metodologia moderna prevede l’utilizzo di parser emotivi e analizzatori semiotici, capaci di riconoscere le occlusioni di senso e le inversioni quantiche del verbo. Gli studenti praticano esercizi di “dislocazione casuale” e “riannodamento concettuale” con carta e forbici.",
+    "L’esame finale consiste nel comporre una frase di almeno cinquanta parole che descriva un gusto immaginario, suddivisa in quattro paragrafi coerenti solo all’interno di un sogno. Il docente valuta ritmo, musicalità e intensità delle metafore in tempo reale."
+  ],
+  "questions": [
+    {
+      "paragraph": 0,
+      "text": "Che cosa studia l’Analisi sintagmostotologica?",
+      "options": [
+        "Le metafore visive",
+        "Strutture sintattiche improbabili",
+        "Le poesie in rima"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "Da quale dialogo deriva la frase celebre?",
+      "options": [
+        "Tra un pittore e un contadino",
+        "Tra un poeta e un tassista",
+        "Tra un filosofo e un barista"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "Qual è la frase citata nel testo?",
+      "options": [
+        "Il silenzio urla arcobaleni",
+        "Il vento canta canzoni",
+        "La notte parla sogni"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 0,
+      "text": "Quando nacquero i primi tentativi?",
+      "options": [
+        "Nel Rinascimento",
+        "Nel Medioevo",
+        "In epoca moderna"
+      ],
+      "correct": 2
+    },
+    {
+      "paragraph": 0,
+      "text": "Chi produsse il dialogo originario?",
+      "options": [
+        "Un poeta e un tassista",
+        "Un monaco e un eremita",
+        "Un professore e uno studente"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "Come si chiama il manoscritto medievale?",
+      "options": [
+        "Codice dei Sostantivi Erranti",
+        "Vangelo delle Virgole Vaganti",
+        "Appendice dei Predicati Perduti"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "Cosa spostava il Codice dei Sostantivi Erranti?",
+      "options": [
+        "Lettere e segni",
+        "Soggetti e predicati",
+        "Paragrafi musicali"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 1,
+      "text": "Chi aggiungeva parentesi graffe parlanti?",
+      "options": [
+        "I monaci linguisti",
+        "I pellegrini erranti",
+        "I contabili medievali"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "Quali virgole erano descritte?",
+      "options": [
+        "Virgole immobili",
+        "Virgole danzanti",
+        "Virgole sussurranti"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 1,
+      "text": "In quale periodo si diffuse il Codice?",
+      "options": [
+        "Età moderna",
+        "Medioevo accademico",
+        "Età contemporanea"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 2,
+      "text": "Quale strumento analizza le occlusioni di senso?",
+      "options": [
+        "Parser emotivo",
+        "Calcolatore quantico",
+        "Cronometro linguistico"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Cosa riconosce un analizzatore semiotico?",
+      "options": [
+        "Gli anacoluti apparenti",
+        "Le occlusioni di senso",
+        "I cliché poetici"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 2,
+      "text": "Quale esercizio usano gli studenti?",
+      "options": [
+        "Dislocazione casuale",
+        "Composizione lineare",
+        "Narrativa formale"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Con quali strumenti praticano gli esercizi?",
+      "options": [
+        "Carta e forbici",
+        "Tablet e pennino",
+        "Audio registrazioni"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Come si chiama l’altro esercizio?",
+      "options": [
+        "Riannodamento concettuale",
+        "Riscrittura casuale",
+        "Ritmo compositivo"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Cosa devono comporre nell’esame finale?",
+      "options": [
+        "Una poesia in rima",
+        "Una frase di cinquanta parole descrittiva",
+        "Un saggio critico"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 3,
+      "text": "Quanti paragrafi deve avere la composizione?",
+      "options": [
+        "Tre",
+        "Quattro",
+        "Cinque"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 3,
+      "text": "Di cosa deve parlare la frase finale?",
+      "options": [
+        "Un gusto immaginario",
+        "La storia della lingua",
+        "Un calcolo matematico"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Che criterio valuta il docente?",
+      "options": [
+        "Ritmo e musicalità",
+        "Numero di parole",
+        "Corretta punteggiatura"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Quando valuta l’intensità delle metafore?",
+      "options": [
+        "A fine esame",
+        "In tempo reale",
+        "Durante la correzione"
+      ],
+      "correct": 1
+    }
+  ]
+}
