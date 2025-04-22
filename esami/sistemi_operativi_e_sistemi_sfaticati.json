@@ -1,1 +1,212 @@
-{}
+{
+  "name": "Sistemi operativi e sistemi sfaticati",
+  "cfu": 12,
+  "text": [
+    "Il modulo “Sistemi operativi e sistemi sfaticati” esplora l’interazione tra kernel efficienti e processi pigri: si studiano architetture in cui alcuni thread si rifiutano di lavorare fino al caffè delle 10, mentre altri gestiscono le interruzioni con solerzia.",
+    "Nel paragrafo sulle strategie di scheduling, si confrontano algoritmi Round‑Robin e Lazy‑Loop: il secondo attende attivamente i cicli di CPU, rispondendo solo se il sistema lo sollecita con un interrupt immaginario.",
+    "La gestione della memoria introduce il concetto di heap dormiente e pagine sonnolenti: le pagine inattive vengono messe in sospensione musicale, attendendo un segnale sonoro prima di ritornare attive.",
+    "Il laboratorio finale richiede di progettare un mini‑sistema operativo che alterni fasi di lavoro e sonnellino: lo studente deve descrivere struttura del processo, gestione delle code sleep‑wake e mostrare un diagramma di stato completo."
+  ],
+  "questions": [
+    {
+      "paragraph": 0,
+      "text": "Di cosa tratta il corso?",
+      "options": [
+        "Interazione tra kernel e processi pigri",
+        "Programmazione web avanzata",
+        "Sicurezza di rete"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 0,
+      "text": "Quando i thread pigri iniziano a lavorare?",
+      "options": [
+        "Subito all’avvio",
+        "Dopo il caffè delle 10",
+        "Solo di notte"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "Cosa gestiscono i thread solerti?",
+      "options": [
+        "Interruzioni",
+        "Caching",
+        "Rendering grafico"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 0,
+      "text": "Qual è il contrasto principale descritto?",
+      "options": [
+        "Thread veloci vs thread lenti",
+        "Processi user vs kernel",
+        "Hardware vecchio vs hardware nuovo"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 0,
+      "text": "Quale elemento non è citato?",
+      "options": [
+        "Interrupt immaginari",
+        "Thread pigri",
+        "Driver grafici"
+      ],
+      "correct": 2
+    },
+    {
+      "paragraph": 1,
+      "text": "Quali algoritmi vengono confrontati?",
+      "options": [
+        "Round‑Robin e Lazy‑Loop",
+        "FIFO e LRU",
+        "Dijkstra e A*"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "Come funziona il Lazy‑Loop?",
+      "options": [
+        "Attende attivamente i cicli di CPU",
+        "Distribuisce equamente il tempo",
+        "Prioritizza i servizi di rete"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "Quando risponde il Lazy‑Loop?",
+      "options": [
+        "Se il sistema lo sollecita con un interrupt",
+        "Ogni millisecondo",
+        "Solo al riavvio"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "Quale algoritmo non è menzionato?",
+      "options": [
+        "Shortest‑Job‑First",
+        "Round‑Robin",
+        "Lazy‑Loop"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "Che tipo di interrupt usa il Lazy‑Loop?",
+      "options": [
+        "Interrupt immaginario",
+        "Interrupt hardware",
+        "Interrupt software"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Come si chiama l’area di heap inattiva?",
+      "options": [
+        "Heap dormiente",
+        "Heap volatile",
+        "Heap permanente"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Cosa succede alle pagine sonnolente?",
+      "options": [
+        "Vengono messe in sospensione musicale",
+        "Vengono cancellate",
+        "Vengono duplicati"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Quando ritornano attive le pagine?",
+      "options": [
+        "Al suono di un segnale",
+        "Alla pressione di un tasto",
+        "Al riavvio"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Quale concetto non appartiene al paragrafo?",
+      "options": [
+        "Heap dormiente",
+        "Pagine sonnolente",
+        "Caching aggressivo"
+      ],
+      "correct": 2
+    },
+    {
+      "paragraph": 2,
+      "text": "Come viene descritta la memoria inattiva?",
+      "options": [
+        "In sospensione musicale",
+        "In standby elettrico",
+        "In modalità lettura"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Cosa richiede il laboratorio finale?",
+      "options": [
+        "Progettare un mini‑sistema operativo",
+        "Configurare un router",
+        "Scrivere un driver stampa"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Quali fasi deve descrivere lo studente?",
+      "options": [
+        "Gestione delle code sleep‑wake",
+        "Installazione del sistema",
+        "Ottimizzazione del kernel"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Cosa deve includere il diagramma di stato?",
+      "options": [
+        "Struttura del processo",
+        "Schema di rete",
+        "Mappa dei file"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Quale elemento non serve nell’esame?",
+      "options": [
+        "Diagramma di stato",
+        "Sleep‑wake queue",
+        "Protocollo HTTP"
+      ],
+      "correct": 2
+    },
+    {
+      "paragraph": 3,
+      "text": "Quanto deve durare il laboratorio?",
+      "options": [
+        "10 minuti",
+        "20 minuti",
+        "30 minuti"
+      ],
+      "correct": 2
+    }
+  ]
+}
