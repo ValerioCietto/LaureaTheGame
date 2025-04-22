@@ -1,0 +1,212 @@
+{
+  "name": "Stupidità artificiale",
+  "cfu": 6,
+  "text": [
+    "Il corso di Stupidità artificiale esplora i limiti cognitivi delle intelligenze artificiali; gli studenti analizzano algoritmi che compiono scelte insensate, crash immotivati e risposte assurde.",
+    "Si studiano concetti come l’overfitting della stupidità, la regressione ridicola e la rete neurale BirdTrack, che impara a generare bug logici in serie.",
+    "Nel laboratorio, gli studenti generano dataset di risposte stupide, addestrano modelli a replicare comportamenti bizzarri, testano la resistenza agli errori logici e analizzano il feedback di utenti confusi.",
+    "L’esame finale consiste nel progettare un algoritmo che produca almeno cinque risposte completamente inutili a una domanda seria e presentarne il prototipo e la demo."
+  ],
+  "questions": [
+    {
+      "paragraph": 0,
+      "text": "Qual è l’obiettivo principale del corso?",
+      "options": [
+        "Analizzare limiti cognitivi delle IA",
+        "Sviluppare chatbot avanzati",
+        "Ottimizzare reti neurali"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 0,
+      "text": "Cosa si intende per “stupidità artificiale”?",
+      "options": [
+        "Accuratezza estrema",
+        "Comportamenti insensati di IA",
+        "Velocità di calcolo"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "Quale fenomeno studiano gli studenti?",
+      "options": [
+        "Crash immotivati di algoritmi",
+        "Miglioramenti delle prestazioni",
+        "Sicurezza informatica"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 0,
+      "text": "Che tipo di risposte analizzano?",
+      "options": [
+        "Risposte corrette",
+        "Risposte assurde",
+        "Risposte rapide"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 0,
+      "text": "Quale aspetto NON è analizzato nel primo paragrafo?",
+      "options": [
+        "Scelte insensate",
+        "Crash immotivati",
+        "Interfacce utente"
+      ],
+      "correct": 2
+    },
+    {
+      "paragraph": 1,
+      "text": "Cosa si intende per overfitting della stupidità?",
+      "options": [
+        "Modello apprende solo errori",
+        "Modello generativo perfetto",
+        "Modello non riesce ad imparare"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "Quale rete è menzionata nel secondo paragrafo?",
+      "options": [
+        "SmartNet",
+        "BirdTrack",
+        "DeepStupid"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 1,
+      "text": "Cosa studia la regressione ridicola?",
+      "options": [
+        "Relazioni improbabili",
+        "Dati puliti",
+        "Errori sistematici"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 1,
+      "text": "Quale concetto NON è citato in questo paragrafo?",
+      "options": [
+        "Overfitting della stupidità",
+        "Regressione ridicola",
+        "Clustering gerarchico"
+      ],
+      "correct": 2
+    },
+    {
+      "paragraph": 1,
+      "text": "Che tipo di bug la rete BirdTrack genera?",
+      "options": [
+        "Bug logici in serie",
+        "Bug hardware",
+        "Bug grafici"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Cosa generano gli studenti in laboratorio?",
+      "options": [
+        "Dataset di risposte stupide",
+        "Dataset di immagini",
+        "Dataset scientifici"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Cosa addestrano nel laboratorio?",
+      "options": [
+        "Modelli a replicare comportamenti bizzarri",
+        "Modelli di traduzione",
+        "Modelli predittivi seri"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Cosa testano sul campo?",
+      "options": [
+        "Resistenza agli errori logici",
+        "Velocità di esecuzione",
+        "Sicurezza dei dati"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Chi fornisce il feedback?",
+      "options": [
+        "Utenti confusi",
+        "Ingegneri esperti",
+        "Robot linguistici"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 2,
+      "text": "Quale attività non è svolta in laboratorio?",
+      "options": [
+        "Analisi del feedback",
+        "Test di sicurezza",
+        "Generazione di dataset"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 3,
+      "text": "In cosa consiste l’esame finale?",
+      "options": [
+        "Progettare un algoritmo per risposte inutili",
+        "Implementare un sistema operativo",
+        "Analizzare dati reali"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Quante risposte deve generare l’algoritmo?",
+      "options": [
+        "Tre",
+        "Cinque",
+        "Dieci"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 3,
+      "text": "Che tipo di risposte deve produrre?",
+      "options": [
+        "Completamente accurate",
+        "Completamente inutili",
+        "Veloci e precise"
+      ],
+      "correct": 1
+    },
+    {
+      "paragraph": 3,
+      "text": "A che tipo di domanda?",
+      "options": [
+        "Seria",
+        "Umoristica",
+        "Retorica"
+      ],
+      "correct": 0
+    },
+    {
+      "paragraph": 3,
+      "text": "Quale caratteristica NON è richiesta per l’algoritmo?",
+      "options": [
+        "Risposte accurate",
+        "Risposte inutili",
+        "Demo funzionante"
+      ],
+      "correct": 0
+    }
+  ]
+}
