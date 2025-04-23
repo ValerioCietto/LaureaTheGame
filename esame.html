@@ -71,7 +71,6 @@
   <div id="result" style="display:none;"></div>
 
   <script>
-    // Helper: estrai parametro numerico o stringa
     function getParam(name, defaultValue = null) {
       const params = new URL(window.location).searchParams;
       return params.has(name) ? params.get(name) : defaultValue;
@@ -81,7 +80,6 @@
       return isNaN(v) ? defaultValue : v;
     }
 
-    // Fisher–Yates shuffle
     function shuffle(array) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -91,6 +89,12 @@
     }
 
     document.addEventListener('DOMContentLoaded', async () => {
+      // Parametri aggiuntivi
+      const bonus = getParamNum('bonus_voto', 0);
+      const hint = getParam('hint', 'false') === 'true';
+      const copiaDa = getParam('copia_da', '').toLowerCase();
+      const allaCieca = getParam('alla_cieca', 'false') === 'true';
+
       const nomeEsame = getParam('nome_esame', null);
       if (!nomeEsame) {
         document.body.innerHTML = "<p style='color:red;text-align:center;'>Parametro <strong>nome_esame</strong> mancante!</p>";
@@ -115,7 +119,7 @@
       document.getElementById('cfu-display').innerText = examData.cfu;
       document.getElementById('prep-display').innerText = prep;
 
-      // Mostra paragrafi sbloccati
+      // Testo
       const textContainer = document.getElementById('exam-text');
       examData.text.slice(0, prep).forEach(p => {
         const pEl = document.createElement('p');
@@ -123,65 +127,103 @@
         textContainer.appendChild(pEl);
       });
 
-      // Seleziona 5 domande
+      // Domande
       const selected = shuffle([...examData.questions]).slice(0, 5);
-
-      // Popola form
       const form = document.getElementById('exam-form');
+
       selected.forEach((q, idx) => {
         const field = document.createElement('div');
         field.className = 'question';
-        field.innerHTML = `
-          <h2>Domanda ${idx + 1}</h2>
-          <p>${q.text}</p>
-          <div class="options">
-            ${q.options.map((opt, i) =>
-              `<label data-q="${idx}" data-i="${i}">
-                 <input type="radio" name="q${idx}" value="${i}">
-                 ${opt}
-               </label>`
-            ).join('')}
-          </div>
-        `;
+        // Question text
+        const qText = document.createElement('p');
+        if (!allaCieca) {
+          const prefix = hint ? `Dal paragrafo ${q.paragraph + 1}: ` : '';
+          qText.textContent = prefix + q.text;
+        } else {
+          qText.style.visibility = 'hidden';
+        }
+        field.appendChild(qText);
+        // Options
+        const optsDiv = document.createElement('div');
+        optsDiv.className = 'options';
+        q.options.forEach((opt, i) => {
+          const label = document.createElement('label');
+          label.setAttribute('data-q', idx);
+          label.setAttribute('data-i', i);
+          label.style.textDecoration = 'none';
+          const input = document.createElement('input');
+          input.type = 'radio';
+          input.name = `q${idx}`;
+          input.value = i;
+          label.appendChild(input);
+          label.appendChild(document.createTextNode(' ' + opt));
+          optsDiv.appendChild(label);
+        });
+        field.appendChild(optsDiv);
         form.appendChild(field);
       });
 
-      // Gestione invio
+      // Sottolineature copia_da
+      selected.forEach((q, idx) => {
+        const labels = Array.from(form.querySelectorAll(`label[data-q="${idx}"]`));
+        if (copiaDa === 'esperto') {
+          labels.forEach(label => {
+            if (parseInt(label.getAttribute('data-i'), 10) === q.correct) {
+              label.style.textDecoration = 'underline';
+            }
+          });
+        } else if (copiaDa === 'mediocre') {
+          labels.forEach(label => label.style.textDecoration = 'none');
+          if (Math.random() < 0.5) {
+            // underline correct
+            const corr = labels.find(l => parseInt(l.getAttribute('data-i'),10) === q.correct);
+            if (corr) corr.style.textDecoration = 'underline';
+          } else {
+            // underline a random wrong
+            const wrongs = labels.filter(l => parseInt(l.getAttribute('data-i'),10) !== q.correct);
+            const pick = wrongs[Math.floor(Math.random()*wrongs.length)];
+            if (pick) pick.style.textDecoration = 'underline';
+          }
+        } else if (copiaDa === 'scarso') {
+          const pick = labels[Math.floor(Math.random()*labels.length)];
+          if (pick) pick.style.textDecoration = 'underline';
+        }
+      });
+
+      // Invio risposte
       document.getElementById('submit-button').addEventListener('click', () => {
-        let correct = 0;
+        let correctCount = 0;
         selected.forEach((q, idx) => {
           const chosen = form.querySelector(`input[name="q${idx}"]:checked`);
-          const chosenVal = chosen ? parseInt(chosen.value, 10) : null;
-          if (chosenVal === q.correct) correct++;
-
-          // Evidenzia risposte:
-          const labels = form.querySelectorAll(`label[data-q="${idx}"]`);
-          labels.forEach(label => {
-            const optIndex = parseInt(label.getAttribute('data-i'), 10);
-            label.classList.remove('correct', 'wrong');
-            if (optIndex === q.correct) {
-              label.classList.add('correct');
-            }
-            if (optIndex === chosenVal && chosenVal !== q.correct) {
-              label.classList.add('wrong');
-            }
+          const val = chosen ? parseInt(chosen.value, 10) : null;
+          if (val === q.correct) correctCount++;
+          // evidenzia corrette/errate
+          form.querySelectorAll(`label[data-q="${idx}"]`).forEach(label => {
+            const i = parseInt(label.getAttribute('data-i'),10);
+            label.classList.remove('correct','wrong');
+            if (i === q.correct) label.classList.add('correct');
+            if (i === val && val !== q.correct) label.classList.add('wrong');
           });
         });
 
-        const score = Math.round((correct / selected.length) * 30);
-        let outcome;
-        if (score === 18) outcome = "Passato con disonore";
-        else if (score >= 18) outcome = "Esame superato";
-        else outcome = "Esame non superato";
+        const baseScore = Math.round((correctCount / selected.length) * 30);
+        let finalScore = baseScore + bonus;
+        if (finalScore < 1) finalScore = 1;
+        if (finalScore > 30) finalScore = 30;
+
+        let outcomeText;
+        if (finalScore === 18) outcomeText = "Passato con disonore";
+        else if (finalScore >= 18) outcomeText = "Esame superato";
+        else outcomeText = "Esame non superato";
 
         const resultEl = document.getElementById('result');
         resultEl.innerText =
-          `Hai risposto correttamente a ${correct} su ${selected.length}.\n` +
-          `Voto finale: ${score}/30\n` +
-          `${outcome}`;
+          `Hai risposto correttamente a ${correctCount} su ${selected.length}.\n` +
+          `Voto base: ${baseScore}/30  (bonus ${bonus >= 0 ? '+'+bonus : bonus})\n` +
+          `Voto finale: ${finalScore}/30\n` +
+          outcomeText;
         resultEl.style.display = 'block';
 
-        // Disabilita ulteriori modifiche
         form.querySelectorAll('input').forEach(i => i.disabled = true);
         document.getElementById('submit-button').disabled = true;
       });
