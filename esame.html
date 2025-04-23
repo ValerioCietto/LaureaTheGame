@@ -28,6 +28,14 @@
     .options label {
       display: block;
       margin: 4px 0;
+      padding: 4px;
+      border-radius: 4px;
+    }
+    .options label.correct {
+      background-color: #c8e6c9; /* verde chiaro */
+    }
+    .options label.wrong {
+      background-color: #ffcdd2; /* rosso chiaro */
     }
     #submit-button {
       display: block;
@@ -99,12 +107,10 @@
         return;
       }
 
-      // Parametri
       const prep = Math.min(4, Math.max(1, getParamNum('preparazione', 1)));
       const cfuParam = getParamNum('cfu', examData.cfu || 0);
       examData.cfu = cfuParam;
 
-      // Titolo e CFU/preparazione
       document.getElementById('exam-title').innerText = `Esame: ${examData.name}`;
       document.getElementById('cfu-display').innerText = examData.cfu;
       document.getElementById('prep-display').innerText = prep;
@@ -117,7 +123,7 @@
         textContainer.appendChild(pEl);
       });
 
-      // Seleziona 5 domande (assumiamo esame da 6 CFU; per altri CFU cambiare slice)
+      // Seleziona 5 domande
       const selected = shuffle([...examData.questions]).slice(0, 5);
 
       // Popola form
@@ -130,7 +136,7 @@
           <p>${q.text}</p>
           <div class="options">
             ${q.options.map((opt, i) =>
-              `<label>
+              `<label data-q="${idx}" data-i="${i}">
                  <input type="radio" name="q${idx}" value="${i}">
                  ${opt}
                </label>`
@@ -144,8 +150,22 @@
       document.getElementById('submit-button').addEventListener('click', () => {
         let correct = 0;
         selected.forEach((q, idx) => {
-          const val = form.querySelector(`input[name="q${idx}"]:checked`);
-          if (val && parseInt(val.value, 10) === q.correct) correct++;
+          const chosen = form.querySelector(`input[name="q${idx}"]:checked`);
+          const chosenVal = chosen ? parseInt(chosen.value, 10) : null;
+          if (chosenVal === q.correct) correct++;
+
+          // Evidenzia risposte:
+          const labels = form.querySelectorAll(`label[data-q="${idx}"]`);
+          labels.forEach(label => {
+            const optIndex = parseInt(label.getAttribute('data-i'), 10);
+            label.classList.remove('correct', 'wrong');
+            if (optIndex === q.correct) {
+              label.classList.add('correct');
+            }
+            if (optIndex === chosenVal && chosenVal !== q.correct) {
+              label.classList.add('wrong');
+            }
+          });
         });
 
         const score = Math.round((correct / selected.length) * 30);
@@ -161,6 +181,7 @@
           `${outcome}`;
         resultEl.style.display = 'block';
 
+        // Disabilita ulteriori modifiche
         form.querySelectorAll('input').forEach(i => i.disabled = true);
         document.getElementById('submit-button').disabled = true;
       });
