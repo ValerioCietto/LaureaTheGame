@@ -32,10 +32,10 @@
       border-radius: 4px;
     }
     .options label.correct {
-      background-color: #c8e6c9; /* verde chiaro */
+      background-color: #c8e6c9;
     }
     .options label.wrong {
-      background-color: #ffcdd2; /* rosso chiaro */
+      background-color: #ffcdd2;
     }
     #submit-button {
       display: block;
@@ -75,9 +75,9 @@
       const params = new URL(window.location).searchParams;
       return params.has(name) ? params.get(name) : defaultValue;
     }
-    function getParamNum(name, defaultValue) {
+    function getParamNum(name) {
       const v = parseInt(getParam(name), 10);
-      return isNaN(v) ? defaultValue : v;
+      return isNaN(v) ? null : v;
     }
     function shuffle(array) {
       for (let i = array.length - 1; i > 0; i--) {
@@ -88,15 +88,23 @@
     }
 
     document.addEventListener('DOMContentLoaded', async () => {
-      // parametri extra
-      const bonus = getParamNum('bonus_voto', 0);
+      // leggi CFU DA PARAMETRO (è obbligatorio)
+      const cfuParam = getParamNum('cfu');
+      if (cfuParam === null) {
+        document.body.innerHTML = `<p style="color:red; text-align:center;">
+          Parametro <strong>cfu</strong> mancante o non numerico!</p>`;
+        return;
+      }
+
+      const bonus = getParamNum('bonus_voto') || 0;
       const hint = getParam('hint') === 'true';
       const copiaDa = getParam('copia_da', '').toLowerCase();
       const allaCieca = getParam('alla_cieca') === 'true';
 
       const nomeEsame = getParam('nome_esame');
       if (!nomeEsame) {
-        document.body.innerHTML = "<p style='color:red;text-align:center;'>Parametro <strong>nome_esame</strong> mancante!</p>";
+        document.body.innerHTML = `<p style="color:red;text-align:center;">
+          Parametro <strong>nome_esame</strong> mancante!</p>`;
         return;
       }
 
@@ -106,21 +114,23 @@
         if (!res.ok) throw new Error(res.statusText);
         examData = await res.json();
       } catch (err) {
-        document.body.innerHTML = `<p style='color:red;text-align:center;'>Impossibile caricare: ${err.message}</p>`;
+        document.body.innerHTML = `<p style="color:red;text-align:center;">
+          Impossibile caricare: ${err.message}</p>`;
         return;
       }
 
-      // calcola paragrafi massimi da CFU
+      // usa SOLO il CFU da parametro
+      examData.cfu = cfuParam;
       const maxPars = examData.cfu / 3;
-      const prepParam = getParamNum('preparazione', maxPars);
-      const prep = Math.min(maxPars, Math.max(1, prepParam));
+      // preparazione tra 1 e maxPars
+      const prepParam = getParamNum('preparazione');
+      const prep = Math.min(maxPars, Math.max(1, prepParam || maxPars));
 
-      // aggiorna header
       document.getElementById('exam-title').innerText = `Esame: ${examData.name}`;
       document.getElementById('cfu-display').innerText = examData.cfu;
       document.getElementById('prep-display').innerText = prep;
 
-      // mostra paragrafi sbloccati
+      // mostra i paragrafi sbloccati
       const textContainer = document.getElementById('exam-text');
       examData.text.slice(0, prep).forEach(p => {
         const pEl = document.createElement('p');
@@ -128,16 +138,15 @@
         textContainer.appendChild(pEl);
       });
 
-      // seleziona domande solo da paragrafi validi
+      // filtra domande con paragraph < maxPars
       const eligible = examData.questions.filter(q => q.paragraph < maxPars);
       const selected = shuffle(eligible).slice(0, 5);
 
-      // popola form
+      // popola le domande
       const form = document.getElementById('exam-form');
       selected.forEach((q, idx) => {
         const div = document.createElement('div');
         div.className = 'question';
-        // testo domanda
         const p = document.createElement('p');
         if (!allaCieca) {
           const prefix = hint ? `Dal paragrafo ${q.paragraph + 1}: ` : '';
@@ -146,7 +155,6 @@
           p.style.visibility = 'hidden';
         }
         div.appendChild(p);
-        // opzioni
         const opts = document.createElement('div');
         opts.className = 'options';
         q.options.forEach((opt, i) => {
@@ -165,7 +173,7 @@
         form.appendChild(div);
       });
 
-      // sottolinea copie
+      // copia_da: sottolineature
       selected.forEach((q, idx) => {
         const labels = Array.from(form.querySelectorAll(`label[data-q="${idx}"]`));
         if (copiaDa === 'esperto') {
@@ -187,14 +195,13 @@
         }
       });
 
-      // gestione submit
+      // invio
       document.getElementById('submit-button').addEventListener('click', () => {
         let correctCount = 0;
         selected.forEach((q, idx) => {
           const choice = form.querySelector(`input[name="q${idx}"]:checked`);
           const sel = choice ? +choice.value : null;
           if (sel === q.correct) correctCount++;
-          // evidenzia
           form.querySelectorAll(`label[data-q="${idx}"]`)
             .forEach(lbl => {
               const i = +lbl.dataset.i;
@@ -215,12 +222,11 @@
         const resEl = document.getElementById('result');
         resEl.innerText =
           `Corrette: ${correctCount}/${selected.length}\n` +
-          `Voto base: ${baseScore}/30 (bonus ${bonus>=0?'+':''}${bonus})\n` +
+          `Voto base: ${baseScore}/30 (bonus ${bonus >= 0 ? '+' : ''}${bonus})\n` +
           `Voto finale: ${finalScore}/30\n` +
           outcome;
         resEl.style.display = 'block';
 
-        // blocca form
         form.querySelectorAll('input').forEach(i => i.disabled = true);
         document.getElementById('submit-button').disabled = true;
       });
