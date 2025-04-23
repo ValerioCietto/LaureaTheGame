@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
-  <title>Laurea the Game – Tabellone</title>
+  <title>Laurea the Game</title>
   <style>
     body {
       font-family: sans-serif;
@@ -13,13 +13,14 @@
       flex-direction: column;
       align-items: center;
     }
-    #controlli-panel {
-      margin-bottom: 20px;
+    h1 {
+      margin: 0;
+      font-size: 24px;
     }
-    #controlli-panel button {
-      margin: 0 8px;
-      padding: 8px 12px;
-      font-size: 14px;
+    h2 {
+      margin: 8px 0 20px;
+      font-size: 18px;
+      color: #555;
     }
     .board {
       display: grid;
@@ -55,9 +56,22 @@
       border-radius: 50%;
       background: white;
     }
+    #controlli-panel {
+      margin-top: 20px;
+    }
+    #controlli-panel button {
+      margin: 0 8px;
+      padding: 8px 12px;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
+
+  <h1>Laurea the Game</h1>
+  <h2 id="year-indicator">Anno 1</h2>
+
+  <div class="board" id="board"></div>
 
   <div id="controlli-panel">
     <button id="advance-button">Avanza di 14 giorni</button>
@@ -65,8 +79,6 @@
     <button id="dai-esame-button">Dai Esame</button>
     <button id="studio-button">Studio forsennato</button>
   </div>
-
-  <div class="board" id="board"></div>
 
   <script>
     // Definizione delle caselle (mezzo mese ciascuna)
@@ -98,6 +110,7 @@
     ];
 
     let currentCell = 0;
+    let lapCount = 1; // Anno
 
     function updateBoard() {
       const board = document.getElementById('board');
@@ -118,26 +131,31 @@
       document.getElementById('studio-button').disabled        = type !== 'vacanza';
     }
 
+    function updateYear() {
+      document.getElementById('year-indicator').textContent = `Anno ${lapCount}`;
+    }
+
     function advanceCell() {
+      const prev = currentCell;
       currentCell = (currentCell + 1) % cellsDef.length;
+      // Se torniamo a 0, completiamo un giro
+      if (currentCell === 0 && prev === cellsDef.length - 1) {
+        lapCount = Math.min(lapCount + 1, 3);
+        updateYear();
+      }
       updateBoard();
       updateControlli();
     }
 
-    document.getElementById('advance-button')
-      .addEventListener('click', advanceCell);
+    document.getElementById('advance-button').addEventListener('click', advanceCell);
+    document.getElementById('frequenta-button').addEventListener('click', () => {/* stub */});
+    document.getElementById('dai-esame-button').addEventListener('click', () => {/* stub */});
+    document.getElementById('studio-button').addEventListener('click', () => {/* stub */});
 
-    // Stub per gli altri pulsanti (da implementare altrove)
-    document.getElementById('frequenta-button')
-      .addEventListener('click', () => {/* frequenta lezione */});
-    document.getElementById('dai-esame-button')
-      .addEventListener('click', () => {/* dai esame */});
-    document.getElementById('studio-button')
-      .addEventListener('click', () => {/* studio forsennato */});
-
-    // Inizializza
+    // Inizializzazione
     updateBoard();
     updateControlli();
+    updateYear();
   </script>
 
 </body>
