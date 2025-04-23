@@ -59,7 +59,7 @@
 
   <h1 id="exam-title">Esame</h1>
   <p style="text-align:center;">
-    CFU assegnati: <span id="cfu-display">–</span> &nbsp;|&nbsp;
+    CFU: <span id="cfu-display">–</span> &nbsp;|&nbsp;
     Preparazione: <span id="prep-display">–</span> paragrafi
   </p>
 
@@ -79,7 +79,6 @@
       const v = parseInt(getParam(name), 10);
       return isNaN(v) ? defaultValue : v;
     }
-
     function shuffle(array) {
       for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -89,13 +88,13 @@
     }
 
     document.addEventListener('DOMContentLoaded', async () => {
-      // Parametri aggiuntivi
+      // parametri extra
       const bonus = getParamNum('bonus_voto', 0);
-      const hint = getParam('hint', 'false') === 'true';
+      const hint = getParam('hint') === 'true';
       const copiaDa = getParam('copia_da', '').toLowerCase();
-      const allaCieca = getParam('alla_cieca', 'false') === 'true';
+      const allaCieca = getParam('alla_cieca') === 'true';
 
-      const nomeEsame = getParam('nome_esame', null);
+      const nomeEsame = getParam('nome_esame');
       if (!nomeEsame) {
         document.body.innerHTML = "<p style='color:red;text-align:center;'>Parametro <strong>nome_esame</strong> mancante!</p>";
         return;
@@ -104,22 +103,24 @@
       let examData;
       try {
         const res = await fetch(`esami/${nomeEsame}.json`);
-        if (!res.ok) throw new Error(res.status + " " + res.statusText);
+        if (!res.ok) throw new Error(res.statusText);
         examData = await res.json();
       } catch (err) {
-        document.body.innerHTML = `<p style='color:red;text-align:center;'>Impossibile caricare l'esame "${nomeEsame}":<br>${err.message}</p>`;
+        document.body.innerHTML = `<p style='color:red;text-align:center;'>Impossibile caricare: ${err.message}</p>`;
         return;
       }
 
-      const prep = Math.min(4, Math.max(1, getParamNum('preparazione', 1)));
-      const cfuParam = getParamNum('cfu', examData.cfu || 0);
-      examData.cfu = cfuParam;
+      // calcola paragrafi massimi da CFU
+      const maxPars = examData.cfu / 3;
+      const prepParam = getParamNum('preparazione', maxPars);
+      const prep = Math.min(maxPars, Math.max(1, prepParam));
 
+      // aggiorna header
       document.getElementById('exam-title').innerText = `Esame: ${examData.name}`;
       document.getElementById('cfu-display').innerText = examData.cfu;
       document.getElementById('prep-display').innerText = prep;
 
-      // Testo
+      // mostra paragrafi sbloccati
       const textContainer = document.getElementById('exam-text');
       examData.text.slice(0, prep).forEach(p => {
         const pEl = document.createElement('p');
@@ -127,103 +128,99 @@
         textContainer.appendChild(pEl);
       });
 
-      // Domande
-      const selected = shuffle([...examData.questions]).slice(0, 5);
-      const form = document.getElementById('exam-form');
+      // seleziona domande solo da paragrafi validi
+      const eligible = examData.questions.filter(q => q.paragraph < maxPars);
+      const selected = shuffle(eligible).slice(0, 5);
 
+      // popola form
+      const form = document.getElementById('exam-form');
       selected.forEach((q, idx) => {
-        const field = document.createElement('div');
-        field.className = 'question';
-        // Question text
-        const qText = document.createElement('p');
+        const div = document.createElement('div');
+        div.className = 'question';
+        // testo domanda
+        const p = document.createElement('p');
         if (!allaCieca) {
           const prefix = hint ? `Dal paragrafo ${q.paragraph + 1}: ` : '';
-          qText.textContent = prefix + q.text;
+          p.textContent = prefix + q.text;
         } else {
-          qText.style.visibility = 'hidden';
+          p.style.visibility = 'hidden';
         }
-        field.appendChild(qText);
-        // Options
-        const optsDiv = document.createElement('div');
-        optsDiv.className = 'options';
+        div.appendChild(p);
+        // opzioni
+        const opts = document.createElement('div');
+        opts.className = 'options';
         q.options.forEach((opt, i) => {
-          const label = document.createElement('label');
-          label.setAttribute('data-q', idx);
-          label.setAttribute('data-i', i);
-          label.style.textDecoration = 'none';
-          const input = document.createElement('input');
-          input.type = 'radio';
-          input.name = `q${idx}`;
-          input.value = i;
-          label.appendChild(input);
-          label.appendChild(document.createTextNode(' ' + opt));
-          optsDiv.appendChild(label);
+          const lbl = document.createElement('label');
+          lbl.dataset.q = idx;
+          lbl.dataset.i = i;
+          lbl.style.textDecoration = 'none';
+          const inp = document.createElement('input');
+          inp.type = 'radio';
+          inp.name = `q${idx}`;
+          inp.value = i;
+          lbl.append(inp, ' ', opt);
+          opts.appendChild(lbl);
         });
-        field.appendChild(optsDiv);
-        form.appendChild(field);
+        div.appendChild(opts);
+        form.appendChild(div);
       });
 
-      // Sottolineature copia_da
+      // sottolinea copie
       selected.forEach((q, idx) => {
         const labels = Array.from(form.querySelectorAll(`label[data-q="${idx}"]`));
         if (copiaDa === 'esperto') {
-          labels.forEach(label => {
-            if (parseInt(label.getAttribute('data-i'), 10) === q.correct) {
-              label.style.textDecoration = 'underline';
-            }
+          labels.forEach(l => {
+            if (+l.dataset.i === q.correct) l.style.textDecoration = 'underline';
           });
         } else if (copiaDa === 'mediocre') {
-          labels.forEach(label => label.style.textDecoration = 'none');
           if (Math.random() < 0.5) {
-            // underline correct
-            const corr = labels.find(l => parseInt(l.getAttribute('data-i'),10) === q.correct);
-            if (corr) corr.style.textDecoration = 'underline';
+            labels.filter(l => +l.dataset.i === q.correct)
+                  .forEach(l => l.style.textDecoration = 'underline');
           } else {
-            // underline a random wrong
-            const wrongs = labels.filter(l => parseInt(l.getAttribute('data-i'),10) !== q.correct);
-            const pick = wrongs[Math.floor(Math.random()*wrongs.length)];
-            if (pick) pick.style.textDecoration = 'underline';
+            const wrongs = labels.filter(l => +l.dataset.i !== q.correct);
+            wrongs[Math.floor(Math.random() * wrongs.length)]
+              .style.textDecoration = 'underline';
           }
         } else if (copiaDa === 'scarso') {
-          const pick = labels[Math.floor(Math.random()*labels.length)];
-          if (pick) pick.style.textDecoration = 'underline';
+          labels[Math.floor(Math.random() * labels.length)]
+            .style.textDecoration = 'underline';
         }
       });
 
-      // Invio risposte
+      // gestione submit
       document.getElementById('submit-button').addEventListener('click', () => {
         let correctCount = 0;
         selected.forEach((q, idx) => {
-          const chosen = form.querySelector(`input[name="q${idx}"]:checked`);
-          const val = chosen ? parseInt(chosen.value, 10) : null;
-          if (val === q.correct) correctCount++;
-          // evidenzia corrette/errate
-          form.querySelectorAll(`label[data-q="${idx}"]`).forEach(label => {
-            const i = parseInt(label.getAttribute('data-i'),10);
-            label.classList.remove('correct','wrong');
-            if (i === q.correct) label.classList.add('correct');
-            if (i === val && val !== q.correct) label.classList.add('wrong');
-          });
+          const choice = form.querySelector(`input[name="q${idx}"]:checked`);
+          const sel = choice ? +choice.value : null;
+          if (sel === q.correct) correctCount++;
+          // evidenzia
+          form.querySelectorAll(`label[data-q="${idx}"]`)
+            .forEach(lbl => {
+              const i = +lbl.dataset.i;
+              lbl.classList.remove('correct','wrong');
+              if (i === q.correct) lbl.classList.add('correct');
+              if (sel === i && sel !== q.correct) lbl.classList.add('wrong');
+            });
         });
 
-        const baseScore = Math.round((correctCount / selected.length) * 30);
+        const baseScore = Math.round(correctCount / selected.length * 30);
         let finalScore = baseScore + bonus;
-        if (finalScore < 1) finalScore = 1;
-        if (finalScore > 30) finalScore = 30;
+        finalScore = Math.min(30, Math.max(1, finalScore));
 
-        let outcomeText;
-        if (finalScore === 18) outcomeText = "Passato con disonore";
-        else if (finalScore >= 18) outcomeText = "Esame superato";
-        else outcomeText = "Esame non superato";
+        let outcome = finalScore >= 18
+          ? (finalScore === 18 ? 'Passato con disonore' : 'Esame superato')
+          : 'Esame non superato';
 
-        const resultEl = document.getElementById('result');
-        resultEl.innerText =
-          `Hai risposto correttamente a ${correctCount} su ${selected.length}.\n` +
-          `Voto base: ${baseScore}/30  (bonus ${bonus >= 0 ? '+'+bonus : bonus})\n` +
+        const resEl = document.getElementById('result');
+        resEl.innerText =
+          `Corrette: ${correctCount}/${selected.length}\n` +
+          `Voto base: ${baseScore}/30 (bonus ${bonus>=0?'+':''}${bonus})\n` +
           `Voto finale: ${finalScore}/30\n` +
-          outcomeText;
-        resultEl.style.display = 'block';
+          outcome;
+        resEl.style.display = 'block';
 
+        // blocca form
         form.querySelectorAll('input').forEach(i => i.disabled = true);
         document.getElementById('submit-button').disabled = true;
       });
