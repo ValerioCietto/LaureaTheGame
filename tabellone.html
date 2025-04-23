@@ -8,22 +8,28 @@
       font-family: sans-serif;
       background: #f5f5f5;
       margin: 0;
-      padding: 0;
+      padding: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
+    }
+    #controlli-panel {
+      margin-bottom: 20px;
+    }
+    #controlli-panel button {
+      margin: 0 8px;
+      padding: 8px 12px;
+      font-size: 14px;
     }
     .board {
       display: grid;
       grid-template-columns: repeat(6, 140px);
       grid-template-rows: repeat(4, 100px);
       gap: 6px;
-      margin: 20px;
-      padding: 20px;
       background: #fff;
+      padding: 20px;
       border-radius: 12px;
       box-shadow: 0 0 12px rgba(0,0,0,0.2);
-      position: relative;
     }
     .cell {
       position: relative;
@@ -32,73 +38,27 @@
       align-items: center;
       border-radius: 8px;
       font-weight: bold;
-      font-size: 14px;
       color: white;
+      font-size: 14px;
     }
-    .cell.lezioni { background-color: #268bd2; }
-    .cell.esami  { background-color: #cb4b16; }
-    .cell.vacanza{ background-color: #859900; }
-    .cell.imprevisto { background-color: #b58900; }
+    .cell.lezioni      { background-color: #268bd2; }
+    .cell.esami        { background-color: #cb4b16; }
+    .cell.vacanza      { background-color: #859900; }
+    .cell.imprevisto   { background-color: #b58900; }
     .cell.player::after {
       content: "";
       position: absolute;
+      top: 8px;
+      right: 8px;
       width: 16px;
       height: 16px;
       border-radius: 50%;
       background: white;
-      top: 8px;
-      right: 8px;
-    }
-    #controlli-panel {
-      margin-bottom: 10px;
-    }
-    #controlli-panel button {
-      margin: 0 5px;
-      padding: 8px 12px;
-    }
-    .card-container {
-      display: flex;
-      gap: 20px;
-      margin-bottom: 20px;
-    }
-    .card {
-      background: #fff;
-      border-radius: 8px;
-      padding: 12px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-      width: 200px;
-    }
-    .card h3 {
-      margin-top: 0;
-      font-size: 16px;
-      text-align: center;
-    }
-    .card ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-    .card li {
-      margin: 6px 0;
-      font-size: 14px;
-    }
-    #testo-dialog {
-      border: none;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.3);
-    }
-    #testo-dialog p {
-      background: #f0f8ff;
-      padding: 8px;
-      border-left: 4px solid #268bd2;
-      margin: 0 0 10px;
     }
   </style>
 </head>
 <body>
 
-  <!-- Controlli -->
   <div id="controlli-panel">
     <button id="advance-button">Avanza di 14 giorni</button>
     <button id="frequenta-button">Frequenta Lezione</button>
@@ -106,105 +66,46 @@
     <button id="studio-button">Studio forsennato</button>
   </div>
 
-  <!-- Tabellone -->
   <div class="board" id="board"></div>
 
-  <!-- Cards -->
-  <div class="card-container">
-    <div class="card" id="lezioni-card">
-      <h3>Lezioni</h3>
-      <ul id="lezioni-list"></ul>
-    </div>
-    <div class="card" id="libretto-card">
-      <h3>Libretto</h3>
-      <ul id="libretto-list"></ul>
-    </div>
-    <div class="card" id="esami-card">
-      <h3>Esami</h3>
-      <select id="esame-select"></select><br><br>
-      <button id="dai-esame-select-button">Dai Esame</button>
-    </div>
-  </div>
-
-  <!-- Dialog Testo -->
-  <dialog id="testo-dialog">
-    <div id="testo-content"></div>
-    <button id="close-dialog">Chiudi</button>
-  </dialog>
-
   <script>
-    // --- Dati iniziali ---
+    // Definizione delle caselle (mezzo mese ciascuna)
     const cellsDef = [
-      { label: 'Ott 1', type: 'lezioni' }, { label: 'Ott 2', type: 'lezioni' },
-      { label: 'Nov 1', type: 'lezioni' }, { label: 'Nov 2', type: 'imprevisto' },
-      { label: 'Dic 1', type: 'lezioni' }, { label: 'Dic 2', type: 'lezioni' },
-      { label: 'Gen 1', type: 'esami' },  { label: 'Gen 2', type: 'esami' },
-      { label: 'Feb 1', type: 'lezioni' },{ label: 'Feb 2', type: 'lezioni' },
-      { label: 'Mar 1', type: 'lezioni' },{ label: 'Mar 2', type: 'lezioni' },
-      { label: 'Apr 1', type: 'lezioni' },{ label: 'Apr 2', type: 'lezioni' },
-      { label: 'Mag 1', type: 'imprevisto' },{ label: 'Mag 2', type: 'lezioni' },
-      { label: 'Giu 1', type: 'lezioni' },{ label: 'Giu 2', type: 'lezioni' },
-      { label: 'Lug 1', type: 'esami' }, { label: 'Lug 2', type: 'esami' },
-      { label: 'Ago 1', type: 'vacanza' },{ label: 'Ago 2', type: 'vacanza' },
-      { label: 'Set 1', type: 'esami' }, { label: 'Set 2', type: 'esami' }
+      { label: 'Ott 1', type: 'lezioni' },
+      { label: 'Ott 2', type: 'lezioni' },
+      { label: 'Nov 1', type: 'lezioni' },
+      { label: 'Nov 2', type: 'imprevisto' },
+      { label: 'Dic 1', type: 'lezioni' },
+      { label: 'Dic 2', type: 'lezioni' },
+      { label: 'Gen 1', type: 'esami' },
+      { label: 'Gen 2', type: 'esami' },
+      { label: 'Feb 1', type: 'lezioni' },
+      { label: 'Feb 2', type: 'lezioni' },
+      { label: 'Mar 1', type: 'lezioni' },
+      { label: 'Mar 2', type: 'lezioni' },
+      { label: 'Apr 1', type: 'lezioni' },
+      { label: 'Apr 2', type: 'lezioni' },
+      { label: 'Mag 1', type: 'imprevisto' },
+      { label: 'Mag 2', type: 'lezioni' },
+      { label: 'Giu 1', type: 'lezioni' },
+      { label: 'Giu 2', type: 'lezioni' },
+      { label: 'Lug 1', type: 'esami' },
+      { label: 'Lug 2', type: 'esami' },
+      { label: 'Ago 1', type: 'vacanza' },
+      { label: 'Ago 2', type: 'vacanza' },
+      { label: 'Set 1', type: 'esami' },
+      { label: 'Set 2', type: 'esami' }
     ];
 
-    // Esami (da esami.json incorporato)
-    const examTexts = {
-      albegra_della_pronuncia_basgliata:       { name: "Albegra della pronuncia basgliata", cfu: 12 },
-      analisi_sintagmostotologica:              { name: "Analisi sintagmostotologica",      cfu: 6  },
-      arrampicata_sui_vetri_artistica:          { name: "Arrampicata sui vetri artistica", cfu: 6  },
-      auparacintesi_dei_purinsesti:             { name: "Auparacintesi dei Purinsesti",     cfu: 12 },
-      chimica_la_formica:                       { name: "Chimica la Formica",               cfu: 6  },
-      comunicazione_scritta_e_gesticolata:      { name: "Comunicazione Scritta e Gesticolata", cfu: 6 },
-      diritto_e_poi_svolta_a_destra:            { name: "Diritto e poi svolta a destra",   cfu: 6  },
-      finanza_e_ortaggi_curiosi:                { name: "Finanza e ortaggi curiosi",        cfu: 6  },
-      fisica_del_fisico:                        { name: "Fisica del fisico",                cfu: 9  },
-      geometria_non_semplice_ma_nemmeno_difficilissima:
-                                                 { name: "Geometria non semplice, ma nemmeno difficilissima", cfu: 9 },
-      lftmts:                                   { name: "LFTMTS (parte dell’esame è capire che significa)", cfu: 9 },
-      matematica_discreta_e_silenziosa:         { name: "Matematica discreta e silenziosa", cfu: 6  },
-      reti_neurali_da_pesca:                    { name: "Reti neurali da pesca",            cfu: 6  },
-      scienza_delle_merendine:                  { name: "Scienza delle merendine",           cfu: 6  },
-      scenza_dellottografia:                    { name: "Scenza dellottografia",            cfu: 6  },
-      sistemi_operativi_e_sistemi_sfaticati:    { name: "Sistemi operativi e sistemi sfaticati", cfu: 12 },
-      stupidita_artificiale:                    { name: "Stupidità artificiale",            cfu: 6  },
-      statistica_ad_mentula:                    { name: "Statistica ad mentula",             cfu: 9  },
-      statistica_stitica:                       { name: "Statistica stitica",               cfu: 6  },
-      teorie_su_allunaggio_e_adduaggio:         { name: "Teorie su allunaggio e adduaggio", cfu: 6  }
-    };
-
-    // Stato di gioco
     let currentCell = 0;
-    const state = {
-      examKeys: Object.keys(examTexts),
-      preparation: {},       // paragrafi sbloccati per esame
-      libretto: {},          // { examKey: { passed, score } }
-      examCFU: {},           // copia cfu di examTexts
-      extraAppelli: {}       // esami -> numero di appelli extra
-    };
-    // inizializza examCFU
-    state.examKeys.forEach(k => state.examCFU[k] = examTexts[k].cfu);
-    // tutti paragrafi inizialmente 0
-    state.examKeys.forEach(k => state.preparation[k] = 0);
 
-    // Fisher–Yates
-    function shuffle(a) {
-      for (let i = a.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [a[i], a[j]] = [a[j], a[i]];
-      }
-      return a;
-    }
-
-    // --- UI Update Functions ---
     function updateBoard() {
       const board = document.getElementById('board');
       board.innerHTML = '';
       cellsDef.forEach((cell, idx) => {
         const div = document.createElement('div');
         div.className = `cell ${cell.type}`;
-        div.innerText = cell.label;
+        div.textContent = cell.label;
         if (idx === currentCell) div.classList.add('player');
         board.appendChild(div);
       });
@@ -212,119 +113,31 @@
 
     function updateControlli() {
       const type = cellsDef[currentCell].type;
-      document.getElementById('frequenta-button').disabled = (type !== 'lezioni');
-      document.getElementById('dai-esame-button').disabled = (type !== 'esami');
-      document.getElementById('dai-esame-select-button').disabled = (type !== 'esami');
-      document.getElementById('studio-button').disabled   = (type !== 'vacanza');
+      document.getElementById('frequenta-button').disabled = type !== 'lezioni';
+      document.getElementById('dai-esame-button').disabled     = type !== 'esami';
+      document.getElementById('studio-button').disabled        = type !== 'vacanza';
     }
 
-    function updateLezioni() {
-      const ul = document.getElementById('lezioni-list');
-      ul.innerHTML = '';
-      // primi 4 esami
-      state.examKeys.slice(0,4).forEach(key => {
-        const totalPars = state.examCFU[key] / 3;
-        const unlocked = state.preparation[key];
-        const li = document.createElement('li');
-        li.innerHTML = `${examTexts[key].name}: ${unlocked}/${totalPars}`;
-        if (unlocked > 0) {
-          const btn = document.createElement('button');
-          btn.textContent = 'Vedi testo';
-          btn.style.marginLeft = '6px';
-          btn.onclick = () => showTesto(key);
-          li.appendChild(btn);
-        }
-        ul.appendChild(li);
-      });
-    }
-
-    function updateLibretto() {
-      const ul = document.getElementById('libretto-list');
-      ul.innerHTML = '';
-      state.examKeys.forEach(key => {
-        if (!state.libretto[key]?.passed) {
-          const li = document.createElement('li');
-          li.textContent = `${examTexts[key].name} (${state.examCFU[key]} CFU)`;
-          ul.appendChild(li);
-        }
-      });
-    }
-
-    function populateExamSelect() {
-      const sel = document.getElementById('esame-select');
-      sel.innerHTML = '';
-      state.examKeys.forEach(key => {
-        const o = document.createElement('option');
-        o.value = key;
-        o.innerText = `${examTexts[key].name} (${state.examCFU[key]} CFU)`;
-        sel.appendChild(o);
-      });
-    }
-
-    function showTesto(key) {
-      const dlg = document.getElementById('testo-dialog');
-      const content = document.getElementById('testo-content');
-      content.innerHTML = '';
-      // mostra X paragrafi  (state.preparation[key])
-      const paras = examTexts[key].text || []; 
-      paras.slice(0, state.preparation[key]).forEach(p => {
-        const pEl = document.createElement('p');
-        pEl.textContent = p;
-        content.appendChild(pEl);
-      });
-      dlg.showModal();
-    }
-
-    // --- Azioni Controlli ---
     function advanceCell() {
       currentCell = (currentCell + 1) % cellsDef.length;
       updateBoard();
       updateControlli();
-      updateLezioni();
-      updateLibretto();
-      populateExamSelect();
     }
 
     document.getElementById('advance-button')
       .addEventListener('click', advanceCell);
 
-    document.getElementById('close-dialog')
-      .addEventListener('click', () => document.getElementById('testo-dialog').close());
-
+    // Stub per gli altri pulsanti (da implementare altrove)
     document.getElementById('frequenta-button')
-      .addEventListener('click', () => {
-        // sblocca un paragrafo su un esame a scelta
-        const examKey = prompt("Quale esame vuoi frequentare? (chiave snake_case)");
-        if (state.preparation[examKey] < state.examCFU[examKey]/3) {
-          state.preparation[examKey]++;
-          updateLezioni();
-        }
-      });
-
-    document.getElementById('dai-esame-select-button')
-      .addEventListener('click', () => {
-        const key = document.getElementById('esame-select').value;
-        state.libretto[key] = { passed: true, score: 18 };
-        updateLibretto();
-      });
-
+      .addEventListener('click', () => {/* frequenta lezione */});
+    document.getElementById('dai-esame-button')
+      .addEventListener('click', () => {/* dai esame */});
     document.getElementById('studio-button')
-      .addEventListener('click', () => {
-        // sblocca un paragrafo a caso tra quelli mancanti
-        const pending = state.examKeys.filter(k => state.preparation[k] < state.examCFU[k]/3);
-        if (pending.length) {
-          const key = pending[Math.floor(Math.random()*pending.length)];
-          state.preparation[key]++;
-          updateLezioni();
-        }
-      });
+      .addEventListener('click', () => {/* studio forsennato */});
 
-    // --- Inizializzazione ---
+    // Inizializza
     updateBoard();
     updateControlli();
-    updateLezioni();
-    updateLibretto();
-    populateExamSelect();
   </script>
 
 </body>
