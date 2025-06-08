@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Board “Matrimonio: The Game” – 52 Caselle + Wedding</title>
+  <style>
+    /* Contenitore principale del tabellone */
+    .board {
+      display: grid;
+      grid-template-columns: repeat(13, 80px);
+      grid-template-rows: repeat(5, 80px);
+      gap: 8px;
+      width: max-content;
+      margin: 20px auto;
+    }
+
+    /* Stile di ogni casella-settimana */
+    .casella {
+      width: 100%;
+      height: 100%;
+      border: 1px solid #333;
+      background-color: #fafafa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: sans-serif;
+      font-size: 14px;
+      color: #333;
+      box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      text-align: center;
+      padding: 4px;
+    }
+
+    /* Casella Wedding speciale */
+    .casella.wedding {
+      background-color: #f0e6f5;
+      border-color: #9b59b6;
+      font-weight: bold;
+      color: #4a235a;
+    }
+
+    /* Facoltativo: evidenziare alcune caselle speciali */
+    .casella.imprevisto {
+      background-color: #ffe6e6;
+      border-color: #cc0000;
+    }
+
+    .casella.check-budget {
+      background-color: #e6f7ff;
+      border-color: #0099cc;
+    }
+
+    /* Legenda per le coppie in competizione */
+    .legend {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin: 20px auto;
+      font-family: sans-serif;
+    }
+    .team {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+    }
+    .token {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+    /* Coppia 1: due pedine colorate */
+    .team1 .token:nth-child(1) { background-color: #e74c3c; } /* Rosso */
+    .team1 .token:nth-child(2) { background-color: #c0392b; } /* Rosso scuro */
+    /* Coppia 2: due pedine colorate */
+    .team2 .token:nth-child(1) { background-color: #3498db; } /* Blu */
+    .team2 .token:nth-child(2) { background-color: #2980b9; } /* Blu scuro */
+  </style>
+</head>
+<body>
+  <!-- Legenda delle coppie in competizione -->
+  <div class="legend">
+    <div class="team team1">
+      <span class="token"></span><span class="token"></span> Coppia 1 (Giocatore A & Giocatore B)
+    </div>
+    <div class="team team2">
+      <span class="token"></span><span class="token"></span> Coppia 2 (Giocatore C & Giocatore D)
+    </div>
+    <!-- Aggiungere altre coppie se necessario seguendo lo stesso schema -->
+  </div>
+
+  <div class="board">
+    <!-- Casella 0: Wedding -->
+    <div class="casella wedding">Settimana 0<br>WEDDING</div>
+
+    <!-- 52 caselle numerate da Settimana 1 a Settimana 52 -->
+    <div class="casella">Settimana 1</div>
+    <div class="casella">Settimana 2</div>
+    <div class="casella">Settimana 3</div>
+    <div class="casella">Settimana 4</div>
+    <div class="casella imprevisto">Settimana 5</div>
+    <div class="casella">Settimana 6</div>
+    <div class="casella">Settimana 7</div>
+    <div class="casella">Settimana 8</div>
+    <div class="casella">Settimana 9</div>
+    <div class="casella imprevisto">Settimana 10</div>
+    <div class="casella">Settimana 11</div>
+    <div class="casella">Settimana 12</div>
+    <div class="casella check-budget">Settimana 13<br>(Check Budget)</div>
+
+    <div class="casella">Settimana 14</div>
+    <div class="casella">Settimana 15</div>
+    <div class="casella">Settimana 16</div>
+    <div class="casella">Settimana 17</div>
+    <div class="casella imprevisto">Settimana 18</div>
+    <div class="casella">Settimana 19</div>
+    <div class="casella">Settimana 20</div>
+    <div class="casella">Settimana 21</div>
+    <div class="casella">Settimana 22</div>
+    <div class="casella imprevisto">Settimana 23</div>
+    <div class="casella">Settimana 24</div>
+    <div class="casella">Settimana 25</div>
+    <div class="casella check-budget">Settimana 26<br>(Check Budget)</div>
+
+    <div class="casella">Settimana 27</div>
+    <div class="casella">Settimana 28</div>
+    <div class="casella">Settimana 29</div>
+    <div class="casella">Settimana 30</div>
+    <div class="casella imprevisto">Settimana 31</div>
+    <div class="casella">Settimana 32</div>
+    <div class="casella">Settimana 33</div>
+    <div class="casella">Settimana 34</div>
+    <div class="casella">Settimana 35</div>
+    <div class="casella imprevisto">Settimana 36</div>
+    <div class="casella">Settimana 37</div>
+    <div class="casella">Settimana 38</div>
+    <div class="casella check-budget">Settimana 39<br>(Check Budget)</div>
+
+    <div class="casella">Settimana 40</div>
+    <div class="casella">Settimana 41</div>
+    <div class="casella">Settimana 42</div>
+    <div class="casella">Settimana 43</div>
+    <div class="casella imprevisto">Settimana 44</div>
+    <div class="casella">Settimana 45</div>
+    <div class="casella">Settimana 46</div>
+    <div class="casella">Settimana 47</div>
+    <div class="casella">Settimana 48</div>
+    <div class="casella imprevisto">Settimana 49</div>
+    <div class="casella">Settimana 50</div>
+    <div class="casella">Settimana 51</div>
+    <div class="casella check-budget">Settimana 52<br>(Check Budget)</div>
+
+    <!-- Celle vuote per completare la griglia a 65 slot -->
+  </div>
+</body>
+</html>
